@@ -1,63 +1,36 @@
 var express = require('express');
-var scraper = require('./scraper.js');
+var scraper = require('./newScraper.js');
 var util = require('./util.js');
 
 var app = express();
 app.set('port', (process.env.PORT || 5000));
 
 
-/* ENDPOINT: GET /schoolCalendars
+/* ENDPOINT: GET /schoolCalendar
 --------------------------
 A scraper for the general school calendar.
-Responds with the parsed calendar data as JSON.  The format is as follows:
-
-{
-    "CALENDAR_NAME": [
-        ...
-    ],
-    "CALENDAR_NAME": [
-        ...
-    ]
-}
-
-The CALENDAR_NAME keys are determined by the SCHOOL_CALENDAR_URLS dictionary
-specified in the constants file.  Each of its keys becomes a key in the JSON
-returned from this endpoint, and the calendar data included with each key is
-from the value (URL) for that key in the ATHLETICS_CALENDAR_URLS dictionary.
-
-Values are arrays of (sorted, from earliest to latest) day dictionaries, 
-where each day dictionary has the format:
+Responds with the parsed calendar data as a JSON array of calendar event objects
+sorted from earliest to latest.  Each object has the format:
 
 {
     "month": "September",
     "date": 9,
     "day": "Wednesday",
-    "year": 2015,
-    "events": [
-        ...
-    ]
-}
-
-Each day dictionary has an array of event dictionaries, where each event
-dictionary has the format:
-
-{
+    "year": 2016,
     "eventName": "US Leadership Workshop",
     "startTime": "6:00 PM",
     "endTime": "7:30 PM",
-    "eventLocation": "Theatre,Theatre Lobby"
+    "location": "Theatre,Theatre Lobby"
 }
 
-Note that only the eventName field is guaranteed to be non-null.  All calendars
-are scraped in parallel.
+All fields except startTime, endTime, and eventLocation are guaranteed to exist.
 --------------------------
 */
-app.get('/schoolCalendars', function(req, res) {
+app.get('/schoolCalendar', (req, res) => {
     "use strict";
-    scrapeCalendars(util.constants.SCHOOL_CALENDAR_URLS,
-        scraper.scrapeSchoolCalendar).then(function(calendarData) {
-            res.json(calendarData);
-    }, function(error) {
+    scraper.scrapeSchoolCalendar().then(calendarData => {
+        res.json(calendarData);   
+    }, error => {
         console.log("Error: " + JSON.stringify(error));
         res.sendStatus(500);
     });
@@ -66,66 +39,63 @@ app.get('/schoolCalendars', function(req, res) {
 
 /* ENDPOINT: GET /athleticsCalendar
 --------------------------
-A scraper for the athletics calendar.
-Responds with an array of (sorted, from earliest to latest) day dictionaries,
-where each day dictionary has the format:
+A scraper for the athletics calendar, including practices and games.
+Responds with a dictionary containing a list of game events and practice events:
+
+{
+    "games": [
+        ...
+    ],
+    "practices": [
+        ...
+    ]
+}
+
+The array of games, which are sorted chronologically from earliest to latest,
+contains objects with the format:
 
 {
     "month": "September",
     "date": 9,
     "day": "Wednesday",
-    "year": 2015,
-    "events": [
-        ...
-    ]
+    "year": 2016,
+    "team": "Boys' Varsity Soccer",
+    "opponent": "Other School"
+    "time": "6:00 PM",
+    "location": "Back Field",
+    "isHome": true,
+    "result": null,
+    "status": "CANCELLED"
 }
 
-Each day dictionary has an array of event dictionaries, where the event
-dictionary format is the following:
+All fields except opponent, time, location, isHome, result, and status are
+guaranteed to exist.  result is a string that may be either null, "Win", "Loss",
+or another string indicating the outcome of the game.  Status may be null or
+"CANCELLED" indicating the event was cancelled.
+
+The array of practices, which are also sorted chronologically from earliest to
+latest, contains objects with the format:
 
 {
-    "eventID": 12543,
-    "eventName": null,
-    "teamName": "Girls' Varsity Soccer",
-    "teamID": 12542,
-    "opponent": "Froggie School",
-    "startTime": "3:00 PM",
-    "endTime": "4:00 PM",
-    "dismissalTime": "2:00 PM",
-    "returnTime": "5:00 PM",
-    "isHome": false,
-    "eventAddress": "1254 Lakeside Dr. Potomac, MD 20156"
-    "eventLocation": null
+    "month": "September",
+    "date": 9,
+    "day": "Wednesday",
+    "year": 2016,
+    "team": "Boys' Varsity Soccer",
+    "time": "6:00 PM",
+    "location": "Back Field",
+    "status": "CANCELLED"
 }
 
-eventID, teamName, teamID and isHome are guaranteed to be non-null.
-eventID is a unique ID.  eventAddress is a mappable address.
-eventLocation is only the name of a place.  Note that isHome can be true and
-there can be a non-null eventLocation and eventAddress if the game is played at
-a home facility besides the main school campus.  eventName is the special name
-for this event (if any - most events will not have one, but some, such as cross
-country meets, have names like "Cross Country Invitational".)
+All fields except time, location, and status are guaranteed to exist.  Status
+may be null or "CANCELLED" indicating the event was cancelled.
 --------------------------
 */
-app.get('/athleticsCalendar', function(req, res) {
+app.get('/athleticsCalendar', (req, res) => {
     "use strict";
-    scraper.scrapeAthleticsTeams().then(function(teams) {
-
-        /* Make a map from team ID to team name */
-        var teamsMap = {};
-        teams.forEach(function(team) {
-            teamsMap[team.teamID] = team.teamName;
-        });
-
-        return teamsMap;
-
-    }).then(function(athleticsTeamsMap) {
-        var calendarDict = {"Athletics": util.constants.ATHLETICS_CALENDAR_URL};
-        return scrapeCalendars(calendarDict, scraper.scrapeAthleticsCalendar,
-            athleticsTeamsMap);
-    }).then(function(calendarData) {
-        res.json(calendarData["Athletics"]);
-    }, function(error) {
+    scraper.scrapeAthleticsCalendar().then(calendarData => {
+        res.json(calendarData);   
+    }, error => {
         console.log("Error: " + JSON.stringify(error));
         res.sendStatus(500);
     });
@@ -134,22 +104,29 @@ app.get('/athleticsCalendar', function(req, res) {
 
 /* ENDPOINT: GET /athleticsTeams
 -----------------------------------------
-A scraper for athletics teams information.  Responds with an array of athletics
-teams objects (sorted by season - Fall, then Winter, then Spring), where each
-object contains the following properties (all guaranteed to be non-null):
+A scraper for athletics teams information.  Responds with a collection of three
+arrays, one for each season, of athletics team names (as strings):
 
 {
-    teamName: "Cross Country",
-    teamID: 1245,
-    season: "Fall"
+    "fall": [
+        "Cross Country",
+        "Girls' Varsity Tennis",
+        ...
+    ],
+    "winter": [
+        ...
+    ],
+    "spring": [
+        ...
+    ]
 }
 -----------------------------------------
 */
-app.get('/athleticsTeams', function(req, res) {
+app.get('/athleticsTeams', (req, res) => {
     "use strict";
-    scraper.scrapeAthleticsTeams().then(function(teams) {
+    scraper.scrapeAthleticsTeams().then(teams => {
         res.json(teams);
-    }, function(error) {
+    }, error => {
         console.log("Error: " + JSON.stringify(error));
         res.sendStatus(500);
     });
@@ -157,7 +134,7 @@ app.get('/athleticsTeams', function(req, res) {
 
 
 /* Start the server */
-app.listen(app.get('port'), function() {
+app.listen(app.get('port'), () => {
     console.log('Node app is running on port', app.get('port'));
 });
 
