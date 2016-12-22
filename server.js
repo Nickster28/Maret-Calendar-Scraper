@@ -6,6 +6,12 @@ const util = require('./util.js');
 const app = express();
 app.set('port', (process.env.PORT || 5000));
 
+const errorHandler = (error, httpResponse) => {
+    console.log(error.stack);
+    console.log("Error: " + error);
+    httpResponse.sendStatus(500);
+}
+
 
 /* ENDPOINT: GET /schoolCalendar
 --------------------------
@@ -33,9 +39,7 @@ app.get('/schoolCalendar', (req, res) => {
     scraper.scrapeSchoolCalendars().then(calendarData => {
         res.json(calendarData);
     }, error => {
-        console.log(error.stack);
-        console.log("Error: " + error);
-        res.sendStatus(500);
+        errorHandler(error, res);
     });
 });
 
@@ -99,8 +103,7 @@ app.get('/athleticsCalendar', (req, res) => {
     scraper.scrapeAthleticsCalendar().then(calendarData => {
         res.json(calendarData);   
     }, error => {
-        console.log("Error: " + JSON.stringify(error));
-        res.sendStatus(500);
+        errorHandler(error, res);
     });
 });
 
@@ -132,8 +135,7 @@ app.get('/athleticsTeams', (req, res) => {
     }).then(teams => {
         res.json(teams);
     }, error => {
-        console.log("Error: " + JSON.stringify(error));
-        res.sendStatus(500);
+        errorHandler(error, res);
     });
 });
 
