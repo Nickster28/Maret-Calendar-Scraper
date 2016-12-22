@@ -1,8 +1,8 @@
-var express = require('express');
-var scraper = require('./newScraper.js');
-var util = require('./util.js');
+const express = require('express');
+const scraper = require('./newScraper.js');
+const util = require('./util.js');
 
-var app = express();
+const app = express();
 app.set('port', (process.env.PORT || 5000));
 
 
