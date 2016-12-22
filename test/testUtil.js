@@ -1,128 +1,65 @@
-var assert = require('assert');
-var cheerio = require('cheerio');
-var fs = require('fs');
+const assert = require('assert');
+const cheerio = require("cheerio");
+const fs = require('fs');
+
+const TEST_FILES_DIRECTORY = "files";
 
 
-/* FUNCTION: loadTestHTMLNamed
---------------------------------
-Parameters:
-    filename - the name of the HTML file to read in
-
-Returns: A Cheerio DOM parser containing the HTML in
-the given file.
---------------------------------
-*/
-function loadTestHTMLNamed(filename) {
+/*
+ * EXPORTED FUNCTION: testScraper
+ * -------------------------------
+ * Parameters:
+ *      testName - the name of the bundle of tests being run.  Displayed by
+ *                  mocha when running all the tests.
+ *      scraperFn - the scraper function to test.  Should take a Cheerio DOM
+ *                  parser object for the DOM to scrape.
+ *      tests - an array of test objects, each corresponding to one test to run.
+ *              Each test object should contain a name, html, and json field.
+ *              The name field is displayed as the test's name.  The html and
+ *              json fields are the names of the files within the test files
+ *              directory for the test HTML file to scrape, and the correct JSON
+ *              output of that scraping, respectively.
+ *
+ * Returns: NA
+ *
+ * Runs mocha tests for each test object contained within tests on the given
+ * scraper function.
+ * -------------------------------
+ */
+module.exports.testScraper = (testName, scraperFn, tests) => {
     "use strict";
-    var fileString = fs.readFileSync(filename, 'utf8');
-    return cheerio.load(fileString);
-}
+    describe(testName, function() {
+        tests.forEach(test => {
+            it(test["name"], function() {
 
+                // Get the HTML file to scrape for this test and scrape it
+                let htmlFilename = getAbsolutePath(test["html"]);
+                const $ = cheerio.load(fs.readFileSync(htmlFilename, "utf8"));
+                const output = scraperFn($);
 
-/* FUNCTION: loadTestJSONNamed
---------------------------------
-Parameters:
-    filename - the name of the JSON file to read in
+                // Get the correct JSON output
+                let jsonFilename = getAbsolutePath(test["json"]);
+                const jsonFile = fs.readFileSync(jsonFilename, 'utf8');
+                const correctOutput = JSON.parse(jsonFile);
 
-Returns: the Javascript object contained in the given
-JSON file.
---------------------------------
-*/
-function loadTestJSONNamed(filename) {
-    "use strict";
-    var fileString = fs.readFileSync(filename, 'utf8');
-    return JSON.parse(fileString);
-}
-
-
-/* FUNCTION: testParserEquality
----------------------------------
-Parameters:
-    htmlFilename - the name of the html filename to try scraping
-    jsonFilename - the name of the file containing the correct scraper output
-                    for the given html file.
-    scraperFn - the function to use to scrape the html.  The function should
-                take two parameters, the Cheerio DOM element for the html
-                to be parsed, and the Cheerio DOM parser itself.
-
-Returns: NA
-
-Checks that the given html file is scraped correctly.  Uses
-assert.deepStrictEqual to ensure the correctness of the scraped JSON against
-the given correct JSON output.
-----------------------------------
-*/
-function testParserEquality(htmlFilename, jsonFilename, scraperFn) {
-    "use strict";
-    var $ = loadTestHTMLNamed(htmlFilename);
-    var actual = scraperFn($.root(), $);
-    var correct = loadTestJSONNamed(jsonFilename);
-    assert.deepStrictEqual(actual, correct, "JSON should match.");
-}
-
-
-/* FUNCTION: runTestCases
-----------------------------
-Parameters:
-    testCases - a map of test case names to test case objects.  Each name is a
-                string, and each test case object should have an htmlFilename
-                and jsonFilename property, each containing the filename of that
-                test case's html file and correct JSON output file.
-    testPrefix - a prefix printed before each test case name when the test is
-                 run.
-    scraperFn - the function to use to scrape the html.  The function should
-                take two parameters, the Cheerio DOM element for the html
-                to be parsed, and the Cheerio DOM parser itself.
-
-Returns: NA
-
-Runs a Mocha test for each of the test cases contained in the testCases map,
-using the given scraperFn to scrape each test case's html.
-----------------------------
-*/
-function runTestCases(testCases, testPrefix, scraperFn) {
-    "use strict";
-
-    for (var testCaseName in testCases) {
-        if (testCases.hasOwnProperty(testCaseName)) {
-            var testCase = testCases[testCaseName];
-            runTestCase(testPrefix + testCaseName, testCase.htmlFilename,
-                testCase.jsonFilename, scraperFn)
-        }
-    }
-}
-
-
-/* FUNCTION: runTestCase
---------------------------
-Parameters:
-    testName - the name displayed for this test
-    htmlFilename - the name of the html file to scrape
-    jsonFilename - the name of the file with the correct scraper output
-    scraperFn - the function to use to scrape the html.  The function should
-                take two parameters, the Cheerio DOM element for the html
-                to be parsed, and the Cheerio DOM parser itself.
-
-Returns: NA
-
-Runs a Mocha test for the given html file, using the given scraperFn to scrape
-it and comparing it against the given correct JSON output.
-
-Note: this is decomposed because of JS weirdness with scope when putting
-this directly inside runTestCases (weird things happen with the it closure
-referencing outside variables that get changed later in the loop).
---------------------------
-*/
-function runTestCase(testName, htmlFilename, jsonFilename, scraperFn) {
-    it(testName, function() {
-        testParserEquality(htmlFilename, jsonFilename, scraperFn);
+                assert.deepStrictEqual(output, correctOutput,
+                    "JSON output should match.");
+            });
+        });
     });
 }
 
 
-/* Exports */
-module.exports.runTestCases = runTestCases;
-module.exports.loadTestHTMLNamed = loadTestHTMLNamed;
-module.exports.loadTestJSONNamed = loadTestJSONNamed;
-
-
+/*
+ * FUNCTION: getAbsolutePath
+ * --------------------------
+ * Parameters:
+ *     filename - the name of a file in the TEST_FILES_DIRECTORY folder
+ * 
+ * Returns: the absolute path for the given filename.  Prepends the current test
+ *          directory plus TEST_FILES_DIRECTORY.
+ * --------------------------
+ */
+function getAbsolutePath(filename) {
+    return __dirname + "/" + TEST_FILES_DIRECTORY + "/" + filename;
+}

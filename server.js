@@ -1,5 +1,6 @@
+const cheerio = require("cheerio");
 const express = require('express');
-const scraper = require('./newScraper.js');
+const scraper = require('./scraper.js');
 const util = require('./util.js');
 
 const app = express();
@@ -108,15 +109,15 @@ A scraper for athletics teams information.  Responds with a collection of three
 arrays, one for each season, of athletics team names (as strings):
 
 {
-    "fall": [
+    "Fall": [
         "Cross Country",
         "Girls' Varsity Tennis",
         ...
     ],
-    "winter": [
+    "Winter": [
         ...
     ],
-    "spring": [
+    "Spring": [
         ...
     ]
 }
@@ -124,7 +125,9 @@ arrays, one for each season, of athletics team names (as strings):
 */
 app.get('/athleticsTeams', (req, res) => {
     "use strict";
-    scraper.scrapeAthleticsTeams().then(teams => {
+    util.getURL(util.constants.ATHLETICS_TEAMS_URL).then(html => {
+        return scraper.scrapeAthleticsTeams(cheerio.load(html));
+    }).then(teams => {
         res.json(teams);
     }, error => {
         console.log("Error: " + JSON.stringify(error));

@@ -1,9 +1,38 @@
-var assert = require('assert');
-var scraper = require('../scraper.js');
-var testUtil = require('./testUtil.js');
+const testUtil = require('./testUtil.js');
+const scraper = require('../scraper.js');
 
-var TEST_TEAMS_HTML_FILENAME = "./files/athleticsteams.html";
-var TEST_TEAMS_JSON_FILENAME = "./files/athleticsteams.json";
+/*
+ * A list of test objects, each representing one test to run.  Each object
+ * contains a name for the test, as well as the HTML file to use to test the
+ * scraping, and the expected JSON output.
+ */
+const TESTS = [
+	{
+		name: "1 Season 1 Team no <a>",
+		html: "athleticsTeams/oneonesimple.html",
+		json: "athleticsTeams/oneonesimple.json"
+	},
+	{
+		name: "1 Season 1 Team <a>",
+		html: "athleticsTeams/oneoneatag.html",
+		json: "athleticsTeams/oneoneatag.json"
+	},
+	{
+		name: "1 Season 1 Team Escaped Chars",
+		html: "athleticsTeams/oneoneescaped.html",
+		json: "athleticsTeams/oneoneescaped.json"
+	},
+	{
+		name: "1 Season Multiple Teams",
+		html: "athleticsTeams/onemultiple.html",
+		json: "athleticsTeams/onemultiple.json"
+	},
+	{
+		name: "Multiple Seasons Multiple Teams",
+		html: "athleticsTeams/multiplemultiple.html",
+		json: "athleticsTeams/multiplemultiple.json"
+	}
+]
 
 
 /* FUNCTION: run
@@ -11,18 +40,12 @@ var TEST_TEAMS_JSON_FILENAME = "./files/athleticsteams.json";
 Parameters: NA
 Returns: NA
 
-Runs all tests for the athletics teams scraper, which currently only includes
-one test that scrapes a sample athletics calendar/teams page.
+Runs all tests for the athletics teams scraper, which includes tests to scrape
+different numbers of seasons, teams, and team name tag formats.
 --------------------
 */
-module.exports.run = function() {
-	"use strict";
-	describe('scrapeAthleticsTeams', function() {
-		it('Scrape Athletics Teams', function() {
-			var $ = testUtil.loadTestHTMLNamed(TEST_TEAMS_HTML_FILENAME);
-			var actual = scraper.scrapeAthleticsTeamsDOM($);
-			var correct = testUtil.loadTestJSONNamed(TEST_TEAMS_JSON_FILENAME);
-			assert.deepStrictEqual(actual, correct, "JSON should match.");
-		});
-	});
+module.exports.run = () => {
+	testUtil.testScraper("scrapeAthleticsTeams", scraper.scrapeAthleticsTeams,
+		TESTS);
 }
+
