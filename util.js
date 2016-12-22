@@ -1,5 +1,5 @@
-const Promise = require('promise');
-const request = require('request');
+const Promise = require("promise");
+const request = require("request");
 
 
 /* FUNCTION: getURL
@@ -30,13 +30,13 @@ module.exports.getURL = url => {
  */
 const SCHOOL_URL_BASE = "https://www.maret.org"
 module.exports.constants = {
-	//ATHLETICS_GAMES_URL: SCHOOL_URL_BASE + "/fs/elements/5634",
-    //SCHOOL_CALENDAR_URL: SCHOOL_URL_BASE + "/fs/elements/6221",
-    //ATHLETICS_PRACTICES_URL: SCHOOL_URL_BASE + "/fs/elements/5637",
-    //ATHLETICS_TEAMS_URL: SCHOOL_URL_BASE + "/fs/elements/6188"
-    ATHLETICS_GAMES_URL: "http://localhost:8000/5634.html",
-    ATHLETICS_PRACTICES_URL: "http://localhost:8000/5637.html",
-    ATHLETICS_TEAMS_URL: "http://localhost:8000/6188.html",
-    SCHOOL_CALENDAR_URL: "http://localhost:8000/6221.html"
+	ATHLETICS_GAMES_URL: SCHOOL_URL_BASE + "/fs/elements/5634",
+    SCHOOL_CALENDAR_URL: SCHOOL_URL_BASE + "/fs/elements/6221",
+    ATHLETICS_PRACTICES_URL: SCHOOL_URL_BASE + "/fs/elements/5637",
+    ATHLETICS_TEAMS_URL: SCHOOL_URL_BASE + "/fs/elements/6188"
+    //ATHLETICS_GAMES_URL: "http://localhost:8000/5634.html",
+    //ATHLETICS_PRACTICES_URL: "http://localhost:8000/5637.html",
+    //ATHLETICS_TEAMS_URL: "http://localhost:8000/6188.html",
+    //SCHOOL_CALENDAR_URL: "http://localhost:8000/6221.html"
 };
 

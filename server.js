@@ -11,7 +11,8 @@ app.set('port', (process.env.PORT || 5000));
 --------------------------
 A scraper for the general school calendar.
 Responds with the parsed calendar data as a JSON array of calendar event objects
-sorted from earliest to latest.  Each object has the format:
+sorted from earliest to latest.  Fetches the next two months of calendar data.
+Each object has the format:
 
 {
     "month": "September",
@@ -29,10 +30,8 @@ All fields except startTime, endTime, and eventLocation are guaranteed to exist.
 */
 app.get('/schoolCalendar', (req, res) => {
     "use strict";
-    util.getURL(util.constants.SCHOOL_CALENDAR_URL).then(html => {
-        return scraper.scrapeSchoolCalendar(cheerio.load(html));
-    }).then(calendarData => {
-        res.json(calendarData);   
+    scraper.scrapeSchoolCalendars().then(calendarData => {
+        res.json(calendarData);
     }, error => {
         console.log(error.stack);
         console.log("Error: " + error);
