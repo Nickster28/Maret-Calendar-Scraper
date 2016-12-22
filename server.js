@@ -29,10 +29,13 @@ All fields except startTime, endTime, and eventLocation are guaranteed to exist.
 */
 app.get('/schoolCalendar', (req, res) => {
     "use strict";
-    scraper.scrapeSchoolCalendar().then(calendarData => {
+    util.getURL(util.constants.SCHOOL_CALENDAR_URL).then(html => {
+        return scraper.scrapeSchoolCalendar(cheerio.load(html));
+    }).then(calendarData => {
         res.json(calendarData);   
     }, error => {
-        console.log("Error: " + JSON.stringify(error));
+        console.log(error.stack);
+        console.log("Error: " + error);
         res.sendStatus(500);
     });
 });
