@@ -33,17 +33,17 @@ from earliest to latest:
 
 Every event object has the following fields:
 
-month - abbreviated month name
-date - the numeric date
-day - abbreviated day name
-year - numeric year
-eventName - name of the event
+* month - abbreviated month name
+* date - the numeric date
+* day - abbreviated day name
+* year - numeric year
+* eventName - name of the event
 
 Additionally, an event may have the following fields:
 
-    startTime - a datetime string
-    endTime - a datetime string
-    location - the name of the event's location
+* startTime - a datetime string
+* endTime - a datetime string
+* location - the name of the event's location
 
 
 ### GET /athleticsTeams
@@ -70,3 +70,13 @@ names (e.g. "Fall", "Winter",...) and the values are arrays of team names:
 
 Note that the seasons returned are whatever are included at the URL in util.js;
 there may be more or less seasons than are given here.
+
+
+### Test
+
+All parts of the server have corresponding [Mocha](https://mochajs.org) tests.
+To execute all tests, just run
+
+```javascript
+npm test
+```
