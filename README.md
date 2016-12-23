@@ -72,7 +72,7 @@ Note that the seasons returned are whatever are included at the URL in util.js;
 there may be more or less seasons than are given here.
 
 
-### Test
+### Testing
 
 All parts of the server have corresponding [Mocha](https://mochajs.org) tests.
 To execute all tests, just run
