@@ -1,7 +1,5 @@
-const cheerio = require("cheerio");
 const express = require('express');
 const scraper = require('./scraper.js');
-const util = require('./util.js');
 
 const app = express();
 app.set('port', (process.env.PORT || 5000));
@@ -36,7 +34,7 @@ All fields except startTime, endTime, and eventLocation are guaranteed to exist.
 */
 app.get('/schoolCalendar', (req, res) => {
     "use strict";
-    scraper.scrapeSchoolCalendars().then(calendarData => {
+    scraper.scrapeSchoolCalendars(new Date()).then(calendarData => {
         res.json(calendarData);
     }, error => {
         errorHandler(error, res);
@@ -130,9 +128,7 @@ arrays, one for each season, of athletics team names (as strings):
 */
 app.get('/athleticsTeams', (req, res) => {
     "use strict";
-    util.getURL(util.constants.ATHLETICS_TEAMS_URL).then(html => {
-        return scraper.scrapeAthleticsTeams(cheerio.load(html));
-    }).then(teams => {
+    scraper.scrapeAthleticsTeams().then(teams => {
         res.json(teams);
     }, error => {
         errorHandler(error, res);

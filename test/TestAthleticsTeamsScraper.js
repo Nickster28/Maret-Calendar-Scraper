@@ -1,5 +1,10 @@
-const testUtil = require('./testUtil.js');
-const scraper = require('../scraper.js');
+const assert = require("assert");
+const fs = require("fs");
+const mock = require("mock-require");
+const rewire = require("rewire");
+let scraper = rewire("../scraper.js");
+const testUtil = require("./testUtil.js");
+const util = require("../util.js");
 
 /*
  * A list of test objects, each representing one test to run.  Each object
@@ -44,13 +49,55 @@ Parameters: NA
 Returns: NA
 
 Runs all tests for the athletics teams scraper, which includes tests to scrape
-different numbers of seasons, teams, and team name tag formats.
+different numbers of seasons, teams, and team name tag formats, and URL fetches.
 --------------------
 */
 module.exports.run = () => {
 	describe("Athletics Teams Scraper Tests", function() {
-		testUtil.testScraper("scrapeAthleticsTeams",
-			scraper.scrapeAthleticsTeams, TESTS);
+
+		// This isn't an exported function, so use rewire (see top)
+		const scrapeAthleticsTeamsFromDOM =
+			scraper.__get__("scrapeAthleticsTeamsFromDOM");
+		testUtil.testScraper("scrapeAthleticsTeamsFromDOM",
+			scrapeAthleticsTeamsFromDOM, TESTS);
+
+		// This full test uses the same "full.html/json" as above tests
+		describe("scrapeAthleticsTeams", function() {
+			// Before all tests are run, mock out getURL to return static HTML
+			before(function() {
+
+			    // We want to return the athletics team page to scrape
+			    mock('../util.js', {
+			        constants: util.constants,
+			        getURL: url => {
+			        	assert.equal(url, util.constants.ATHLETICS_TEAMS_URL,
+			        		"Athletics Teams URL should be from util");
+
+			        	let filename = "athleticsTeams/full.html";
+			            filename = testUtil.getAbsolutePath(filename);
+			            const file = fs.readFileSync(filename, 'utf8');
+			            return Promise.resolve(file);
+			        }
+			    });
+
+			    scraper = mock.reRequire('../scraper.js');
+			});
+
+			after(function() {
+			    mock.stop('../util.js');
+			});
+
+			// Test the whole scraping pipeline to ensure correct output
+			it("Full", function() {
+			    return scraper.scrapeAthleticsTeams().then(teams => {
+			        // Get the correct JSON output
+			        let jsonFilename = "athleticsTeams/full.json";
+			        jsonFilename = testUtil.getAbsolutePath(jsonFilename);
+			        const jsonFile = fs.readFileSync(jsonFilename, 'utf8');
+			        assert.deepStrictEqual(teams, JSON.parse(jsonFile));
+			    });
+			});
+		});
 	});
 }
 

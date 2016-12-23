@@ -5,10 +5,11 @@ const util = require("./util.js");
 
 /* EXPORTED FUNCTION: scrapeSchoolCalendars
 --------------------------------------------
-Parameters: NA
+Parameters:
+	date - the start date to fetch the calendars for.
 
 Returns: a list of event objects in chronological order for the next two
-months of the school calendar.  Each event is guaranteed to have at
+months of the school calendar after 'date'.  Each event is guaranteed to have at
 least the following fields:
 
 	month - abbreviated month name
@@ -24,8 +25,8 @@ Additionally, an event may have the following fields:
 	location - the name of the event's location
 --------------------------------------------
 */
-module.exports.scrapeSchoolCalendars = () => {
-	const calendarURLs = schoolCalendarURLsForStartingDate(new Date());
+module.exports.scrapeSchoolCalendars = date => {
+	const calendarURLs = schoolCalendarURLsForStartingDate(date);
 	const urlFetchPromises = calendarURLs.map(url => util.getURL(url));
 	return Promise.all(urlFetchPromises).then(fetchedHTML => {
 		const scraperPromises = fetchedHTML.map(html => {
@@ -213,16 +214,31 @@ module.exports.scrapeAthleticsCalendar = () => {
 }
 
 
-/* EXPORTED FUNCTION: scrapeAthleticsTeams
+/* FUNCTION: scrapeAthleticsTeams
 ----------------------------------
-Parameters:
-	$ - the Cheerio DOM parser object for the athletics teams page to scrape.
+Parameters: NA
 
 Returns: A dictionary from season names ("Fall") to a list of team names in that
 season.  This data is scraped from the school athletics page.
 ----------------------------------
 */
-module.exports.scrapeAthleticsTeams = $ => {
+module.exports.scrapeAthleticsTeams = () => {
+	return util.getURL(util.constants.ATHLETICS_TEAMS_URL).then(html => {
+		return scrapeAthleticsTeamsFromDOM(cheerio.load(html));
+	});
+}
+
+
+/* FUNCTION: scrapeAthleticsTeamsFromDOM
+----------------------------------
+Parameters:
+	$ - the Cheerio DOM parser object for the athletics teams page to scrape.
+
+Returns: A dictionary from season names ("Fall") to a list of team names in that
+season.  This data is scraped from the given Cheerio DOM object.
+----------------------------------
+*/
+const scrapeAthleticsTeamsFromDOM = $ => {
 
 	// A dictionary from season names ("Fall") to a list of team names
 	const teamsDict = {};

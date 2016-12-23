@@ -66,8 +66,7 @@ const testSameYearURLs = numURLs => {
     if (numURLs > 12) assert(false, "Error: can't have > 12 same-year URLs");
 
     it("Same Year (" + numURLs + " URLs)", function() {
-        const SCHOOL_CALENDAR_URL =
-            require("../util.js").constants.SCHOOL_CALENDAR_URL;
+        const SCHOOL_CALENDAR_URL = util.constants.SCHOOL_CALENDAR_URL;
 
         // This isn't an exported function, so use rewire to get it (see top)
         const schoolCalendarURLsForStartingDate =
@@ -104,8 +103,7 @@ calendar works correctly (aka month and year wrapping work properly).
 const testOverflowYearURLs = numURLs => {
     numURLs += 2;
     it("Year Overflow (" + numURLs + " URLs)", function() {
-        const SCHOOL_CALENDAR_URL =
-            require("../util.js").constants.SCHOOL_CALENDAR_URL;
+        const SCHOOL_CALENDAR_URL = util.constants.SCHOOL_CALENDAR_URL;
 
         // This isn't an exported function, so use rewire to get it (see top)
         const schoolCalendarURLsForStartingDate =
@@ -403,12 +401,20 @@ const testScrapeSchoolCalendars = () => {
 
             // We want to return two calendar HTML files to scrape
             mock('../util.js', {
-                constants: {},
+                constants: util.constants,
                 getURL: url => {
                     let filename = "";
                     if (callNumber == 0) {
+                        assert.equal(url, util.constants.SCHOOL_CALENDAR_URL,
+                            "First school calendar URL should be the constant");
+
                         filename = "schoolCalendar/calendarsFull1.html";
                     } else if (callNumber == 1) {
+                        let correctURL = util.constants.SCHOOL_CALENDAR_URL +
+                            "?cal_date=2017-1-23";
+                        assert.equal(url, correctURL, "Second school " +
+                            "URL should have query param");
+
                         filename = "schoolCalendar/calendarsFull2.html";
                     } else {
                         assert(false, "Error: call number " + callNumber);
@@ -430,8 +436,8 @@ const testScrapeSchoolCalendars = () => {
 
         // Test the whole scraping pipeline to ensure correct output
         it("Full", function() {
-            this.timeout(0);
-            return scraper.scrapeSchoolCalendars().then(calendarData => {
+            const date = new Date(2016, 11, 23, 0, 0, 0, 0);
+            return scraper.scrapeSchoolCalendars(date).then(calendarData => {
                 // Get the correct JSON output
                 let jsonFilename = "schoolCalendar/calendarsFull.json";
                 jsonFilename = testUtil.getAbsolutePath(jsonFilename);
