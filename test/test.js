@@ -11,3 +11,4 @@ must export a run() method that takes no arguments and runs all of its tests.
 */
 
 require('./TestAthleticsTeamsScraper.js').run();
+require('./TestSchoolCalendarScraper.js').run();

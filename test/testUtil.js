@@ -33,12 +33,12 @@ module.exports.testScraper = (testName, scraperFn, tests) => {
             it(test["name"], function() {
 
                 // Get the HTML file to scrape for this test and scrape it
-                let htmlFilename = getAbsolutePath(test["html"]);
+                let htmlFilename = getAbsolutePath(test["file"] + ".html");
                 const $ = cheerio.load(fs.readFileSync(htmlFilename, "utf8"));
                 const output = scraperFn($);
 
                 // Get the correct JSON output
-                let jsonFilename = getAbsolutePath(test["json"]);
+                let jsonFilename = getAbsolutePath(test["file"] + ".json");
                 const jsonFile = fs.readFileSync(jsonFilename, 'utf8');
                 const correctOutput = JSON.parse(jsonFile);
 
@@ -51,7 +51,7 @@ module.exports.testScraper = (testName, scraperFn, tests) => {
 
 
 /*
- * FUNCTION: getAbsolutePath
+ * EXPORTED FUNCTION: getAbsolutePath
  * --------------------------
  * Parameters:
  *     filename - the name of a file in the TEST_FILES_DIRECTORY folder
@@ -63,3 +63,4 @@ module.exports.testScraper = (testName, scraperFn, tests) => {
 function getAbsolutePath(filename) {
     return __dirname + "/" + TEST_FILES_DIRECTORY + "/" + filename;
 }
+module.exports.getAbsolutePath = getAbsolutePath;

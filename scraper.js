@@ -22,8 +22,6 @@ Additionally, an event may have the following fields:
 	startTime - a datetime string
 	endTime - a datetime string
 	location - the name of the event's location
-
-If any of the above fields are absent, their value is null.
 --------------------------------------------
 */
 module.exports.scrapeSchoolCalendars = () => {
@@ -161,8 +159,6 @@ Additionally, an event may have the following fields:
 	startTime - a datetime string
 	endTime - a datetime string
 	location - the name of the event's location
-
-If any of the above fields are absent, their value is null.
 -------------------------------------------
 */
 const scrapeSchoolCalendar = $ => {
@@ -186,10 +182,7 @@ const scrapeSchoolCalendar = $ => {
 			date: date,
 			day: dayName,
 			year: year,
-			eventName: eventName,
-			startTime: null,
-			endTime: null,
-			location: null
+			eventName: eventName
 		};
 
 		// Add the location if there is one

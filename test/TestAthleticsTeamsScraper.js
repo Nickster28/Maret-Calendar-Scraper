@@ -3,34 +3,37 @@ const scraper = require('../scraper.js');
 
 /*
  * A list of test objects, each representing one test to run.  Each object
- * contains a name for the test, as well as the HTML file to use to test the
- * scraping, and the expected JSON output.
+ * contains a name for the test, as well as the HTML and JSON file to use to
+ test the scraping (named identically, but with different file types).
  */
 const TESTS = [
 	{
 		name: "1 Season 1 Team no <a>",
-		html: "athleticsTeams/oneonesimple.html",
-		json: "athleticsTeams/oneonesimple.json"
+		file: "athleticsTeams/oneonesimple"
 	},
 	{
 		name: "1 Season 1 Team <a>",
-		html: "athleticsTeams/oneoneatag.html",
-		json: "athleticsTeams/oneoneatag.json"
+		file: "athleticsTeams/oneoneatag"
 	},
 	{
 		name: "1 Season 1 Team Escaped Chars",
-		html: "athleticsTeams/oneoneescaped.html",
-		json: "athleticsTeams/oneoneescaped.json"
+		file: "athleticsTeams/oneoneescaped"
 	},
 	{
 		name: "1 Season Multiple Teams",
-		html: "athleticsTeams/onemultiple.html",
-		json: "athleticsTeams/onemultiple.json"
+		file: "athleticsTeams/onemultiple"
+	},
+	{
+		name: "1 Season Multiple Sports",
+		file: "athleticsTeams/onemultiplesports"
 	},
 	{
 		name: "Multiple Seasons Multiple Teams",
-		html: "athleticsTeams/multiplemultiple.html",
-		json: "athleticsTeams/multiplemultiple.json"
+		file: "athleticsTeams/multiplemultiple"
+	},
+	{
+		name: "Full",
+		file: "athleticsTeams/full"
 	}
 ]
 
@@ -45,7 +48,9 @@ different numbers of seasons, teams, and team name tag formats.
 --------------------
 */
 module.exports.run = () => {
-	testUtil.testScraper("scrapeAthleticsTeams", scraper.scrapeAthleticsTeams,
-		TESTS);
+	describe("Athletics Teams Scraper Tests", function() {
+		testUtil.testScraper("scrapeAthleticsTeams",
+			scraper.scrapeAthleticsTeams, TESTS);
+	});
 }
 
