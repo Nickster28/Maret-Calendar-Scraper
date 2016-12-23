@@ -1,9 +1,5 @@
 # MyMaret-Calendar-Scraper
-A scraper for the Maret Upper School and athletics calendar sites.
-This is a node server that scrapes the mobile Upper School calendar site
-(https://www.maret.org/mobile/index.aspx?v=c&mid=120&t=Upper%20School)
-and the main athletics page calendar
-(http://www.maret.org/athletics-center/index.aspx).
+A scraper for the Maret School Calendar and athletics calendar/teams sites.
 To run the server, just run
 
 ```javascript
@@ -15,95 +11,62 @@ The main file, server.js, will run.  There are multiple endpoints:
 ### GET /schoolCalendars
 
 This sends back a JSON response containing information about the events in
-all the main school calendars.  With the given util.js settings, the format
-is as follows:
+all the main school calendars for the next two months.  With the given util.js
+setting for URL, the format is an array of event objects, in chronological order
+from earliest to latest:
 
 ```javascript
-{
-    "Upper School": [
-        ...
-    ],
-    "Middle School": [
-        ...
-    ],
-    "Lower School": [
-        ...
-    ]
-}
+[
+    {
+        "month": "September",
+        "date": 9,
+        "day": "Wednesday",
+        "year": 2016,
+        "eventName": "US Leadership Workshop",
+        "startTime": "6:00 PM",
+        "endTime": "7:30 PM",
+        "location": "Theatre,Theatre Lobby"
+    },
+    ...
+]
 ```
 
-Values are arrays of day dictionaries, where each day dictionary has the format:
+Every event object has the following fields:
 
-```javascript
-{
-    "month": "September",
-    "date": 9,
-    "day": "Wednesday",
-    "year": 2015,
-    "events": [
-        ...
-    ]
-}
-```
+month - abbreviated month name
+date - the numeric date
+day - abbreviated day name
+year - numeric year
+eventName - name of the event
 
-Each day dictionary has an array of event dictionaries, where the event
-dictionary format is the following:
+Additionally, an event may have the following fields:
 
-```javascript
-{
-    "eventName": "US Leadership Workshop",
-    "startTime": "6:00 PM",
-    "endTime": "7:30 PM",
-    "eventLocation": "Theatre,Theatre Lobby"
-}
-```
+    startTime - a datetime string
+    endTime - a datetime string
+    location - the name of the event's location
 
-Note that only the eventName field is guaranteed to be non-null.  The calendars
-are fetched in parallel.
-
-### GET /athleticsCalendar
-
-This sends back a JSON response containing information about the events in the
-athletics calendar.  The response format is an array of day dictionaries, which
-are identical to the day dictionaries in GET /scrapeSchoolCalendars.  The only
-difference is that the event dictionaries inside the days are defined as:
-
-```javascript
-{
-    "eventID": 12543,
-    "eventName": null,
-    "teamName": "Girls' Varsity Soccer",
-    "teamID": 12542,
-    "opponent": "Froggie School",
-    "startTime": "3:00 PM",
-    "endTime": "4:00 PM",
-    "dismissalTime": "2:00 PM",
-    "returnTime": "5:00 PM",
-    "isHome": false,
-    "eventAddress": "1254 Lakeside Dr. Potomac, MD 20156"
-    "eventLocation": null
-}
-```
-
-eventID, teamName, teamID and isHome are guaranteed to be non-null.
-eventID is a unique ID.  eventAddress is a mappable address.
-eventLocation is only the name of a place.  Note that isHome can be true and
-there can be a non-null eventLocation and eventAddress if the game is played at
-a home facility besides the main school campus.  eventName is the special name
-for this event (if any - most events will not have one, but some, such as cross
-country meets, have names like "Cross Country Invitational".)
 
 ### GET /athleticsTeams
 
-This sends back an array of athletics teams objects sorted by season - Fall,
-then Winter, then Spring.  Each object contains the following properties 
-(all guaranteed to be non-null):
+This sends back an array of athletics teams for each season - Fall,
+then Winter, then Spring.  The response is a dictionary of keys that are season
+names (e.g. "Fall", "Winter",...) and the values are arrays of team names:
 
 ```javascript
 {
-    teamName: "Cross Country",
-    teamID: 1245,
-    season: "Fall"
+    "Fall": [
+        "Cross Country",
+        "Girls' Varsity Tennis",
+        ...
+    ],
+    "Winter": [
+        ...
+    ],
+    "Spring": [
+        ...
+    ]
 }
 ```
 
+Note that the seasons returned are whatever are included at the URL in util.js;
+there may be more or less seasons than are given here.
