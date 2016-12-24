@@ -2,7 +2,7 @@ const assert = require("assert");
 const fs = require("fs");
 const mock = require("mock-require");
 const rewire = require("rewire");
-let scraper = rewire("../scraper.js");
+var scraper = rewire("../scraper.js");
 const testUtil = require("./testUtil.js");
 const util = require("../util.js");
 
@@ -40,11 +40,11 @@ const testSchoolCalendarURLsForStartingDate = function() {
     "use strict";
     describe("schoolCalendarURLsForStartingDate Tests", function() {
         
-        for (let i = 1; i <= 6; i++) {
+        for (var i = 1; i <= 6; i++) {
             testSameYearURLs(i);
         }
 
-        for (let i = 0; i < 6; i++) {
+        for (var i = 0; i < 6; i++) {
             testOverflowYearURLs(i);
         }
     });
@@ -79,7 +79,7 @@ const testSameYearURLs = function(numURLs) {
             "First URL should be base school calendar URL");
 
         // Each subsequent URL should have a cal_date query param for month + 1
-        for (let i = 1; i < urls.length; i++) {
+        for (var i = 1; i < urls.length; i++) {
             const queryParam = "?cal_date=" + testDate.getFullYear() + "-" +
                 (testDate.getMonth() + 1 + i) + "-" + testDate.getDate();
             assert.equal(urls[i], SCHOOL_CALENDAR_URL + queryParam,
@@ -117,10 +117,10 @@ const testOverflowYearURLs = function(numURLs) {
 
         /* Each subsequent URL should have a cal_date query param for month + 1
         with wrapping to the next year. */
-        let month = testDate.getMonth() + 1;
-        let year = testDate.getFullYear();
+        var month = testDate.getMonth() + 1;
+        var year = testDate.getFullYear();
 
-        for (let i = 1; i < urls.length; i++) {
+        for (var i = 1; i < urls.length; i++) {
             const date = testDate.getDate();
             month += 1;
             if (month == 13) {
@@ -243,11 +243,11 @@ const testMergeCalendars = function() {
         });
 
         it("Empty Calendars", function() {
-            for (let i = 0; i < 3; i++) {
+            for (var i = 0; i < 3; i++) {
 
                 // Make 2 of 3 calendars empty, except for calendars[i]
                 const calendars = [];
-                for (let j = 0; j < 3; j++) {
+                for (var j = 0; j < 3; j++) {
                     if (j == i) calendars.push(calendar1);
                     else calendars.push([]);
                 }
@@ -397,20 +397,20 @@ const testScrapeSchoolCalendars = function() {
         
         // Before all tests are run, mock out getURL to return static HTML files
         before(function() {
-            let callNumber = 0;
+            var callNumber = 0;
 
             // We want to return two calendar HTML files to scrape
             mock('../util.js', {
                 constants: util.constants,
                 getURL: function(url) {
-                    let filename = "";
+                    var filename = "";
                     if (callNumber == 0) {
                         assert.equal(url, util.constants.SCHOOL_CALENDAR_URL,
                             "First school calendar URL should be the constant");
 
                         filename = "schoolCalendar/calendarsFull1.html";
                     } else if (callNumber == 1) {
-                        let correctURL = util.constants.SCHOOL_CALENDAR_URL +
+                        var correctURL = util.constants.SCHOOL_CALENDAR_URL +
                             "?cal_date=2017-1-23";
                         assert.equal(url, correctURL, "Second school " +
                             "URL should have query param");
@@ -439,7 +439,7 @@ const testScrapeSchoolCalendars = function() {
             const date = new Date(2016, 11, 23, 0, 0, 0, 0);
             return scraper.scrapeSchoolCalendars(date).then(function(data) {
                 // Get the correct JSON output
-                let jsonFilename = "schoolCalendar/calendarsFull.json";
+                var jsonFilename = "schoolCalendar/calendarsFull.json";
                 jsonFilename = testUtil.getAbsolutePath(jsonFilename);
                 const jsonFile = fs.readFileSync(jsonFilename, 'utf8');
                 const correctOutput = JSON.parse(jsonFile);

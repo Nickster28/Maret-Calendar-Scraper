@@ -2,7 +2,7 @@ const assert = require("assert");
 const fs = require("fs");
 const mock = require("mock-require");
 const rewire = require("rewire");
-let scraper = rewire("../scraper.js");
+var scraper = rewire("../scraper.js");
 const testUtil = require("./testUtil.js");
 const util = require("../util.js");
 
@@ -73,7 +73,7 @@ module.exports.run = function() {
 			        	assert.equal(url, util.constants.ATHLETICS_TEAMS_URL,
 			        		"Athletics Teams URL should be from util");
 
-			        	let filename = "athleticsTeams/full.html";
+			        	var filename = "athleticsTeams/full.html";
 			            filename = testUtil.getAbsolutePath(filename);
 			            const file = fs.readFileSync(filename, 'utf8');
 			            return Promise.resolve(file);
@@ -91,7 +91,7 @@ module.exports.run = function() {
 			it("Full", function() {
 			    return scraper.scrapeAthleticsTeams().then(function(teams) {
 			        // Get the correct JSON output
-			        let jsonFilename = "athleticsTeams/full.json";
+			        var jsonFilename = "athleticsTeams/full.json";
 			        jsonFilename = testUtil.getAbsolutePath(jsonFilename);
 			        const jsonFile = fs.readFileSync(jsonFilename, 'utf8');
 			        assert.deepStrictEqual(teams, JSON.parse(jsonFile));

@@ -54,13 +54,13 @@ calendar data for the next numMonths months.
 -----------------------------------------------
 */
 const schoolCalendarURLsForStartingDate = function(startingDate, numMonths) {
-	let year = startingDate.getFullYear();
-	let monthNum = startingDate.getMonth() + 1;
+	var year = startingDate.getFullYear();
+	var monthNum = startingDate.getMonth() + 1;
 	const date = startingDate.getDate();
 
 	// Get URLs for the pages for the next months of school calendar data
 	const calendarURLs = [util.constants.SCHOOL_CALENDAR_URL];
-	for (let i = 0; i < numMonths - 1; i++) {
+	for (var i = 0; i < numMonths - 1; i++) {
 	    monthNum += 1;
 	    if (monthNum == 13) {
 	        monthNum = 1;
@@ -95,16 +95,16 @@ chronologically.
 const mergeCalendars = function(calendars) {
 	// Start with the first calendar, and merge in the rest
 	const mergedCalendar = [];
-	for (let i = 0; i < calendars[0].length; i++) {
+	for (var i = 0; i < calendars[0].length; i++) {
 		mergedCalendar.push(calendars[0][i]);
 	}
 
 	/* Loop over the other calendars, and add events once we're not overlapping
 	(since we know the calendar arrays are sorted chronologically and later
 	calendar arrays come after earlier ones). */
-	for (let i = 1; i < calendars.length; i++) {
-		let isOverlapping = true;
-		for (let j = 0; j < calendars[i].length; j++) {
+	for (var i = 1; i < calendars.length; i++) {
+		var isOverlapping = true;
+		for (var j = 0; j < calendars[i].length; j++) {
 			if (mergedCalendar.length == 0 || 
 				!containsEvent(mergedCalendar, calendars[i][j])) { 
 				isOverlapping = false;
@@ -131,7 +131,7 @@ we assume that calendar contains event as well.
 ---------------------------
 */
 const containsEvent = function(calendar, event) {
-	for (let i = 0; i < calendar.length; i++) {
+	for (var i = 0; i < calendar.length; i++) {
 		const currEvent = calendar[i];
 		if (currEvent.month == event.month && currEvent.date == event.date &&
 			currEvent.day == event.day && currEvent.year == event.year) {
@@ -174,7 +174,7 @@ const scrapeSchoolCalendar = function($) {
 		const year = parseInt(dateElem.attr("data-year"));
 
 		// Get the name of the day and month
-		let dayName = $(dateElem).find(".fsCalendarDay").text().trim();
+		var dayName = $(dateElem).find(".fsCalendarDay").text().trim();
 		dayName = dayName.substring(0, dayName.length - 1);
 		const monthName = $(dateElem).find(".fsCalendarMonth").text().trim();
 

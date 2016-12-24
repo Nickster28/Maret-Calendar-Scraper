@@ -33,12 +33,12 @@ module.exports.testScraper = (testName, scraperFn, tests) => {
             it(test["name"], function() {
 
                 // Get the HTML file to scrape for this test and scrape it
-                let htmlFilename = getAbsolutePath(test["file"] + ".html");
+                const  htmlFilename = getAbsolutePath(test["file"] + ".html");
                 const $ = cheerio.load(fs.readFileSync(htmlFilename, "utf8"));
                 const output = scraperFn($);
 
                 // Get the correct JSON output
-                let jsonFilename = getAbsolutePath(test["file"] + ".json");
+                const jsonFilename = getAbsolutePath(test["file"] + ".json");
                 const jsonFile = fs.readFileSync(jsonFilename, 'utf8');
                 const correctOutput = JSON.parse(jsonFile);
 

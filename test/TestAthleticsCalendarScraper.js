@@ -2,7 +2,7 @@ const assert = require("assert");
 const fs = require("fs");
 const mock = require("mock-require");
 const rewire = require("rewire");
-let scraper = rewire("../scraper.js");
+var scraper = rewire("../scraper.js");
 const testUtil = require("./testUtil.js");
 const util = require("../util.js");
 
@@ -153,7 +153,7 @@ const testScrapeAthleticsCalendars = function() {
         
         // Before all tests are run, mock out getURL to return static HTML files
         before(function() {
-            let callNumber = 0;
+            var callNumber = 0;
 
            	/* We want to return two calendar HTML files to scrape.  Make sure
            	this function is called with the right parameters and right number
@@ -161,7 +161,7 @@ const testScrapeAthleticsCalendars = function() {
             mock('../util.js', {
                 constants: util.constants,
                 getURL: function(url) {
-                    let filename = "";
+                    var filename = "";
                     if (callNumber > 1) {
                     	assert(false, "Error: too many calls: " + callNumber);
                     } else if (url == util.constants.ATHLETICS_GAMES_URL) {
@@ -190,7 +190,7 @@ const testScrapeAthleticsCalendars = function() {
         it("Full", function() {
             return scraper.scrapeAthleticsCalendars().then(function(data) {
                 // Get the correct JSON output
-                let jsonFilename = "athleticsCalendar/full.json";
+                var jsonFilename = "athleticsCalendar/full.json";
                 jsonFilename = testUtil.getAbsolutePath(jsonFilename);
                 const jsonFile = fs.readFileSync(jsonFilename, 'utf8');
                 const correctOutput = JSON.parse(jsonFile);
