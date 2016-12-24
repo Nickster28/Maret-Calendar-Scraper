@@ -4,7 +4,7 @@ const scraper = require('./scraper.js');
 const app = express();
 app.set('port', (process.env.PORT || 5000));
 
-const errorHandler = (error, httpResponse) => {
+const errorHandler = function(error, httpResponse) {
     console.log(error.stack);
     console.log("Error: " + error);
     httpResponse.sendStatus(500);
