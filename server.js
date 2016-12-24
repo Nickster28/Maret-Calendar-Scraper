@@ -45,11 +45,11 @@ Additionally, an event object may have the following fields:
     - location: the name of the event's location
 --------------------------
 */
-app.get('/schoolCalendar', (req, res) => {
+app.get('/schoolCalendar', function(req, res) {
     "use strict";
-    scraper.scrapeSchoolCalendars(new Date()).then(calendarData => {
+    scraper.scrapeSchoolCalendars(new Date()).then(function(calendarData) {
         res.json(calendarData);
-    }, error => {
+    }, function(error) {
         errorHandler(error, res);
     });
 });
@@ -119,11 +119,11 @@ All fields in a practice object are the same as their corresponding fields in a
 game object.
 --------------------------
 */
-app.get('/athleticsCalendar', (req, res) => {
+app.get('/athleticsCalendar', function(req, res) {
     "use strict";
-    scraper.scrapeAthleticsCalendars().then(calendarData => {
+    scraper.scrapeAthleticsCalendars().then(function(calendarData) {
         res.json(calendarData);   
-    }, error => {
+    }, function(error) {
         errorHandler(error, res);
     });
 });
@@ -149,18 +149,18 @@ arrays, one for each season, of athletics team names (as strings):
 }
 -----------------------------------------
 */
-app.get('/athleticsTeams', (req, res) => {
+app.get('/athleticsTeams', function(req, res) {
     "use strict";
-    scraper.scrapeAthleticsTeams().then(teams => {
+    scraper.scrapeAthleticsTeams().then(function(teams) {
         res.json(teams);
-    }, error => {
+    }, function(error) {
         errorHandler(error, res);
     });
 });
 
 
 /* Start the server */
-app.listen(app.get('port'), () => {
+app.listen(app.get('port'), function() {
     console.log('Node app is running on port', app.get('port'));
 });
 

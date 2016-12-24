@@ -36,7 +36,7 @@ Runs tests for generating school calendar URLs to scrape given a starting date.
 Tests generating URLs within the same year, and also overflowing across 2 years.
 ---------------------------------------------------
 */
-const testSchoolCalendarURLsForStartingDate = () => {
+const testSchoolCalendarURLsForStartingDate = function() {
     "use strict";
     describe("schoolCalendarURLsForStartingDate Tests", function() {
         
@@ -62,7 +62,7 @@ Tests that generating numURLs urls for the same year for scraping the school
 calendar works correctly.
 ------------------------------
 */
-const testSameYearURLs = numURLs => {
+const testSameYearURLs = function(numURLs) {
     if (numURLs > 12) assert(false, "Error: can't have > 12 same-year URLs");
 
     it("Same Year (" + numURLs + " URLs)", function() {
@@ -100,7 +100,7 @@ Tests that generating numURLs urls across 2 years for scraping the school
 calendar works correctly (aka month and year wrapping work properly).
 ------------------------------
 */
-const testOverflowYearURLs = numURLs => {
+const testOverflowYearURLs = function(numURLs) {
     numURLs += 2;
     it("Year Overflow (" + numURLs + " URLs)", function() {
         const SCHOOL_CALENDAR_URL = util.constants.SCHOOL_CALENDAR_URL;
@@ -143,7 +143,7 @@ Returns: NA
 Tests that merging multiple calendars together works properly.
 ------------------------------
 */
-const testMergeCalendars = () => {
+const testMergeCalendars = function() {
     "use strict";
     describe("mergeCalendars Tests", function() {
 
@@ -279,7 +279,7 @@ calendar contains entries for a given day, then it must contain *all* entries
 for a given day.
 ------------------------------
 */
-const testContainsEvent = () => {
+const testContainsEvent = function() {
     "use strict";
     describe("containsEvent Tests", function() {
 
@@ -374,7 +374,7 @@ Runs all tests for the SINGLE school calendar scraper, which includes tests to
 scrape different variations of possible events, single days, and multiple days.
 --------------------
 */
-const testScrapeSchoolCalendar = () => {
+const testScrapeSchoolCalendar = function() {
     // This isn't an exported function, so use rewire to get it (see top)
     const scrapeSchoolCalendar = scraper.__get__("scrapeSchoolCalendar");
     testUtil.testScraper("scrapeSchoolCalendar", scrapeSchoolCalendar, 
@@ -392,7 +392,7 @@ everything tested above such as calendar URL generation, page scraping, and
 calendar event merging.
 --------------------
 */
-const testScrapeSchoolCalendars = () => {
+const testScrapeSchoolCalendars = function() {
     describe("scrapeSchoolCalendars", function() {
         
         // Before all tests are run, mock out getURL to return static HTML files
@@ -402,7 +402,7 @@ const testScrapeSchoolCalendars = () => {
             // We want to return two calendar HTML files to scrape
             mock('../util.js', {
                 constants: util.constants,
-                getURL: url => {
+                getURL: function(url) {
                     let filename = "";
                     if (callNumber == 0) {
                         assert.equal(url, util.constants.SCHOOL_CALENDAR_URL,
@@ -437,13 +437,13 @@ const testScrapeSchoolCalendars = () => {
         // Test the whole scraping pipeline to ensure correct output
         it("Full", function() {
             const date = new Date(2016, 11, 23, 0, 0, 0, 0);
-            return scraper.scrapeSchoolCalendars(date).then(calendarData => {
+            return scraper.scrapeSchoolCalendars(date).then(function(data) {
                 // Get the correct JSON output
                 let jsonFilename = "schoolCalendar/calendarsFull.json";
                 jsonFilename = testUtil.getAbsolutePath(jsonFilename);
                 const jsonFile = fs.readFileSync(jsonFilename, 'utf8');
                 const correctOutput = JSON.parse(jsonFile);
-                assert.deepStrictEqual(calendarData, correctOutput);
+                assert.deepStrictEqual(data, correctOutput);
             });
         });
     });

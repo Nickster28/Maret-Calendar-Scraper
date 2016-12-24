@@ -82,7 +82,7 @@ Runs all tests in GAMES_TESTS to test different types of scraped athletics
 games, including testing different optional fields, home vs. away, etc.
 --------------------------------------
 */
-const testScrapeAthleticsGames = () => {
+const testScrapeAthleticsGames = function() {
 	// This isn't an exported function, so use rewire (see top)
 	const scrapeAthleticsGames = scraper.__get__("scrapeAthleticsGames");
 	testUtil.testScraper("scrapeAthleticsGames", scrapeAthleticsGames,
@@ -130,7 +130,7 @@ Runs all tests in PRACTICES_TESTS to test different types of scraped athletics
 practices, including testing different optional fields.
 --------------------------------------
 */
-const testScrapeAthleticsPractices = () => {
+const testScrapeAthleticsPractices = function() {
 	// This isn't an exported function, so use rewire (see top)
 	const scrapeAthleticsPractices =
 		scraper.__get__("scrapeAthleticsPractices");
@@ -148,7 +148,7 @@ Runs a test on the whole athletics calendar scraping pipeline, which includes
 fetching and scraping athletics games and practices.
 ------------------------------------------
 */
-const testScrapeAthleticsCalendars = () => {
+const testScrapeAthleticsCalendars = function() {
     describe("scrapeAthleticsCalendars", function() {
         
         // Before all tests are run, mock out getURL to return static HTML files
@@ -160,7 +160,7 @@ const testScrapeAthleticsCalendars = () => {
            	of times. */
             mock('../util.js', {
                 constants: util.constants,
-                getURL: url => {
+                getURL: function(url) {
                     let filename = "";
                     if (callNumber > 1) {
                     	assert(false, "Error: too many calls: " + callNumber);
@@ -188,13 +188,13 @@ const testScrapeAthleticsCalendars = () => {
 
         // Test the whole scraping pipeline to ensure correct output
         it("Full", function() {
-            return scraper.scrapeAthleticsCalendars().then(calendarData => {
+            return scraper.scrapeAthleticsCalendars().then(function(data) {
                 // Get the correct JSON output
                 let jsonFilename = "athleticsCalendar/full.json";
                 jsonFilename = testUtil.getAbsolutePath(jsonFilename);
                 const jsonFile = fs.readFileSync(jsonFilename, 'utf8');
                 const correctOutput = JSON.parse(jsonFile);
-                assert.deepStrictEqual(calendarData, correctOutput);
+                assert.deepStrictEqual(data, correctOutput);
             });
         });
     });

@@ -14,10 +14,10 @@ error will be passed back in a promise.  Otherwise, the response
 is passed back.
 --------------------------
 */
-module.exports.getURL = url => {
+module.exports.getURL = function(url) {
     "use strict";
-    return new Promise((resolve, reject) => {
-        request(url, (error, response, body) => {
+    return new Promise(function(resolve, reject) {
+        request(url, function(error, response, body) {
             if(error) reject(error);
             else resolve(body);
         });
