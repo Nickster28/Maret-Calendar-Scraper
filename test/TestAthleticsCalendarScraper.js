@@ -28,47 +28,47 @@ module.exports.run = function() {
 const GAMES_TESTS = [
 	{
 		name: "Base Game (No Home/Away Label)",
-		file: "athleticsCalendar/base"
+		file: "athleticsCalendarGame/base"
 	},
 	{
 		name: "Away Game",
-		file: "athleticsCalendar/away"
+		file: "athleticsCalendarGame/away"
 	},
 	{
 		name: "Home Game",
-		file: "athleticsCalendar/home"
+		file: "athleticsCalendarGame/home"
 	},
 	{
 		name: "Opponent",
-		file: "athleticsCalendar/opponent"
+		file: "athleticsCalendarGame/opponent"
 	},
 	{
 		name: "Time",
-		file: "athleticsCalendar/time"
+		file: "athleticsCalendarGame/time"
 	},
 	{
 		name: "Location",
-		file: "athleticsCalendar/location"
+		file: "athleticsCalendarGame/location"
 	},
 	{
 		name: "Game Result",
-		file: "athleticsCalendar/gameResult"
+		file: "athleticsCalendarGame/result"
 	},
 	{
 		name: "Game Status",
-		file: "athleticsCalendar/gameStatus"
+		file: "athleticsCalendarGame/status"
 	},
 	{
 		name: "Complete Event",
-		file: "athleticsCalendar/completeEvent"
+		file: "athleticsCalendarGame/complete"
 	},
 	{
 		name: "Ignore Table Header",
-		file: "athleticsCalendar/tableHeader"
+		file: "athleticsCalendarGame/tableHeader"
 	},
 	{
 		name: "Full",
-		file: "athleticsCalendar/fullGames"
+		file: "athleticsCalendarGame/full"
 	}
 ];
 
