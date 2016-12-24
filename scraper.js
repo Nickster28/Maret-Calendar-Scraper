@@ -448,7 +448,7 @@ const scrapeAthleticsPractices = $ => {
 }
 
 
-/* FUNCTION: scrapeAthleticsTeams
+/* EXPORTED FUNCTION: scrapeAthleticsTeams
 ----------------------------------
 Parameters: NA
 
