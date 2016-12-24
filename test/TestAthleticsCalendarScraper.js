@@ -89,9 +89,47 @@ const testScrapeAthleticsGames = () => {
 		GAMES_TESTS);
 }
 
-const PRACTICES_TESTS = [];
+const PRACTICES_TESTS = [
+	{
+		name: "Base Practice",
+		file: "athleticsCalendarPractice/base"
+	},
+	{
+		name: "Time",
+		file: "athleticsCalendarPractice/time"
+	},
+	{
+		name: "Location",
+		file: "athleticsCalendarPractice/location"
+	},
+	{
+		name: "Game Status",
+		file: "athleticsCalendarPractice/status"
+	},
+	{
+		name: "Complete Event",
+		file: "athleticsCalendarPractice/complete"
+	},
+	{
+		name: "Ignore Table Header",
+		file: "athleticsCalendarPractice/tableHeader"
+	},
+	{
+		name: "Full",
+		file: "athleticsCalendarPractice/full"
+	}
+];
 
 
+/* FUNCTION: testScrapeAthleticsPractices
+--------------------------------------
+Parameters: NA
+Returns: NA
+
+Runs all tests in PRACTICES_TESTS to test different types of scraped athletics
+practices, including testing different optional fields.
+--------------------------------------
+*/
 const testScrapeAthleticsPractices = () => {
 	// This isn't an exported function, so use rewire (see top)
 	const scrapeAthleticsPractices =
@@ -104,3 +142,6 @@ const testScrapeAthleticsPractices = () => {
 const testScrapeAthleticsCalendars = () => {
     
 }
+
+
+
