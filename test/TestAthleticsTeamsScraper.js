@@ -65,6 +65,7 @@ module.exports.run = function() {
 		describe("scrapeAthleticsTeams", function() {
 			// Before all tests are run, mock out getURL to return static HTML
 			before(function() {
+				var callNumber = 0;
 
 			    // We want to return the athletics team page to scrape
 			    mock('../util.js', {
@@ -72,10 +73,13 @@ module.exports.run = function() {
 			        getURL: function(url) {
 			        	assert.equal(url, util.constants.ATHLETICS_TEAMS_URL,
 			        		"Athletics Teams URL should be from util");
+			        	assert.equal(callNumber, 0,
+			        		"getURL should only be called once");
 
 			        	var filename = "athleticsTeams/full.html";
 			            filename = testUtil.getAbsolutePath(filename);
 			            const file = fs.readFileSync(filename, 'utf8');
+			            callNumber++;
 			            return Promise.resolve(file);
 			        }
 			    });
