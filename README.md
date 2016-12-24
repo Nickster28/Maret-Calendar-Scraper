@@ -18,14 +18,14 @@ in chronological order from earliest to latest:
 ```javascript
 [
     {
-        "month": "September",
+        "month": "Sep",
         "date": 9,
-        "day": "Wednesday",
+        "day": "Wed",
         "year": 2016,
         "eventName": "US Leadership Workshop",
-        "startTime": "6:00 PM",
-        "endTime": "7:30 PM",
-        "location": "Theatre,Theatre Lobby"
+        "startTime": "2016-11-28T11:45:00-05:00",
+        "endTime": "2016-11-28T15:45:00-05:00",
+        "location": "Theatre Lobby"
     },
     ...
 ]
