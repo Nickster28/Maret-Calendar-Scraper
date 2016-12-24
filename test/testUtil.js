@@ -29,7 +29,7 @@ const TEST_FILES_DIRECTORY = "files";
 module.exports.testScraper = (testName, scraperFn, tests) => {
     "use strict";
     describe(testName, function() {
-        tests.forEach(test => {
+        tests.forEach(function(test) {
             it(test["name"], function() {
 
                 // Get the HTML file to scrape for this test and scrape it

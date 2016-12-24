@@ -52,7 +52,7 @@ Runs all tests for the athletics teams scraper, which includes tests to scrape
 different numbers of seasons, teams, and team name tag formats, and URL fetches.
 --------------------
 */
-module.exports.run = () => {
+module.exports.run = function() {
 	describe("Athletics Teams Scraper Tests", function() {
 
 		// This isn't an exported function, so use rewire (see top)
@@ -69,7 +69,7 @@ module.exports.run = () => {
 			    // We want to return the athletics team page to scrape
 			    mock('../util.js', {
 			        constants: util.constants,
-			        getURL: url => {
+			        getURL: function(url) {
 			        	assert.equal(url, util.constants.ATHLETICS_TEAMS_URL,
 			        		"Athletics Teams URL should be from util");
 
@@ -89,7 +89,7 @@ module.exports.run = () => {
 
 			// Test the whole scraping pipeline to ensure correct output
 			it("Full", function() {
-			    return scraper.scrapeAthleticsTeams().then(teams => {
+			    return scraper.scrapeAthleticsTeams().then(function(teams) {
 			        // Get the correct JSON output
 			        let jsonFilename = "athleticsTeams/full.json";
 			        jsonFilename = testUtil.getAbsolutePath(jsonFilename);

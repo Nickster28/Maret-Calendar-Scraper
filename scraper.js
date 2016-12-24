@@ -25,15 +25,18 @@ Additionally, an event may have the following fields:
 	- location: the name of the event's location
 --------------------------------------------
 */
-module.exports.scrapeSchoolCalendars = date => {
+module.exports.scrapeSchoolCalendars = function(date) {
 	const calendarURLs = schoolCalendarURLsForStartingDate(date);
-	const urlFetchPromises = calendarURLs.map(url => util.getURL(url));
-	return Promise.all(urlFetchPromises).then(fetchedHTML => {
-		const scraperPromises = fetchedHTML.map(html => {
+	const urlFetchPromises = calendarURLs.map(function(url) {
+		return util.getURL(url);
+	});
+
+	return Promise.all(urlFetchPromises).then(function(fetchedHTML) {
+		const scraperPromises = fetchedHTML.map(function(html) {
 			return scrapeSchoolCalendar(cheerio.load(html));
 		});
 		return Promise.all(scraperPromises);
-	}).then(calendars => {
+	}).then(function(calendars) {
 		return mergeCalendars(calendars);
 	});
 }
@@ -51,7 +54,7 @@ Returns: an array of school calendar URLs that should be scraped to get school
 calendar data for the next numMonths months.
 -----------------------------------------------
 */
-const schoolCalendarURLsForStartingDate = (startingDate, numMonths=2) => {
+const schoolCalendarURLsForStartingDate = function(startingDate, numMonths=2) {
 	let year = startingDate.getFullYear();
 	let monthNum = startingDate.getMonth() + 1;
 	const date = startingDate.getDate();
@@ -90,7 +93,7 @@ Returns: a single array of all of the events in calendars merged
 chronologically.
 ----------------------------
 */
-const mergeCalendars = calendars => {
+const mergeCalendars = function(calendars) {
 	// Start with the first calendar, and merge in the rest
 	const mergedCalendar = [];
 	for (let i = 0; i < calendars[0].length; i++) {
@@ -128,7 +131,7 @@ has no partial days, so if the calendar has events on the same day as event,
 we assume that calendar contains event as well. 
 ---------------------------
 */
-const containsEvent = (calendar, event) => {
+const containsEvent = function(calendar, event) {
 	for (let i = 0; i < calendar.length; i++) {
 		const currEvent = calendar[i];
 		if (currEvent.month == event.month && currEvent.date == event.date &&
@@ -162,9 +165,9 @@ Additionally, each event may have the following fields:
 	- location: the name of the event's location
 -------------------------------------------
 */
-const scrapeSchoolCalendar = $ => {
+const scrapeSchoolCalendar = function($) {
 
-	return $(".fsCalendarInfo").map((i, elem) => {
+	return $(".fsCalendarInfo").map(function(i, elem) {
 
 		// Get date info from the top sibling (elem before all event rows)
 		const dateElem = $(elem).siblings().first();
@@ -273,18 +276,18 @@ All fields in a practice object are the same as their corresponding fields in a
 game object.
 -----------------------------------------------
 */
-module.exports.scrapeAthleticsCalendars = () => {
+module.exports.scrapeAthleticsCalendars = function() {
 	const urlFetchPromises = [
 		util.getURL(util.constants.ATHLETICS_GAMES_URL), 
 		util.getURL(util.constants.ATHLETICS_PRACTICES_URL)
 	];
 
-	return Promise.all(urlFetchPromises).then(fetchedHTML => {
+	return Promise.all(urlFetchPromises).then(function(fetchedHTML) {
 		return Promise.all([
 			scrapeAthleticsGames(cheerio.load(fetchedHTML[0])),
 			scrapeAthleticsPractices(cheerio.load(fetchedHTML[1]))
 		]);
-	}).then(calendars => {
+	}).then(function(calendars) {
 		return {
 			games: calendars[0],
 			practices: calendars[1]
@@ -331,8 +334,8 @@ Additionally, every game event object may have the following fields:
 	- status: "CANCELLED" or another string indicator of game status
 --------------------------------------
 */
-const scrapeAthleticsGames = $ => {
-	return $("tbody tr").map((i, elem) => {
+const scrapeAthleticsGames = function($) {
+	return $("tbody tr").map(function(i, elem) {
 		const event = {
 			month: $(elem).find("td.fsAthleticsDate .fsMonth").text().trim(),
 			date: parseInt($(elem).find("td.fsAthleticsDate .fsDay").text()),
@@ -414,8 +417,8 @@ Additionally, every practice event object may have the following fields:
 	- status: "CANCELLED" or another string indicator of practice status
 --------------------------------------
 */
-const scrapeAthleticsPractices = $ => {
-	return $("tbody tr").map((i, elem) => {
+const scrapeAthleticsPractices = function($) {
+	return $("tbody tr").map(function(i, elem) {
 		const event = {
 			month: $(elem).find("td.fsAthleticsDate .fsMonth").text().trim(),
 			date: parseInt($(elem).find("td.fsAthleticsDate .fsDay").text()),
@@ -456,8 +459,8 @@ Returns: A dictionary from season names ("Fall") to a list of team names in that
 season.  This data is scraped from the school athletics page.
 ----------------------------------
 */
-module.exports.scrapeAthleticsTeams = () => {
-	return util.getURL(util.constants.ATHLETICS_TEAMS_URL).then(html => {
+module.exports.scrapeAthleticsTeams = function() {
+	return util.getURL(util.constants.ATHLETICS_TEAMS_URL).then(function(html) {
 		return scrapeAthleticsTeamsFromDOM(cheerio.load(html));
 	});
 }
@@ -472,18 +475,18 @@ Returns: A dictionary from season name ("Fall") to a list of team names in that
 season.  This data is scraped from the given Cheerio DOM object.
 ----------------------------------
 */
-const scrapeAthleticsTeamsFromDOM = $ => {
+const scrapeAthleticsTeamsFromDOM = function($) {
 
 	// A dictionary from season names ("Fall") to a list of team names
 	const teamsDict = {};
 
 	// There's one section element per season
-	$("section").each((i, elem) => {
+	$("section").each(function(i, elem) {
 		const season = $(elem).find("header h2").text().trim();
 		const teamNameSelector = "span.fsAthleticsTeamName";
 
 		// Get a list of all team names within this section
-		const teams = $(elem).find(teamNameSelector).map((i, elem) => {
+		const teams = $(elem).find(teamNameSelector).map(function(i, elem) {
 			return $(elem).text().trim();
 		}).get();
 
