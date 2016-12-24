@@ -26,7 +26,7 @@ const TEST_FILES_DIRECTORY = "files";
  * scraper function.
  * -------------------------------
  */
-module.exports.testScraper = (testName, scraperFn, tests) => {
+module.exports.testScraper = function(testName, scraperFn, tests) {
     "use strict";
     describe(testName, function() {
         tests.forEach(function(test) {
