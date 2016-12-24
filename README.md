@@ -54,6 +54,7 @@ http://www.maret.org/fs/elements/5634 and http://www.maret.org/fs/elements/5637,
 the format is an object with a "games" key and "practices" key, each mapping to
 an array:
 
+```javascript
 {
     "games": [
         ...
@@ -62,12 +63,14 @@ an array:
         ...
     ]
 }
+```
 
 Each array contains athletics event objects in chronological order for athletics
 games and practices scraped from the school website.  The information scraped
 for games and practices is slightly different, however.  The games events have
 the following format:
 
+```javascript
 {
     "month": "Sep",
     "date": 28,
@@ -80,25 +83,27 @@ the following format:
     "result": null,
     "status": "CANCELLED"
 }
+```
 
 where all fields except opponent, time, location, result, and status are
 guaranteed to exist.  A description of each field is as follows:
 
-    - month: an abbreviated name for the event month
-    - date: the numeric date
-    - year: the numeric year
-    - team: the school team competing
-    - isHome: boolean whether or not this is a home game
+* month: an abbreviated name for the event month
+* date: the numeric date
+* year: the numeric year
+* team: the school team competing
+* isHome: boolean whether or not this is a home game
 
 ** Not guaranteed to exist: **
-    - opponent: the opposing team name
-    - time: a datetime string
-    - location: the name of the game's location (NOT necessarily address)
-    - result: "Win" or "Loss" or another string indicator of game result
-    - status: "CANCELLED" or another string indicator of game status
+* opponent: the opposing team name
+* time: a datetime string
+* location: the name of the game's location (NOT necessarily address)
+* result: "Win" or "Loss" or another string indicator of game result
+* status: "CANCELLED" or another string indicator of game status
 
 The practices events have the following format (a subset of the game object):
 
+```javascript
 {
     "month": "Sep",
     "date": 28,
@@ -108,6 +113,7 @@ The practices events have the following format (a subset of the game object):
     "location": "Back Field",
     "status": "CANCELLED"
 }
+```
 
 where all fields except time, location and status are guaranteed to exist.  All
 fields in a practice object are the same as their corresponding fields in a
