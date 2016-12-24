@@ -19,17 +19,29 @@ sorted from earliest to latest.  Fetches the next two months of calendar data.
 Each object has the format:
 
 {
-    "month": "September",
-    "date": 9,
-    "day": "Wednesday",
+    "month": "Sep",
+    "date": 28,
+    "day": "Wed",
     "year": 2016,
     "eventName": "US Leadership Workshop",
-    "startTime": "6:00 PM",
-    "endTime": "7:30 PM",
+    "startTime": "2016-11-28T11:45:00-05:00",
+    "endTime": "2016-11-28T15:45:00-05:00",
     "location": "Theatre,Theatre Lobby"
 }
 
-All fields except startTime, endTime, and eventLocation are guaranteed to exist.
+where all fields except startTime, endTime and location are guaranteed to exist.
+A description of each field is as follows:
+
+    - month: abbreviated month name
+    - date: the numeric date
+    - day: abbreviated day name
+    - year: numeric year
+    - eventName: name of the event
+
+** Not guaranteed to exist: **
+    - startTime: a datetime string
+    - endTime: a datetime string
+    - location: the name of the event's location
 --------------------------
 */
 app.get('/schoolCalendar', (req, res) => {
@@ -45,7 +57,7 @@ app.get('/schoolCalendar', (req, res) => {
 /* ENDPOINT: GET /athleticsCalendar
 --------------------------
 A scraper for the athletics calendar, including practices and games.
-Responds with a dictionary containing a list of game events and practice events:
+Responds with an object with the following format:
 
 {
     "games": [
@@ -56,49 +68,60 @@ Responds with a dictionary containing a list of game events and practice events:
     ]
 }
 
-The array of games, which are sorted chronologically from earliest to latest,
-contains objects with the format:
+Each array contains athletics event objects in chronological order for athletics
+games and practices scraped from the school website.  The information scraped
+for games and practices is slightly different, however.  The games events have
+the following format:
 
 {
-    "month": "September",
-    "date": 9,
-    "day": "Wednesday",
+    "month": "Sep",
+    "date": 28,
     "year": 2016,
     "team": "Boys' Varsity Soccer",
     "opponent": "Other School"
-    "time": "6:00 PM",
+    "time": "2016-11-28T15:45:00-05:00",
     "location": "Back Field",
     "isHome": true,
     "result": null,
     "status": "CANCELLED"
 }
 
-All fields except opponent, time, location, isHome, result, and status are
-guaranteed to exist.  result is a string that may be either null, "Win", "Loss",
-or another string indicating the outcome of the game.  Status may be null or
-"CANCELLED" indicating the event was cancelled.
+where all fields except opponent, time, location, result, and status are
+guaranteed to exist.  A description of each field is as follows:
 
-The array of practices, which are also sorted chronologically from earliest to
-latest, contains objects with the format:
+    - month: an abbreviated name for the event month
+    - date: the numeric date
+    - year: the numeric year
+    - team: the school team competing
+    - isHome: boolean whether or not this is a home game
+
+** Not guaranteed to exist: **
+    - opponent: the opposing team name
+    - time: a datetime string
+    - location: the name of the game's location (NOT necessarily address)
+    - result: "Win" or "Loss" or another string indicator of game result
+    - status: "CANCELLED" or another string indicator of game status
+
+The practices events have the following format (a subset of the game object):
 
 {
-    "month": "September",
-    "date": 9,
-    "day": "Wednesday",
+    "month": "Sep",
+    "date": 28,
     "year": 2016,
     "team": "Boys' Varsity Soccer",
-    "time": "6:00 PM",
+    "time": "2016-11-28T15:45:00-05:00",
     "location": "Back Field",
     "status": "CANCELLED"
 }
 
-All fields except time, location, and status are guaranteed to exist.  Status
-may be null or "CANCELLED" indicating the event was cancelled.
+where all fields except time, location and status are guaranteed to exist.  All
+fields in a practice object are the same as their corresponding fields in a
+game object.
 --------------------------
 */
 app.get('/athleticsCalendar', (req, res) => {
     "use strict";
-    scraper.scrapeAthleticsCalendar().then(calendarData => {
+    scraper.scrapeAthleticsCalendars().then(calendarData => {
         res.json(calendarData);   
     }, error => {
         errorHandler(error, res);

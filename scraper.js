@@ -8,21 +8,19 @@ const util = require("./util.js");
 Parameters:
 	date - the start date to fetch the calendars for.
 
-Returns: a list of event objects in chronological order for the next two
-months of the school calendar after 'date'.  Each event is guaranteed to have at
-least the following fields:
+Returns: a list of event objects in chronological order for the next two months
+of the school calendar after 'date'.  Each event has the following fields:
 
-	month - abbreviated month name
-	date - the numeric date
-	day - abbreviated day name
-	year - numeric year
-	eventName - name of the event
+	- month: abbreviated month name
+	- date: the numeric date
+	- day: abbreviated day name
+	- year: numeric year
+	- eventName: name of the event
 
-Additionally, an event may have the following fields:
-
-	startTime - a datetime string
-	endTime - a datetime string
-	location - the name of the event's location
+** Not guaranteed to exist: **
+	- startTime: a datetime string
+	- endTime: a datetime string
+	- location: the name of the event's location
 --------------------------------------------
 */
 module.exports.scrapeSchoolCalendars = date => {
@@ -147,19 +145,18 @@ Parameters:
 	$ - the Cheerio DOM parser object for the main calendar page to scrape.
 
 Returns: a list of event objects in chronological order scraped from the given
-DOM.  Each event is guaranteed to have at least the following fields:
+DOM.  Each event has the following fields:
 
-	month - abbreviated month name
-	date - the numeric date
-	day - abbreviated day name
-	year - numeric year
-	eventName - name of the event
+	- month: abbreviated month name
+	- date: the numeric date
+	- day: abbreviated day name
+	- year: numeric year
+	- eventName: name of the event
 
-Additionally, an event may have the following fields:
-
-	startTime - a datetime string
-	endTime - a datetime string
-	location - the name of the event's location
+** Not guaranteed to exist: **
+	- startTime: a datetime string
+	- endTime: a datetime string
+	- location: the name of the event's location
 -------------------------------------------
 */
 const scrapeSchoolCalendar = $ => {
@@ -209,8 +206,243 @@ const scrapeSchoolCalendar = $ => {
 }
 
 
-module.exports.scrapeAthleticsCalendar = () => {
+/* EXPORTED FUNCTION: scrapeAthleticsCalendars
+-----------------------------------------------
+Parameters: NA
+Returns: an object with the following format:
 
+{
+    "games": [
+        ...
+    ],
+    "practices": [
+        ...
+    ]
+}
+
+Each array contains athletics event objects in chronological order for athletics
+games and practices scraped from the school website.  The information scraped
+for games and practices is slightly different, however.  The games events have
+the following format:
+
+{
+    "month": "Sep",
+    "date": 28,
+    "year": 2016,
+    "team": "Boys' Varsity Soccer",
+    "opponent": "Other School"
+    "time": "2016-11-28T15:45:00-05:00",
+    "location": "Back Field",
+    "isHome": true,
+    "result": null,
+    "status": "CANCELLED"
+}
+
+where all fields except opponent, time, location, result, and status are
+guaranteed to exist.  A description of each field is as follows:
+
+	- month: an abbreviated name for the event month
+	- date: the numeric date
+	- year: the numeric year
+	- team: the school team competing
+	- isHome: boolean whether or not this is a home game
+
+** Not guaranteed to exist: **
+	- opponent: the opposing team name
+	- time: a datetime string
+	- location: the name of the game's location (NOT necessarily address)
+	- result: "Win" or "Loss" or another string indicator of game result
+	- status: "CANCELLED" or another string indicator of game status
+
+The practices events have the following format (a subset of the game object):
+
+{
+    "month": "Sep",
+    "date": 28,
+    "year": 2016,
+    "team": "Boys' Varsity Soccer",
+    "time": "2016-11-28T15:45:00-05:00",
+    "location": "Back Field",
+    "status": "CANCELLED"
+}
+
+where all fields except time, location and status are guaranteed to exist.  All
+fields in a practice object are the same as their corresponding fields in a
+game object.
+-----------------------------------------------
+*/
+module.exports.scrapeAthleticsCalendars = () => {
+	const urlFetchPromises = [
+		util.getURL(util.constants.ATHLETICS_GAMES_URL), 
+		util.getURL(util.constants.ATHLETICS_PRACTICES_URL)
+	];
+
+	return Promise.all(urlFetchPromises).then(fetchedHTML => {
+		return Promise.all([
+			scrapeAthleticsGames(cheerio.load(fetchedHTML[0])),
+			scrapeAthleticsPractices(cheerio.load(fetchedHTML[1]))
+		]);
+	}).then(calendars => {
+		return {
+			games: calendars[0],
+			practices: calendars[1]
+		};
+	});
+}
+
+
+/* FUNCTION: scrapeAthleticsGames
+--------------------------------------
+Parameters:
+	$ - the Cheerio DOM parser object for the athletics games page to scrape
+
+Returns: An array of games event objects, sorted chronologically from
+earliest to latest.  The objects have the following format:
+
+{
+    "month": "Sep",
+    "date": 28,
+    "year": 2016,
+    "team": "Boys' Varsity Soccer",
+    "opponent": "Other School"
+    "time": "2016-11-28T15:45:00-05:00",
+    "location": "Back Field",
+    "isHome": true,
+    "result": null,
+    "status": "CANCELLED"
+}
+
+where all fields except opponent, time, location, result, and status are
+guaranteed to exist.  A description of each field is as follows:
+
+	- month: an abbreviated name for the event month
+	- date: the numeric date
+	- year: the numeric year
+	- team: the school team competing
+	- isHome: boolean whether or not this is a home game
+
+** Not guaranteed to exist: **
+	- opponent: the opposing team name
+	- time: a datetime string
+	- location: the name of the game's location (NOT necessarily address)
+	- result: "Win" or "Loss" or another string indicator of game result
+	- status: "CANCELLED" or another string indicator of game status
+--------------------------------------
+*/
+const scrapeAthleticsGames = $ => {
+	return $("tbody tr").map((i, elem) => {
+		const event = {
+			month: $(elem).find("td.fsAthleticsDate .fsMonth").text().trim(),
+			date: parseInt($(elem).find("td.fsAthleticsDate .fsDay").text()),
+			year: parseInt($(elem).find("td.fsAthleticsDate .fsYear").text()),
+			team: $(elem).find("td.fsTitle").text().trim()
+		};
+
+		// Check if it's a home game (if no label, default to away)
+		event.isHome =
+			$(elem).find("td.fsAthleticsAdvantage").text().trim() == "Home";
+
+		// Add the opponent if there is one
+		const opponentElem = $(elem)
+			.find("td.fsAthleticsOpponents .fsAthleticsOpponentNames");
+		if (opponentElem.length > 0 && opponentElem.text().trim().length > 0) {
+			event.opponent = opponentElem.text().trim();
+		}
+
+		// Add the time if there is one
+		const timeElem = $(elem).find("td.fsAthleticsTime time");
+		if (timeElem.length > 0
+			&& timeElem.attr("datetime").trim().length > 0) {
+
+			event.time = timeElem.attr("datetime").trim();
+		}
+
+		// Add the location if there is one
+		const locationElem = $(elem).find("td.fsAthleticsLocations");
+		if (locationElem.length > 0 && locationElem.text().trim().length > 0) {
+			event.location = locationElem.text().trim();
+		}
+
+		// Add the game result if there is one
+		const resultElem = $(elem).find("td.fsAthleticsResult");
+		if (resultElem.length > 0 && resultElem.text().trim().length > 0) {
+			event.result = resultElem.text().trim();
+		}
+
+		// Add the status if there is one
+		const statusElem = $(elem).find("td.fsAthleticsStatus");
+		if (statusElem.length > 0 && statusElem.text().trim().length > 0) {
+			event.status = statusElem.text().trim();
+		}
+
+		return event;
+	}).get();
+}
+
+
+/* FUNCTION: scrapeAthleticsPractices
+--------------------------------------
+Parameters:
+	$ - the Cheerio DOM parser object for the athletics practices page to scrape
+
+Returns: An array of practice event objects, sorted chronologically from
+earliest to latest.  The objects have the following format:
+
+{
+    "month": "Sep",
+    "date": 28,
+    "year": 2016,
+    "team": "Boys' Varsity Soccer",
+    "time": "2016-11-28T15:45:00-05:00",
+    "location": "Back Field",
+    "status": "CANCELLED"
+}
+
+where all fields except time, location and status are guaranteed to exist.  A
+description of each field is as follows:
+
+	- month: an abbreviated name for the event month
+	- date: the numeric date
+	- year: the numeric year
+	- team: the school team practicing
+
+** Not guaranteed to exist: **
+	- time: a datetime string
+	- location: the name of the practice's location (NOT necessarily address)
+	- status: "CANCELLED" or another string indicator of practice status
+--------------------------------------
+*/
+const scrapeAthleticsPractices = $ => {
+	return $("tbody tr").map((i, elem) => {
+		const event = {
+			month: $(elem).find("td.fsAthleticsDate .fsMonth").text().trim(),
+			date: parseInt($(elem).find("td.fsAthleticsDate .fsDay").text()),
+			year: parseInt($(elem).find("td.fsAthleticsDate .fsYear").text()),
+			team: $(elem).find("td.fsTitle").text().trim()
+		};
+
+		// Add the time if there is one
+		const timeElem = $(elem).find("td.fsAthleticsTime time");
+		if (timeElem.length > 0
+			&& timeElem.attr("datetime").trim().length > 0) {
+
+			event.time = timeElem.attr("datetime").trim();
+		}
+
+		// Add the location if there is one
+		const locationElem = $(elem).find("td.fsAthleticsLocations");
+		if (locationElem.length > 0 && locationElem.text().trim().length > 0) {
+			event.location = locationElem.text().trim();
+		}
+
+		// Add the status if there is one
+		const statusElem = $(elem).find("td.fsAthleticsStatus");
+		if (statusElem.length > 0 && statusElem.text().trim().length > 0) {
+			event.status = statusElem.text().trim();
+		}
+
+		return event;
+	}).get();
 }
 
 
