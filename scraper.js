@@ -26,7 +26,7 @@ Additionally, an event may have the following fields:
 --------------------------------------------
 */
 module.exports.scrapeSchoolCalendars = function(date) {
-	const calendarURLs = schoolCalendarURLsForStartingDate(date);
+	const calendarURLs = schoolCalendarURLsForStartingDate(date, 2);
 	const urlFetchPromises = calendarURLs.map(function(url) {
 		return util.getURL(url);
 	});
@@ -47,14 +47,13 @@ module.exports.scrapeSchoolCalendars = function(date) {
 Parameters:
 	startingDate - the starting date for which to generate school calendar URLs.
 				URLs will be created for the month of date and the month after.
-	numMonths (optional) - defaults to 2.  The number of total months to
-							generate calendar URLs for.
+	numMonths - The number of total months to generate calendar URLs for.
 
 Returns: an array of school calendar URLs that should be scraped to get school
 calendar data for the next numMonths months.
 -----------------------------------------------
 */
-const schoolCalendarURLsForStartingDate = function(startingDate, numMonths=2) {
+const schoolCalendarURLsForStartingDate = function(startingDate, numMonths) {
 	let year = startingDate.getFullYear();
 	let monthNum = startingDate.getMonth() + 1;
 	const date = startingDate.getDate();
