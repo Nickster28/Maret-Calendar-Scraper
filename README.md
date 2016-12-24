@@ -19,7 +19,7 @@ in chronological order from earliest to latest:
 [
     {
         "month": "Sep",
-        "date": 9,
+        "date": 28,
         "day": "Wed",
         "year": 2016,
         "eventName": "US Leadership Workshop",
