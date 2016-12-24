@@ -30,7 +30,7 @@ Each object has the format:
 }
 
 where all fields except startTime, endTime and location are guaranteed to exist.
-A description of each field is as follows:
+An event object is guaranteed to have the following fields:
 
     - month: abbreviated month name
     - date: the numeric date
@@ -38,7 +38,8 @@ A description of each field is as follows:
     - year: numeric year
     - eventName: name of the event
 
-** Not guaranteed to exist: **
+Additionally, an event object may have the following fields:
+
     - startTime: a datetime string
     - endTime: a datetime string
     - location: the name of the event's location
@@ -86,8 +87,7 @@ the following format:
     "status": "CANCELLED"
 }
 
-where all fields except opponent, time, location, result, and status are
-guaranteed to exist.  A description of each field is as follows:
+Every game event object is guaranteed to have the following fields:
 
     - month: an abbreviated name for the event month
     - date: the numeric date
@@ -95,7 +95,8 @@ guaranteed to exist.  A description of each field is as follows:
     - team: the school team competing
     - isHome: boolean whether or not this is a home game
 
-** Not guaranteed to exist: **
+Additionally, a game event object may have the following fields:
+
     - opponent: the opposing team name
     - time: a datetime string
     - location: the name of the game's location (NOT necessarily address)
@@ -114,8 +115,7 @@ The practices events have the following format (a subset of the game object):
     "status": "CANCELLED"
 }
 
-where all fields except time, location and status are guaranteed to exist.  All
-fields in a practice object are the same as their corresponding fields in a
+All fields in a practice object are the same as their corresponding fields in a
 game object.
 --------------------------
 */

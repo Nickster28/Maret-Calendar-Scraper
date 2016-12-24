@@ -39,7 +39,7 @@ Every event object is guaranteed to have the following fields:
 * **year** - numeric year
 * **eventName** - name of the event
 
-Additionally, an event may have the following additional fields:
+Additionally, an event may have the following fields:
 
 * **startTime** - a datetime string
 * **endTime** - a datetime string
@@ -93,7 +93,7 @@ Every game event object is guaranteed to have the following fields:
 * **team**: the school team competing
 * **isHome**: boolean whether or not this is a home game
 
-Additionally, a game object may have the following additional fields:
+Additionally, a game object may have the following fields:
 
 * **opponent**: the opposing team name
 * **time**: a datetime string
