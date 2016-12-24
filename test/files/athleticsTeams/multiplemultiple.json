@@ -1,0 +1,18 @@
+{
+	"Winter": [
+		"Boys' JV Basketball",
+		"Boys' MS A Basketball",
+		"Boys' MS B Basketball",
+		"MS Wrestling"
+	],
+	"Spring": [
+		"Boys' MS A Lacrosse",
+		"Girls' MS A Lacrosse",
+		"Boys' Varsity Tennis"
+	],
+	"Fall": [
+		"Boys' JV Soccer",
+		"Boys' MS B Soccer",
+		"Girls' Varsity Soccer"
+	]
+}

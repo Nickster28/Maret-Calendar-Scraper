@@ -1,0 +1,167 @@
+const express = require('express');
+const scraper = require('./scraper.js');
+
+const app = express();
+app.set('port', (process.env.PORT || 5000));
+
+const errorHandler = (error, httpResponse) => {
+    console.log(error.stack);
+    console.log("Error: " + error);
+    httpResponse.sendStatus(500);
+}
+
+
+/* ENDPOINT: GET /schoolCalendar
+--------------------------
+A scraper for the general school calendar.
+Responds with the parsed calendar data as a JSON array of calendar event objects
+sorted from earliest to latest.  Fetches the next two months of calendar data.
+Each object has the format:
+
+{
+    "month": "Sep",
+    "date": 28,
+    "day": "Wed",
+    "year": 2016,
+    "eventName": "US Leadership Workshop",
+    "startTime": "2016-11-28T11:45:00-05:00",
+    "endTime": "2016-11-28T15:45:00-05:00",
+    "location": "Theatre,Theatre Lobby"
+}
+
+where all fields except startTime, endTime and location are guaranteed to exist.
+A description of each field is as follows:
+
+    - month: abbreviated month name
+    - date: the numeric date
+    - day: abbreviated day name
+    - year: numeric year
+    - eventName: name of the event
+
+** Not guaranteed to exist: **
+    - startTime: a datetime string
+    - endTime: a datetime string
+    - location: the name of the event's location
+--------------------------
+*/
+app.get('/schoolCalendar', (req, res) => {
+    "use strict";
+    scraper.scrapeSchoolCalendars(new Date()).then(calendarData => {
+        res.json(calendarData);
+    }, error => {
+        errorHandler(error, res);
+    });
+});
+
+
+/* ENDPOINT: GET /athleticsCalendar
+--------------------------
+A scraper for the athletics calendar, including practices and games.
+Responds with an object with the following format:
+
+{
+    "games": [
+        ...
+    ],
+    "practices": [
+        ...
+    ]
+}
+
+Each array contains athletics event objects in chronological order for athletics
+games and practices scraped from the school website.  The information scraped
+for games and practices is slightly different, however.  The games events have
+the following format:
+
+{
+    "month": "Sep",
+    "date": 28,
+    "year": 2016,
+    "team": "Boys' Varsity Soccer",
+    "opponent": "Other School"
+    "time": "2016-11-28T15:45:00-05:00",
+    "location": "Back Field",
+    "isHome": true,
+    "result": null,
+    "status": "CANCELLED"
+}
+
+where all fields except opponent, time, location, result, and status are
+guaranteed to exist.  A description of each field is as follows:
+
+    - month: an abbreviated name for the event month
+    - date: the numeric date
+    - year: the numeric year
+    - team: the school team competing
+    - isHome: boolean whether or not this is a home game
+
+** Not guaranteed to exist: **
+    - opponent: the opposing team name
+    - time: a datetime string
+    - location: the name of the game's location (NOT necessarily address)
+    - result: "Win" or "Loss" or another string indicator of game result
+    - status: "CANCELLED" or another string indicator of game status
+
+The practices events have the following format (a subset of the game object):
+
+{
+    "month": "Sep",
+    "date": 28,
+    "year": 2016,
+    "team": "Boys' Varsity Soccer",
+    "time": "2016-11-28T15:45:00-05:00",
+    "location": "Back Field",
+    "status": "CANCELLED"
+}
+
+where all fields except time, location and status are guaranteed to exist.  All
+fields in a practice object are the same as their corresponding fields in a
+game object.
+--------------------------
+*/
+app.get('/athleticsCalendar', (req, res) => {
+    "use strict";
+    scraper.scrapeAthleticsCalendars().then(calendarData => {
+        res.json(calendarData);   
+    }, error => {
+        errorHandler(error, res);
+    });
+});
+
+
+/* ENDPOINT: GET /athleticsTeams
+-----------------------------------------
+A scraper for athletics teams information.  Responds with a collection of three
+arrays, one for each season, of athletics team names (as strings):
+
+{
+    "Fall": [
+        "Cross Country",
+        "Girls' Varsity Tennis",
+        ...
+    ],
+    "Winter": [
+        ...
+    ],
+    "Spring": [
+        ...
+    ]
+}
+-----------------------------------------
+*/
+app.get('/athleticsTeams', (req, res) => {
+    "use strict";
+    scraper.scrapeAthleticsTeams().then(teams => {
+        res.json(teams);
+    }, error => {
+        errorHandler(error, res);
+    });
+});
+
+
+/* Start the server */
+app.listen(app.get('port'), () => {
+    console.log('Node app is running on port', app.get('port'));
+});
+
+
