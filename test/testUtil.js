@@ -43,7 +43,7 @@ module.exports.testScraper = (testName, scraperFn, tests) => {
                 const correctOutput = JSON.parse(jsonFile);
 
                 assert.deepStrictEqual(output, correctOutput,
-                    "JSON output should match.");
+                    "JSON output should match: " + JSON.stringify(output));
             });
         });
     });
