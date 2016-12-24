@@ -1,0 +1,38 @@
+[
+	{
+		"month": "Dec",
+		"date": 7,
+		"day": "Wed",
+		"year": 2016,
+		"eventName": "Hour of Code"
+	},
+	{
+		"month": "Dec",
+		"date": 7,
+		"day": "Wed",
+		"year": 2016,
+		"eventName": "MPA General Meeting",
+		"startTime": "2016-12-07T08:15:00-05:00",
+		"endTime": "2016-12-07T09:45:00-05:00",
+		"location": "202-AB Movement Studio"
+	},
+	{
+		"month": "Dec",
+		"date": 7,
+		"day": "Wed",
+		"year": 2016,
+		"eventName": "Kindergarten siblings visit",
+		"startTime": "2016-12-07T13:00:00-05:00",
+		"location": "Cottage"
+	},
+	{
+		"month": "Dec",
+		"date": 7,
+		"day": "Wed",
+		"year": 2016,
+		"eventName": "Summer Trips Meeting",
+		"startTime": "2016-12-07T18:00:00-05:00",
+		"endTime": "2016-12-07T20:00:00-05:00",
+		"location": "Atrium"
+	}
+]

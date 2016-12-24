@@ -1,0 +1,14 @@
+[
+	{
+		"month": "Oct",
+		"date": 25,
+		"year": 2016,
+		"team": "Girls' JV Soccer",
+		"isHome": true,
+		"opponent": "Madeira School",
+		"time": "2016-10-25T16:15:00-04:00",
+		"location": "Back Field",
+		"result": "Win",
+		"status": "CANCELLED"
+	}
+]

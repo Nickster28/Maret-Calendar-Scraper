@@ -1,11 +1,11 @@
 {
   "name": "maretcalendarscraper",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A scraper for the Maret Upper School and athletics calendar sites.",
-  "main": "scraper.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node scraper.js"
+    "start": "nodemon server.js",
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,11 @@
   },
   "engines": {
     "node": "0.12.x"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "mock-require": "^2.0.0",
+    "nodemon": "^1.11.0",
+    "rewire": "^2.5.2"
   }
 }
