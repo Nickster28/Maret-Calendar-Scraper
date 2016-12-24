@@ -9,7 +9,8 @@ Parameters:
 	date - the start date to fetch the calendars for.
 
 Returns: a list of event objects in chronological order for the next two months
-of the school calendar after 'date'.  Each event has the following fields:
+of the school calendar after 'date'.  Each event is guaranteed to have the
+following fields:
 
 	- month: abbreviated month name
 	- date: the numeric date
@@ -17,7 +18,8 @@ of the school calendar after 'date'.  Each event has the following fields:
 	- year: numeric year
 	- eventName: name of the event
 
-** Not guaranteed to exist: **
+Additionally, an event may have the following fields:
+
 	- startTime: a datetime string
 	- endTime: a datetime string
 	- location: the name of the event's location
@@ -145,7 +147,7 @@ Parameters:
 	$ - the Cheerio DOM parser object for the main calendar page to scrape.
 
 Returns: a list of event objects in chronological order scraped from the given
-DOM.  Each event has the following fields:
+DOM.  Each event is guaranteed to have the following fields:
 
 	- month: abbreviated month name
 	- date: the numeric date
@@ -153,7 +155,8 @@ DOM.  Each event has the following fields:
 	- year: numeric year
 	- eventName: name of the event
 
-** Not guaranteed to exist: **
+Additionally, each event may have the following fields:
+
 	- startTime: a datetime string
 	- endTime: a datetime string
 	- location: the name of the event's location
@@ -238,8 +241,7 @@ the following format:
     "status": "CANCELLED"
 }
 
-where all fields except opponent, time, location, result, and status are
-guaranteed to exist.  A description of each field is as follows:
+Each game event is guaranteed to have the following fields:
 
 	- month: an abbreviated name for the event month
 	- date: the numeric date
@@ -247,7 +249,8 @@ guaranteed to exist.  A description of each field is as follows:
 	- team: the school team competing
 	- isHome: boolean whether or not this is a home game
 
-** Not guaranteed to exist: **
+Additionally, each game event may have the following fields:
+
 	- opponent: the opposing team name
 	- time: a datetime string
 	- location: the name of the game's location (NOT necessarily address)
@@ -266,8 +269,7 @@ The practices events have the following format (a subset of the game object):
     "status": "CANCELLED"
 }
 
-where all fields except time, location and status are guaranteed to exist.  All
-fields in a practice object are the same as their corresponding fields in a
+All fields in a practice object are the same as their corresponding fields in a
 game object.
 -----------------------------------------------
 */
@@ -297,7 +299,7 @@ Parameters:
 	$ - the Cheerio DOM parser object for the athletics games page to scrape
 
 Returns: An array of games event objects, sorted chronologically from
-earliest to latest.  The objects have the following format:
+earliest to latest.  The event objects have the following format:
 
 {
     "month": "Sep",
@@ -312,8 +314,7 @@ earliest to latest.  The objects have the following format:
     "status": "CANCELLED"
 }
 
-where all fields except opponent, time, location, result, and status are
-guaranteed to exist.  A description of each field is as follows:
+Every game event object is guaranteed to have the following fields:
 
 	- month: an abbreviated name for the event month
 	- date: the numeric date
@@ -321,7 +322,8 @@ guaranteed to exist.  A description of each field is as follows:
 	- team: the school team competing
 	- isHome: boolean whether or not this is a home game
 
-** Not guaranteed to exist: **
+Additionally, every game event object may have the following fields:
+
 	- opponent: the opposing team name
 	- time: a datetime string
 	- location: the name of the game's location (NOT necessarily address)
@@ -398,15 +400,15 @@ earliest to latest.  The objects have the following format:
     "status": "CANCELLED"
 }
 
-where all fields except time, location and status are guaranteed to exist.  A
-description of each field is as follows:
+Every practice event is guaranteed to have the following fields:
 
 	- month: an abbreviated name for the event month
 	- date: the numeric date
 	- year: the numeric year
 	- team: the school team practicing
 
-** Not guaranteed to exist: **
+Additionally, every practice event object may have the following fields:
+
 	- time: a datetime string
 	- location: the name of the practice's location (NOT necessarily address)
 	- status: "CANCELLED" or another string indicator of practice status
@@ -446,7 +448,7 @@ const scrapeAthleticsPractices = $ => {
 }
 
 
-/* FUNCTION: scrapeAthleticsTeams
+/* EXPORTED FUNCTION: scrapeAthleticsTeams
 ----------------------------------
 Parameters: NA
 
@@ -466,7 +468,7 @@ module.exports.scrapeAthleticsTeams = () => {
 Parameters:
 	$ - the Cheerio DOM parser object for the athletics teams page to scrape.
 
-Returns: A dictionary from season names ("Fall") to a list of team names in that
+Returns: A dictionary from season name ("Fall") to a list of team names in that
 season.  This data is scraped from the given Cheerio DOM object.
 ----------------------------------
 */

@@ -1,0 +1,1943 @@
+[
+    {
+        "month": "Oct",
+        "date": 25,
+        "year": 2016,
+        "team": "Girls' MS A Volleyball",
+        "isHome": true,
+        "opponent": "Georgetown Day School",
+        "time": "2016-10-25T14:45:00-04:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Oct",
+        "date": 25,
+        "year": 2016,
+        "team": "Girls' MS B Volleyball",
+        "isHome": true,
+        "opponent": "Georgetown Day School",
+        "time": "2016-10-25T14:45:00-04:00",
+        "location": "Old Gym"
+    },
+    {
+        "month": "Oct",
+        "date": 25,
+        "year": 2016,
+        "team": "Girls' MS A Soccer",
+        "isHome": false,
+        "opponent": "St. Stephens & St. Agnes School",
+        "time": "2016-10-25T14:45:00-04:00",
+        "location": "St. Stephens & St. Agnes School"
+    },
+    {
+        "month": "Oct",
+        "date": 25,
+        "year": 2016,
+        "team": "Boys' Varsity Soccer",
+        "isHome": false,
+        "opponent": "Sidwell Friends School",
+        "time": "2016-10-25T16:00:00-04:00",
+        "location": "Sidwell Friends School",
+        "result": "Win"
+    },
+    {
+        "month": "Oct",
+        "date": 25,
+        "year": 2016,
+        "team": "Boys' JV Soccer",
+        "isHome": true,
+        "opponent": "Sidwell Friends School",
+        "time": "2016-10-25T16:00:00-04:00",
+        "location": "Back Field"
+    },
+    {
+        "month": "Oct",
+        "date": 25,
+        "year": 2016,
+        "team": "Girls' JV Soccer",
+        "isHome": true,
+        "opponent": "Madeira School",
+        "time": "2016-10-25T16:15:00-04:00",
+        "location": "Back Field",
+        "status": "CANCELLED"
+    },
+    {
+        "month": "Oct",
+        "date": 25,
+        "year": 2016,
+        "team": "Girls' JV Volleyball",
+        "isHome": false,
+        "opponent": "Georgetown Visitation School",
+        "time": "2016-10-25T16:15:00-04:00",
+        "location": "Georgetown Visitation School"
+    },
+    {
+        "month": "Oct",
+        "date": 25,
+        "year": 2016,
+        "team": "Girls' Varsity Soccer",
+        "isHome": false,
+        "opponent": "Madeira School",
+        "time": "2016-10-25T16:15:00-04:00",
+        "location": "Madeira School",
+        "result": "Win"
+    },
+    {
+        "month": "Oct",
+        "date": 25,
+        "year": 2016,
+        "team": "Girls' Varsity Tennis",
+        "isHome": false,
+        "opponent": "St. Stephens & St. Agnes School",
+        "time": "2016-10-25T16:15:00-04:00",
+        "location": "St. Stephens & St. Agnes School",
+        "result": "Loss"
+    },
+    {
+        "month": "Oct",
+        "date": 25,
+        "year": 2016,
+        "team": "Girls' Varsity Volleyball",
+        "isHome": false,
+        "opponent": "Georgetown Visitation School",
+        "time": "2016-10-25T17:30:00-04:00",
+        "location": "Georgetown Visitation School",
+        "result": "Win"
+    },
+    {
+        "month": "Oct",
+        "date": 26,
+        "year": 2016,
+        "team": "Girls' MS A Volleyball",
+        "isHome": true,
+        "opponent": "Sidwell Friends School",
+        "time": "2016-10-26T14:45:00-04:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Oct",
+        "date": 26,
+        "year": 2016,
+        "team": "Girls' MS B Soccer",
+        "isHome": false,
+        "opponent": "Sidwell Friends School",
+        "time": "2016-10-26T14:45:00-04:00",
+        "location": "Sidwell Friends School"
+    },
+    {
+        "month": "Oct",
+        "date": 26,
+        "year": 2016,
+        "team": "MS Football",
+        "isHome": false,
+        "opponent": "Sidwell Friends School",
+        "time": "2016-10-26T14:45:00-04:00",
+        "location": "Sidwell Friends School"
+    },
+    {
+        "month": "Oct",
+        "date": 26,
+        "year": 2016,
+        "team": "MS Football",
+        "isHome": false,
+        "opponent": "Sidwell Friends School",
+        "time": "2016-10-26T14:45:00-04:00",
+        "location": "Sidwell Friends School"
+    },
+    {
+        "month": "Oct",
+        "date": 26,
+        "year": 2016,
+        "team": "MS Football",
+        "isHome": false,
+        "opponent": "Sidwell Friends School",
+        "time": "2016-10-26T14:45:00-04:00",
+        "location": "Sidwell Friends"
+    },
+    {
+        "month": "Oct",
+        "date": 26,
+        "year": 2016,
+        "team": "Girls' Varsity Tennis",
+        "isHome": true,
+        "opponent": "Sidwell Friends School",
+        "time": "2016-10-26T16:15:00-04:00",
+        "location": "UDC",
+        "result": "Loss"
+    },
+    {
+        "month": "Oct",
+        "date": 26,
+        "year": 2016,
+        "team": "Girls' JV Volleyball",
+        "isHome": false,
+        "opponent": "Maryland School for the Deaf",
+        "time": "2016-10-26T16:30:00-04:00",
+        "location": "Maryland School for the Deaf"
+    },
+    {
+        "month": "Oct",
+        "date": 26,
+        "year": 2016,
+        "team": "Girls' Varsity Volleyball",
+        "isHome": false,
+        "opponent": "Maryland School for the Deaf",
+        "time": "2016-10-26T18:00:00-04:00",
+        "location": "Maryland School for the Deaf",
+        "result": "Loss"
+    },
+    {
+        "month": "Oct",
+        "date": 27,
+        "year": 2016,
+        "team": "Boys' MS B Soccer",
+        "isHome": true,
+        "opponent": "Potomac School",
+        "time": "2016-10-27T14:45:00-04:00"
+    },
+    {
+        "month": "Oct",
+        "date": 27,
+        "year": 2016,
+        "team": "MS Cross Country",
+        "isHome": false,
+        "opponent": "Landon School, Holton-Arms School",
+        "time": "2016-10-27T15:30:00-04:00",
+        "location": "Landon School"
+    },
+    {
+        "month": "Oct",
+        "date": 27,
+        "year": 2016,
+        "team": "Girls' Varsity Soccer",
+        "isHome": true,
+        "opponent": "Georgetown Visitation School",
+        "time": "2016-10-27T16:00:00-04:00",
+        "location": "Jelleff",
+        "result": "Win"
+    },
+    {
+        "month": "Oct",
+        "date": 27,
+        "year": 2016,
+        "team": "Girls' JV Soccer",
+        "isHome": false,
+        "opponent": "Georgetown Visitation School",
+        "time": "2016-10-27T16:15:00-04:00",
+        "location": "Georgetown Visitation School",
+        "status": "CANCELLED"
+    },
+    {
+        "month": "Oct",
+        "date": 27,
+        "year": 2016,
+        "team": "Boys' JV Soccer",
+        "isHome": true,
+        "opponent": "Flint Hill School (VA)",
+        "time": "2016-10-27T16:15:00-04:00",
+        "location": "Back Field"
+    },
+    {
+        "month": "Oct",
+        "date": 28,
+        "year": 2016,
+        "team": "Boys' Varsity Soccer",
+        "isHome": true,
+        "opponent": "St. James School",
+        "time": "2016-10-28T15:00:00-04:00",
+        "location": "Jelleff",
+        "result": "Win"
+    },
+    {
+        "month": "Oct",
+        "date": 28,
+        "year": 2016,
+        "team": "Girls' JV Volleyball",
+        "isHome": false,
+        "opponent": "Georgetown Day School",
+        "time": "2016-10-28T15:30:00-04:00",
+        "location": "Georgetown Day School"
+    },
+    {
+        "month": "Oct",
+        "date": 28,
+        "year": 2016,
+        "team": "Boys' JV Soccer",
+        "isHome": false,
+        "opponent": "Sidwell Friends School",
+        "time": "2016-10-28T16:00:00-04:00",
+        "location": "Sidwell Friends School"
+    },
+    {
+        "month": "Oct",
+        "date": 29,
+        "year": 2016,
+        "team": "Cross Country",
+        "isHome": false,
+        "time": "2016-10-29T09:00:00-04:00",
+        "location": "Derwood, MD"
+    },
+    {
+        "month": "Oct",
+        "date": 29,
+        "year": 2016,
+        "team": "Varsity Football",
+        "isHome": true,
+        "opponent": "Flint Hill School (VA)",
+        "time": "2016-10-29T12:00:00-04:00",
+        "location": "St. Albans School",
+        "result": "Win"
+    },
+    {
+        "month": "Oct",
+        "date": 31,
+        "year": 2016,
+        "team": "Boys' MS A Soccer",
+        "isHome": true,
+        "opponent": "Georgetown Day School",
+        "time": "2016-10-31T14:45:00-04:00"
+    },
+    {
+        "month": "Oct",
+        "date": 31,
+        "year": 2016,
+        "team": "Boys' Varsity Soccer",
+        "isHome": true,
+        "opponent": "St. Andrew's Episcopal School",
+        "time": "2016-10-31T15:00:00-04:00",
+        "location": "Jelleff",
+        "result": "Loss"
+    },
+    {
+        "month": "Nov",
+        "date": 1,
+        "year": 2016,
+        "team": "Girls' MS A Soccer",
+        "isHome": false,
+        "opponent": "Holton-Arms School",
+        "time": "2016-11-01T14:45:00-04:00",
+        "location": "Holton-Arms School"
+    },
+    {
+        "month": "Nov",
+        "date": 1,
+        "year": 2016,
+        "team": "Girls' MS A Volleyball",
+        "isHome": false,
+        "opponent": "Holton-Arms School",
+        "time": "2016-11-01T14:45:00-04:00",
+        "location": "Holton-Arms School"
+    },
+    {
+        "month": "Nov",
+        "date": 1,
+        "year": 2016,
+        "team": "Girls' MS B Volleyball",
+        "isHome": false,
+        "opponent": "Holton-Arms School",
+        "time": "2016-11-01T14:45:00-04:00",
+        "location": "Holton-Arms School"
+    },
+    {
+        "month": "Nov",
+        "date": 1,
+        "year": 2016,
+        "team": "Girls' Varsity Tennis",
+        "isHome": false,
+        "opponent": "Madeira School",
+        "time": "2016-11-01T15:00:00-04:00",
+        "location": "Madeira School",
+        "result": "Win"
+    },
+    {
+        "month": "Nov",
+        "date": 2,
+        "year": 2016,
+        "team": "Girls' MS A Soccer",
+        "isHome": true,
+        "opponent": "National Cathedral School",
+        "time": "2016-11-02T14:45:00-04:00",
+        "location": "Back Field"
+    },
+    {
+        "month": "Nov",
+        "date": 2,
+        "year": 2016,
+        "team": "Girls' MS B Volleyball",
+        "isHome": true,
+        "opponent": "National Cathedral School",
+        "time": "2016-11-02T14:45:00-04:00",
+        "location": "Old Gym"
+    },
+    {
+        "month": "Nov",
+        "date": 2,
+        "year": 2016,
+        "team": "Girls' Varsity Soccer",
+        "isHome": true,
+        "opponent": "Madeira School",
+        "time": "2016-11-02T15:00:00-04:00",
+        "location": "Jelleff",
+        "result": "Win"
+    },
+    {
+        "month": "Nov",
+        "date": 2,
+        "year": 2016,
+        "team": "Girls' Varsity Tennis",
+        "isHome": false,
+        "opponent": "Stone Ridge School of the Sacred Heart",
+        "time": "2016-11-02T15:00:00-04:00",
+        "result": "Loss"
+    },
+    {
+        "month": "Nov",
+        "date": 3,
+        "year": 2016,
+        "team": "Girls' Varsity Tennis",
+        "isHome": false,
+        "opponent": "ISL",
+        "time": "2016-11-03T15:00:00-04:00",
+        "location": "ISL",
+        "status": "CANCELLED"
+    },
+    {
+        "month": "Nov",
+        "date": 3,
+        "year": 2016,
+        "team": "Girls' Varsity Volleyball",
+        "isHome": true,
+        "opponent": "Georgetown Visitation School",
+        "time": "2016-11-03T16:30:00-04:00",
+        "result": "Win"
+    },
+    {
+        "month": "Nov",
+        "date": 4,
+        "year": 2016,
+        "team": "Girls' Varsity Soccer",
+        "isHome": true,
+        "opponent": "Connelly School of the Holy Child",
+        "time": "2016-11-04T15:00:00-04:00",
+        "location": "Jelleff",
+        "result": "Win"
+    },
+    {
+        "month": "Nov",
+        "date": 4,
+        "year": 2016,
+        "team": "Girls' Varsity Volleyball",
+        "isHome": true,
+        "time": "2016-11-04T16:30:00-04:00",
+        "result": "Win"
+    },
+    {
+        "month": "Nov",
+        "date": 5,
+        "year": 2016,
+        "team": "Varsity Football",
+        "isHome": true,
+        "opponent": "Potomac School",
+        "time": "2016-11-05T15:45:00-04:00",
+        "location": "Wilson High School",
+        "result": "Win"
+    },
+    {
+        "month": "Nov",
+        "date": 6,
+        "year": 2016,
+        "team": "Girls' Varsity Volleyball",
+        "isHome": false,
+        "time": "2016-11-06T13:00:00-05:00",
+        "location": "Episcopal High School",
+        "result": "Loss"
+    },
+    {
+        "month": "Nov",
+        "date": 6,
+        "year": 2016,
+        "team": "Girls' Varsity Soccer",
+        "isHome": false,
+        "time": "2016-11-06T14:00:00-05:00",
+        "location": "Episcopal High School",
+        "result": "Win"
+    },
+    {
+        "month": "Nov",
+        "date": 7,
+        "year": 2016,
+        "team": "Boys' Varsity Soccer",
+        "isHome": true,
+        "opponent": "St. John's College High School",
+        "time": "2016-11-07T14:45:00-05:00",
+        "location": "Jelleff",
+        "result": "Win"
+    },
+    {
+        "month": "Nov",
+        "date": 8,
+        "year": 2016,
+        "team": "Boys' Varsity Soccer",
+        "isHome": false,
+        "time": "2016-11-08T14:45:00-05:00"
+    },
+    {
+        "month": "Nov",
+        "date": 8,
+        "year": 2016,
+        "team": "Girls' Varsity Soccer",
+        "isHome": false,
+        "opponent": "Woodrow Wilson High School",
+        "time": "2016-11-08T14:45:00-05:00",
+        "result": "Loss"
+    },
+    {
+        "month": "Nov",
+        "date": 8,
+        "year": 2016,
+        "team": "Girls' Varsity Volleyball",
+        "isHome": false,
+        "opponent": "Bell Multicultural School",
+        "time": "2016-11-08T17:00:00-05:00",
+        "location": "Bell Multicultural School",
+        "result": "Win"
+    },
+    {
+        "month": "Nov",
+        "date": 8,
+        "year": 2016,
+        "team": "Boys' Varsity Soccer",
+        "isHome": false,
+        "time": "2016-11-08T18:00:00-05:00",
+        "result": "Loss"
+    },
+    {
+        "month": "Nov",
+        "date": 9,
+        "year": 2016,
+        "team": "MS Football",
+        "isHome": false,
+        "opponent": "St. Stephens & St. Agnes School",
+        "time": "2016-11-09T14:45:00-05:00",
+        "location": "St. Stephens & St. Agnes School"
+    },
+    {
+        "month": "Nov",
+        "date": 9,
+        "year": 2016,
+        "team": "Girls' Varsity Volleyball",
+        "isHome": false,
+        "opponent": "Washington International School",
+        "time": "2016-11-09T17:00:00-05:00",
+        "result": "Win"
+    },
+    {
+        "month": "Nov",
+        "date": 10,
+        "year": 2016,
+        "team": "Girls' Varsity Soccer",
+        "isHome": false,
+        "time": "2016-11-10T14:45:00-05:00"
+    },
+    {
+        "month": "Nov",
+        "date": 10,
+        "year": 2016,
+        "team": "Boys' Varsity Soccer",
+        "isHome": false,
+        "time": "2016-11-10T14:45:00-05:00"
+    },
+    {
+        "month": "Nov",
+        "date": 10,
+        "year": 2016,
+        "team": "Girls' Varsity Volleyball",
+        "isHome": false,
+        "opponent": "Model Secondary School for the Deaf",
+        "time": "2016-11-10T17:00:00-05:00",
+        "result": "Loss"
+    },
+    {
+        "month": "Nov",
+        "date": 11,
+        "year": 2016,
+        "team": "Girls' Varsity Volleyball",
+        "isHome": false,
+        "time": "2016-11-11T18:30:00-05:00",
+        "location": "TRINITY UNIVERSITY"
+    },
+    {
+        "month": "Nov",
+        "date": 12,
+        "year": 2016,
+        "team": "Girls' Varsity Soccer",
+        "isHome": false
+    },
+    {
+        "month": "Nov",
+        "date": 12,
+        "year": 2016,
+        "team": "Boys' Varsity Soccer",
+        "isHome": false
+    },
+    {
+        "month": "Nov",
+        "date": 12,
+        "year": 2016,
+        "team": "Varsity Football",
+        "isHome": false,
+        "time": "2016-11-12T11:00:00-05:00",
+        "location": "Woodrow Wilson High School"
+    },
+    {
+        "month": "Nov",
+        "date": 17,
+        "year": 2016,
+        "team": "Girls' Varsity Basketball",
+        "isHome": true,
+        "opponent": "St. Paul's School for Girls",
+        "time": "2016-11-17T16:00:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Nov",
+        "date": 18,
+        "year": 2016,
+        "team": "Boys' JV Basketball",
+        "isHome": true,
+        "opponent": "Phelps High School",
+        "time": "2016-11-18T16:30:00-05:00",
+        "location": "New Gym",
+        "status": "CANCELLED"
+    },
+    {
+        "month": "Nov",
+        "date": 18,
+        "year": 2016,
+        "team": "Boys' Varsity Basketball",
+        "isHome": true,
+        "opponent": "Phelps High School",
+        "time": "2016-11-18T17:00:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Nov",
+        "date": 19,
+        "year": 2016,
+        "team": "Boys' JV Basketball",
+        "isHome": false,
+        "opponent": "MAC Jamboree",
+        "time": "2016-11-19T09:00:00-05:00",
+        "location": "MAC Jamboree"
+    },
+    {
+        "month": "Nov",
+        "date": 19,
+        "year": 2016,
+        "team": "Varsity Football",
+        "isHome": true,
+        "opponent": "KIPP",
+        "time": "2016-11-19T12:00:00-05:00",
+        "location": "Wilson High School"
+    },
+    {
+        "month": "Nov",
+        "date": 21,
+        "year": 2016,
+        "team": "Girls' Varsity Basketball",
+        "isHome": true,
+        "opponent": "Woodrow Wilson High School",
+        "time": "2016-11-21T18:00:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Nov",
+        "date": 22,
+        "year": 2016,
+        "team": "Boys' JV Basketball",
+        "isHome": true,
+        "opponent": "Kennedy High School",
+        "time": "2016-11-22T16:30:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Nov",
+        "date": 22,
+        "year": 2016,
+        "team": "Boys' Varsity Basketball",
+        "isHome": true,
+        "opponent": "Kennedy High School",
+        "time": "2016-11-22T17:45:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Nov",
+        "date": 26,
+        "year": 2016,
+        "team": "Boys' JV Basketball",
+        "isHome": false,
+        "opponent": "Paul the VI High School",
+        "time": "2016-11-26T14:00:00-05:00",
+        "location": "Paul the VI High School"
+    },
+    {
+        "month": "Nov",
+        "date": 26,
+        "year": 2016,
+        "team": "Varsity Football",
+        "isHome": false,
+        "time": "2016-11-26T14:30:00-05:00",
+        "location": "Woodrow Wilson High School"
+    },
+    {
+        "month": "Nov",
+        "date": 26,
+        "year": 2016,
+        "team": "Boys' Varsity Basketball",
+        "isHome": false,
+        "opponent": "Paul the VI High School",
+        "time": "2016-11-26T15:30:00-05:00",
+        "location": "Paul the VI High School"
+    },
+    {
+        "month": "Nov",
+        "date": 28,
+        "year": 2016,
+        "team": "Girls' Varsity Basketball",
+        "isHome": true,
+        "opponent": "School Without Walls",
+        "time": "2016-11-28T17:30:00-05:00",
+        "location": "New Gym",
+        "status": "CANCELLED"
+    },
+    {
+        "month": "Nov",
+        "date": 29,
+        "year": 2016,
+        "team": "Varsity Swimming",
+        "isHome": false,
+        "opponent": "St. Albans School",
+        "time": "2016-11-29T16:00:00-05:00",
+        "location": "St. Albans School"
+    },
+    {
+        "month": "Nov",
+        "date": 30,
+        "year": 2016,
+        "team": "Girls' Varsity Basketball",
+        "isHome": false,
+        "opponent": "Broad Run High School",
+        "time": "2016-11-30T18:00:00-05:00",
+        "location": "Annandale High School"
+    },
+    {
+        "month": "Dec",
+        "date": 1,
+        "year": 2016,
+        "team": "Boys' Varsity Basketball",
+        "isHome": true,
+        "opponent": "Edmund Burke School",
+        "time": "2016-12-01T17:45:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Dec",
+        "date": 1,
+        "year": 2016,
+        "team": "Girls' Varsity Basketball",
+        "isHome": false,
+        "opponent": "Loudon Valley High School",
+        "time": "2016-12-01T18:00:00-05:00",
+        "location": "Annandale High School"
+    },
+    {
+        "month": "Dec",
+        "date": 3,
+        "year": 2016,
+        "team": "Boys' JV Basketball",
+        "isHome": true,
+        "opponent": "Woodrow Wilson High School",
+        "time": "2016-12-03T12:00:00-05:00",
+        "location": "New Gym",
+        "status": "CANCELLED"
+    },
+    {
+        "month": "Dec",
+        "date": 3,
+        "year": 2016,
+        "team": "Boys' Varsity Basketball",
+        "isHome": true,
+        "opponent": "Woodrow Wilson High School",
+        "time": "2016-12-03T13:30:00-05:00",
+        "location": "Georgetown Day School"
+    },
+    {
+        "month": "Dec",
+        "date": 3,
+        "year": 2016,
+        "team": "Varsity Swimming",
+        "isHome": false,
+        "opponent": "WMPS",
+        "time": "2016-12-03T16:00:00-05:00",
+        "location": "WMPS",
+        "status": "CANCELLED"
+    },
+    {
+        "month": "Dec",
+        "date": 6,
+        "year": 2016,
+        "team": "Varsity Swimming",
+        "isHome": false,
+        "opponent": "Stone Ridge School of the Sacred Heart",
+        "time": "2016-12-06T16:00:00-05:00",
+        "location": "Stone Ridge School of the Sacred Heart"
+    },
+    {
+        "month": "Dec",
+        "date": 6,
+        "year": 2016,
+        "team": "Girls' JV Basketball",
+        "isHome": true,
+        "opponent": "Sidwell Friends School",
+        "time": "2016-12-06T16:15:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Dec",
+        "date": 6,
+        "year": 2016,
+        "team": "Girls' Varsity Basketball",
+        "isHome": true,
+        "opponent": "Sidwell Friends School",
+        "time": "2016-12-06T17:45:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Dec",
+        "date": 7,
+        "year": 2016,
+        "team": "Boys' JV Basketball",
+        "isHome": true,
+        "opponent": "Sandy Springs Friends School",
+        "time": "2016-12-07T16:15:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Dec",
+        "date": 7,
+        "year": 2016,
+        "team": "Boys' Varsity Basketball",
+        "isHome": true,
+        "opponent": "Sandy Springs Friends School",
+        "time": "2016-12-07T17:45:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Dec",
+        "date": 8,
+        "year": 2016,
+        "team": "Girls' JV Basketball",
+        "isHome": true,
+        "opponent": "National Cathedral School",
+        "time": "2016-12-08T16:15:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Dec",
+        "date": 8,
+        "year": 2016,
+        "team": "Girls' Varsity Basketball",
+        "isHome": true,
+        "opponent": "National Cathedral School",
+        "time": "2016-12-08T17:45:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Dec",
+        "date": 9,
+        "year": 2016,
+        "team": "Boys' JV Basketball",
+        "isHome": true,
+        "opponent": "McKinley Tech",
+        "time": "2016-12-09T16:15:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Dec",
+        "date": 9,
+        "year": 2016,
+        "team": "Boys' Varsity Basketball",
+        "isHome": true,
+        "opponent": "McKinley Tech",
+        "time": "2016-12-09T17:45:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Dec",
+        "date": 10,
+        "year": 2016,
+        "team": "Girls' Varsity Basketball",
+        "isHome": true,
+        "opponent": "MERCERSBURG ACADEMY",
+        "time": "2016-12-10T17:00:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Dec",
+        "date": 13,
+        "year": 2016,
+        "team": "Boys' JV Basketball",
+        "isHome": true,
+        "opponent": "St. Andrew's Episcopal School",
+        "time": "2016-12-13T16:15:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Dec",
+        "date": 13,
+        "year": 2016,
+        "team": "Boys' Varsity Basketball",
+        "isHome": true,
+        "opponent": "St. Andrew's Episcopal School",
+        "time": "2016-12-13T17:45:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Dec",
+        "date": 15,
+        "year": 2016,
+        "team": "Boys' JV Basketball",
+        "isHome": false,
+        "opponent": "Sidwell Friends School",
+        "time": "2016-12-15T16:15:00-05:00",
+        "location": "Sidwell Friends School"
+    },
+    {
+        "month": "Dec",
+        "date": 15,
+        "year": 2016,
+        "team": "Girls' JV Basketball",
+        "isHome": true,
+        "opponent": "Potomac School",
+        "time": "2016-12-15T16:30:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Dec",
+        "date": 15,
+        "year": 2016,
+        "team": "Varsity Swimming",
+        "isHome": false,
+        "opponent": "Holton-Arms School",
+        "time": "2016-12-15T18:00:00-05:00",
+        "location": "Holton-Arms School"
+    },
+    {
+        "month": "Dec",
+        "date": 15,
+        "year": 2016,
+        "team": "Girls' Varsity Basketball",
+        "isHome": true,
+        "opponent": "Potomac School",
+        "time": "2016-12-15T18:15:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Dec",
+        "date": 20,
+        "year": 2016,
+        "team": "Girls' Varsity Basketball",
+        "isHome": false,
+        "opponent": "Anacostia High School",
+        "time": "2016-12-20T18:00:00-05:00",
+        "location": "Anacostia High School"
+    },
+    {
+        "month": "Dec",
+        "date": 29,
+        "year": 2016,
+        "team": "Boys' Varsity Basketball",
+        "isHome": true,
+        "opponent": "Herndon High School",
+        "time": "2016-12-29T17:00:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 3,
+        "year": 2017,
+        "team": "Girls' JV Basketball",
+        "isHome": true,
+        "opponent": "Georgetown Day School",
+        "time": "2017-01-03T16:15:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 3,
+        "year": 2017,
+        "team": "Girls' Varsity Basketball",
+        "isHome": true,
+        "opponent": "Georgetown Day School",
+        "time": "2017-01-03T17:45:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 4,
+        "year": 2017,
+        "team": "Boys' JV Basketball",
+        "isHome": true,
+        "opponent": "Flint Hill School (VA)",
+        "time": "2017-01-04T16:15:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 4,
+        "year": 2017,
+        "team": "Boys' Varsity Basketball",
+        "isHome": true,
+        "opponent": "Flint Hill School (VA)",
+        "time": "2017-01-04T17:45:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 6,
+        "year": 2017,
+        "team": "Girls' JV Basketball",
+        "isHome": true,
+        "opponent": "Madeira School",
+        "time": "2017-01-06T16:15:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 6,
+        "year": 2017,
+        "team": "Girls' Varsity Basketball",
+        "isHome": true,
+        "opponent": "Madeira School",
+        "time": "2017-01-06T17:45:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 7,
+        "year": 2017,
+        "team": "Varsity Swimming",
+        "isHome": false,
+        "opponent": "Stone Ridge School of the Sacred Heart",
+        "time": "2017-01-07T13:00:00-05:00",
+        "location": "Stone Ridge School of the Sacred Heart"
+    },
+    {
+        "month": "Jan",
+        "date": 10,
+        "year": 2017,
+        "team": "Girls' MS A Basketball",
+        "isHome": true,
+        "opponent": "Georgetown Day School",
+        "time": "2017-01-10T14:45:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 10,
+        "year": 2017,
+        "team": "Girls' MS B Basketball",
+        "isHome": false,
+        "opponent": "Georgetown Day School",
+        "time": "2017-01-10T14:45:00-05:00",
+        "location": "Georgetown Day School"
+    },
+    {
+        "month": "Jan",
+        "date": 10,
+        "year": 2017,
+        "team": "Boys' JV Basketball",
+        "isHome": true,
+        "opponent": "Takoma Academy",
+        "time": "2017-01-10T16:15:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 10,
+        "year": 2017,
+        "team": "Boys' Varsity Basketball",
+        "isHome": true,
+        "opponent": "Takoma Academy",
+        "time": "2017-01-10T17:45:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 10,
+        "year": 2017,
+        "team": "Varsity Swimming",
+        "isHome": false,
+        "opponent": "St. Albans School",
+        "time": "2017-01-10T19:00:00-05:00",
+        "location": "St. Albans School"
+    },
+    {
+        "month": "Jan",
+        "date": 10,
+        "year": 2017,
+        "team": "Girls' Varsity Basketball",
+        "isHome": true,
+        "opponent": "Thomas Jefferson High School",
+        "time": "2017-01-10T19:00:00-05:00"
+    },
+    {
+        "month": "Jan",
+        "date": 11,
+        "year": 2017,
+        "team": "Boys' MS A Basketball",
+        "isHome": false,
+        "opponent": "Sidwell Friends School",
+        "time": "2017-01-11T14:45:00-05:00",
+        "location": "Sidwell Friends School"
+    },
+    {
+        "month": "Jan",
+        "date": 11,
+        "year": 2017,
+        "team": "Boys' MS B Basketball",
+        "isHome": true,
+        "opponent": "Sidwell Friends School",
+        "time": "2017-01-11T14:45:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 11,
+        "year": 2017,
+        "team": "Girls' MS A Basketball",
+        "isHome": false,
+        "opponent": "Sidwell Friends School",
+        "time": "2017-01-11T14:45:00-05:00",
+        "location": "Sidwell Friends School"
+    },
+    {
+        "month": "Jan",
+        "date": 11,
+        "year": 2017,
+        "team": "Girls' MS B Basketball",
+        "isHome": true,
+        "opponent": "Sidwell Friends School",
+        "time": "2017-01-11T14:45:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 11,
+        "year": 2017,
+        "team": "Boys' MS A Basketball",
+        "isHome": false,
+        "opponent": "Sidwell Friends School",
+        "time": "2017-01-11T14:45:00-05:00",
+        "location": "Sidwell Friends School"
+    },
+    {
+        "month": "Jan",
+        "date": 11,
+        "year": 2017,
+        "team": "Boys' MS B Basketball",
+        "isHome": true,
+        "opponent": "Sidwell Friends School",
+        "time": "2017-01-11T14:45:00-05:00"
+    },
+    {
+        "month": "Jan",
+        "date": 12,
+        "year": 2017,
+        "team": "Boys' MS A Basketball",
+        "isHome": true,
+        "opponent": "Georgetown Day School",
+        "time": "2017-01-12T14:45:00-05:00"
+    },
+    {
+        "month": "Jan",
+        "date": 12,
+        "year": 2017,
+        "team": "Boys' MS B Basketball",
+        "isHome": true,
+        "opponent": "Georgetown Day School",
+        "time": "2017-01-12T14:45:00-05:00"
+    },
+    {
+        "month": "Jan",
+        "date": 12,
+        "year": 2017,
+        "team": "MS Wrestling",
+        "isHome": true,
+        "opponent": "Georgetown Day School",
+        "time": "2017-01-12T14:45:00-05:00"
+    },
+    {
+        "month": "Jan",
+        "date": 13,
+        "year": 2017,
+        "team": "MS Wrestling",
+        "isHome": true,
+        "opponent": "Sidwell Friends School",
+        "time": "2017-01-13T14:45:00-05:00",
+        "location": "Wrestling Room"
+    },
+    {
+        "month": "Jan",
+        "date": 13,
+        "year": 2017,
+        "team": "Boys' JV Basketball",
+        "isHome": true,
+        "opponent": "Saint John Paul the Great Catholic High School",
+        "time": "2017-01-13T16:15:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 13,
+        "year": 2017,
+        "team": "Girls' Varsity Basketball",
+        "isHome": false,
+        "opponent": "Sandy Springs Friends School",
+        "time": "2017-01-13T16:30:00-05:00",
+        "location": "Sandy Spring Friends School"
+    },
+    {
+        "month": "Jan",
+        "date": 13,
+        "year": 2017,
+        "team": "Boys' Varsity Basketball",
+        "isHome": true,
+        "opponent": "Saint John Paul the Great Catholic High School",
+        "time": "2017-01-13T17:45:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 17,
+        "year": 2017,
+        "team": "Girls' MS A Basketball",
+        "isHome": false,
+        "opponent": "St. Andrew's Episcopal School",
+        "time": "2017-01-17T15:00:00-05:00",
+        "location": "St. Andrew's Episcopal School"
+    },
+    {
+        "month": "Jan",
+        "date": 17,
+        "year": 2017,
+        "team": "Girls' MS B Basketball",
+        "isHome": false,
+        "opponent": "St. Andrew's Episcopal School",
+        "time": "2017-01-17T15:00:00-05:00",
+        "location": "St. Andrew's Episcopal School"
+    },
+    {
+        "month": "Jan",
+        "date": 17,
+        "year": 2017,
+        "team": "Girls' JV Basketball",
+        "isHome": false,
+        "opponent": "Episcopal High School",
+        "time": "2017-01-17T16:15:00-05:00",
+        "location": "Episcopal High School"
+    },
+    {
+        "month": "Jan",
+        "date": 17,
+        "year": 2017,
+        "team": "Boys' JV Basketball",
+        "isHome": true,
+        "opponent": "St. James School",
+        "time": "2017-01-17T17:00:00-05:00",
+        "location": "Old Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 17,
+        "year": 2017,
+        "team": "Boys' Varsity Basketball",
+        "isHome": true,
+        "opponent": "St. James School",
+        "time": "2017-01-17T17:00:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 17,
+        "year": 2017,
+        "team": "Girls' Varsity Basketball",
+        "isHome": false,
+        "opponent": "Episcopal High School",
+        "time": "2017-01-17T18:00:00-05:00",
+        "location": "Episcopal High School"
+    },
+    {
+        "month": "Jan",
+        "date": 18,
+        "year": 2017,
+        "team": "Girls' MS A Basketball",
+        "isHome": true,
+        "opponent": "National Cathedral School",
+        "time": "2017-01-18T14:45:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 18,
+        "year": 2017,
+        "team": "Girls' MS B Basketball",
+        "isHome": false,
+        "opponent": "National Cathedral School",
+        "time": "2017-01-18T14:45:00-05:00",
+        "location": "National Cathedral School"
+    },
+    {
+        "month": "Jan",
+        "date": 18,
+        "year": 2017,
+        "team": "Varsity Swimming",
+        "isHome": false,
+        "opponent": "Bullis School",
+        "time": "2017-01-18T16:00:00-05:00",
+        "location": "Bullis School"
+    },
+    {
+        "month": "Jan",
+        "date": 19,
+        "year": 2017,
+        "team": "Boys' MS A Basketball",
+        "isHome": false,
+        "opponent": "St. Andrew's Episcopal School",
+        "time": "2017-01-19T14:45:00-05:00",
+        "location": "St. Andrew's Episcopal School"
+    },
+    {
+        "month": "Jan",
+        "date": 19,
+        "year": 2017,
+        "team": "Boys' MS B Basketball",
+        "isHome": true,
+        "opponent": "St. Andrew's Episcopal School",
+        "time": "2017-01-19T14:45:00-05:00"
+    },
+    {
+        "month": "Jan",
+        "date": 19,
+        "year": 2017,
+        "team": "Boys' JV Basketball",
+        "isHome": true,
+        "opponent": "Sidwell Friends School",
+        "time": "2017-01-19T16:15:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 19,
+        "year": 2017,
+        "team": "Girls' JV Basketball",
+        "isHome": false,
+        "opponent": "Holton-Arms School",
+        "time": "2017-01-19T16:15:00-05:00",
+        "location": "Holton-Arms School"
+    },
+    {
+        "month": "Jan",
+        "date": 19,
+        "year": 2017,
+        "team": "Boys' Varsity Basketball",
+        "isHome": true,
+        "opponent": "Sidwell Friends School",
+        "time": "2017-01-19T17:45:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 19,
+        "year": 2017,
+        "team": "Girls' Varsity Basketball",
+        "isHome": false,
+        "opponent": "Holton-Arms School",
+        "time": "2017-01-19T17:45:00-05:00",
+        "location": "Holton-Arms School"
+    },
+    {
+        "month": "Jan",
+        "date": 24,
+        "year": 2017,
+        "team": "Girls' MS A Basketball",
+        "isHome": false,
+        "opponent": "Holton-Arms School",
+        "time": "2017-01-24T14:45:00-05:00",
+        "location": "Holton-Arms School"
+    },
+    {
+        "month": "Jan",
+        "date": 24,
+        "year": 2017,
+        "team": "Girls' MS B Basketball",
+        "isHome": false,
+        "opponent": "Holton-Arms School",
+        "time": "2017-01-24T14:45:00-05:00",
+        "location": "Holton-Arms School"
+    },
+    {
+        "month": "Jan",
+        "date": 24,
+        "year": 2017,
+        "team": "Boys' JV Basketball",
+        "isHome": true,
+        "opponent": "Georgetown Day School",
+        "time": "2017-01-24T16:15:00-05:00",
+        "location": "Old Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 24,
+        "year": 2017,
+        "team": "Girls' Varsity Basketball",
+        "isHome": true,
+        "opponent": "St. Andrew's Episcopal School",
+        "time": "2017-01-24T16:15:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 24,
+        "year": 2017,
+        "team": "Boys' Varsity Basketball",
+        "isHome": true,
+        "opponent": "Georgetown Day School",
+        "time": "2017-01-24T17:45:00-05:00",
+        "location": "Georgetown Day School"
+    },
+    {
+        "month": "Jan",
+        "date": 24,
+        "year": 2017,
+        "team": "Girls' JV Basketball",
+        "isHome": true,
+        "opponent": "St. Andrew's Episcopal School",
+        "time": "2017-01-24T17:45:00-05:00",
+        "location": "Old Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 25,
+        "year": 2017,
+        "team": "Girls' MS A Basketball",
+        "isHome": true,
+        "opponent": "National Cathedral School",
+        "time": "2017-01-25T14:45:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 25,
+        "year": 2017,
+        "team": "Girls' MS B Basketball",
+        "isHome": false,
+        "opponent": "National Cathedral School",
+        "time": "2017-01-25T14:45:00-05:00",
+        "location": "National Cathedral School"
+    },
+    {
+        "month": "Jan",
+        "date": 25,
+        "year": 2017,
+        "team": "Boys' MS A Basketball",
+        "isHome": false,
+        "opponent": "St. Paul's School",
+        "time": "2017-01-25T15:00:00-05:00",
+        "location": "Sheridan"
+    },
+    {
+        "month": "Jan",
+        "date": 26,
+        "year": 2017,
+        "team": "Boys' MS A Basketball",
+        "isHome": true,
+        "opponent": "Potomac School",
+        "time": "2017-01-26T14:45:00-05:00"
+    },
+    {
+        "month": "Jan",
+        "date": 26,
+        "year": 2017,
+        "team": "Boys' MS B Basketball",
+        "isHome": false,
+        "opponent": "Potomac School",
+        "time": "2017-01-26T14:45:00-05:00",
+        "location": "Potomac School"
+    },
+    {
+        "month": "Jan",
+        "date": 26,
+        "year": 2017,
+        "team": "Boys' JV Basketball",
+        "isHome": false,
+        "opponent": "Flint Hill School (VA)",
+        "time": "2017-01-26T16:15:00-05:00",
+        "location": "Flint Hill School (VA)"
+    },
+    {
+        "month": "Jan",
+        "date": 26,
+        "year": 2017,
+        "team": "Girls' JV Basketball",
+        "isHome": true,
+        "opponent": "St. Stephens & St. Agnes School",
+        "time": "2017-01-26T16:15:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 26,
+        "year": 2017,
+        "team": "Girls' Varsity Basketball",
+        "isHome": true,
+        "opponent": "St. Stephens & St. Agnes School",
+        "time": "2017-01-26T17:45:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 26,
+        "year": 2017,
+        "team": "Boys' Varsity Basketball",
+        "isHome": false,
+        "opponent": "Flint Hill School (VA)",
+        "time": "2017-01-26T18:00:00-05:00",
+        "location": "Flint Hill School (VA)"
+    },
+    {
+        "month": "Jan",
+        "date": 27,
+        "year": 2017,
+        "team": "Varsity Swimming",
+        "isHome": false,
+        "opponent": "ISL",
+        "time": "2017-01-27T15:15:00-05:00",
+        "location": "ISL"
+    },
+    {
+        "month": "Jan",
+        "date": 28,
+        "year": 2017,
+        "team": "Boys' Varsity Basketball",
+        "isHome": false,
+        "opponent": "H. D. Woodson High School",
+        "location": "H. D. Woodson High School"
+    },
+    {
+        "month": "Jan",
+        "date": 30,
+        "year": 2017,
+        "team": "Boys' MS A Basketball",
+        "isHome": true,
+        "opponent": "Flint Hill School (VA)",
+        "time": "2017-01-30T14:45:00-05:00"
+    },
+    {
+        "month": "Jan",
+        "date": 31,
+        "year": 2017,
+        "team": "Girls' MS A Basketball",
+        "isHome": false,
+        "opponent": "Potomac School",
+        "time": "2017-01-31T14:45:00-05:00",
+        "location": "Potomac School"
+    },
+    {
+        "month": "Jan",
+        "date": 31,
+        "year": 2017,
+        "team": "Girls' MS B Basketball",
+        "isHome": true,
+        "opponent": "Potomac School",
+        "time": "2017-01-31T14:45:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Jan",
+        "date": 31,
+        "year": 2017,
+        "team": "Boys' JV Basketball",
+        "isHome": false,
+        "opponent": "St. Andrew's Episcopal School",
+        "time": "2017-01-31T16:15:00-05:00",
+        "location": "St. Andrew's Episcopal School"
+    },
+    {
+        "month": "Jan",
+        "date": 31,
+        "year": 2017,
+        "team": "Girls' JV Basketball",
+        "isHome": false,
+        "opponent": "Madeira School",
+        "time": "2017-01-31T16:15:00-05:00",
+        "location": "Madeira School"
+    },
+    {
+        "month": "Jan",
+        "date": 31,
+        "year": 2017,
+        "team": "Girls' Varsity Basketball",
+        "isHome": false,
+        "opponent": "Madeira School",
+        "time": "2017-01-31T17:45:00-05:00",
+        "location": "Madeira School"
+    },
+    {
+        "month": "Jan",
+        "date": 31,
+        "year": 2017,
+        "team": "Boys' Varsity Basketball",
+        "isHome": false,
+        "opponent": "St. Andrew's Episcopal School",
+        "time": "2017-01-31T18:00:00-05:00",
+        "location": "St. Andrew's Episcopal School"
+    },
+    {
+        "month": "Jan",
+        "date": 31,
+        "year": 2017,
+        "team": "Varsity Swimming",
+        "isHome": false,
+        "opponent": "St. Albans School",
+        "time": "2017-01-31T19:00:00-05:00",
+        "location": "St. Albans School"
+    },
+    {
+        "month": "Feb",
+        "date": 2,
+        "year": 2017,
+        "team": "Varsity Swimming",
+        "isHome": false,
+        "opponent": "ISL Diving",
+        "time": "2017-02-02T17:30:00-05:00",
+        "location": "ISL Diving"
+    },
+    {
+        "month": "Feb",
+        "date": 3,
+        "year": 2017,
+        "team": "Boys' JV Basketball",
+        "isHome": true,
+        "opponent": "Potomac School",
+        "time": "2017-02-03T16:15:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Feb",
+        "date": 3,
+        "year": 2017,
+        "team": "Girls' JV Basketball",
+        "isHome": false,
+        "opponent": "Potomac School",
+        "time": "2017-02-03T16:15:00-05:00",
+        "location": "Potomac School"
+    },
+    {
+        "month": "Feb",
+        "date": 3,
+        "year": 2017,
+        "team": "Boys' Varsity Basketball",
+        "isHome": true,
+        "opponent": "Potomac School",
+        "time": "2017-02-03T17:45:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Feb",
+        "date": 3,
+        "year": 2017,
+        "team": "Girls' Varsity Basketball",
+        "isHome": false,
+        "opponent": "Potomac School",
+        "time": "2017-02-03T17:45:00-05:00",
+        "location": "Potomac School"
+    },
+    {
+        "month": "Feb",
+        "date": 6,
+        "year": 2017,
+        "team": "Boys' JV Basketball",
+        "isHome": true,
+        "opponent": "Thurgood Marshall",
+        "time": "2017-02-06T16:15:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Feb",
+        "date": 6,
+        "year": 2017,
+        "team": "Boys' Varsity Basketball",
+        "isHome": true,
+        "opponent": "Thurgood Marshall",
+        "time": "2017-02-06T17:45:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Feb",
+        "date": 7,
+        "year": 2017,
+        "team": "Girls' Varsity Basketball",
+        "isHome": true,
+        "opponent": "Sandy Springs Friends School",
+        "time": "2017-02-07T16:30:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Feb",
+        "date": 8,
+        "year": 2017,
+        "team": "Boys' MS B Basketball",
+        "isHome": true,
+        "opponent": "Flint Hill School (VA)",
+        "time": "2017-02-08T14:45:00-05:00"
+    },
+    {
+        "month": "Feb",
+        "date": 8,
+        "year": 2017,
+        "team": "Boys' MS A Basketball",
+        "isHome": false,
+        "opponent": "Flint Hill School (VA)",
+        "time": "2017-02-08T14:45:00-05:00",
+        "location": "Flint Hill School"
+    },
+    {
+        "month": "Feb",
+        "date": 8,
+        "year": 2017,
+        "team": "Boys' JV Basketball",
+        "isHome": false,
+        "opponent": "Sidwell Friends School",
+        "time": "2017-02-08T16:15:00-05:00",
+        "location": "Sidwell Friends School"
+    },
+    {
+        "month": "Feb",
+        "date": 9,
+        "year": 2017,
+        "team": "Boys' MS A Basketball",
+        "isHome": false,
+        "opponent": "Georgetown Day School",
+        "time": "2017-02-09T14:45:00-05:00",
+        "location": "Georgetown Day School"
+    },
+    {
+        "month": "Feb",
+        "date": 9,
+        "year": 2017,
+        "team": "Boys' MS B Basketball",
+        "isHome": true,
+        "opponent": "Georgetown Day School",
+        "time": "2017-02-09T14:45:00-05:00"
+    },
+    {
+        "month": "Feb",
+        "date": 9,
+        "year": 2017,
+        "team": "MS Wrestling",
+        "isHome": false,
+        "opponent": "Georgetown Day School",
+        "time": "2017-02-09T14:45:00-05:00",
+        "location": "Georgetown Day School"
+    },
+    {
+        "month": "Feb",
+        "date": 9,
+        "year": 2017,
+        "team": "Girls' JV Basketball",
+        "isHome": true,
+        "opponent": "Episcopal High School",
+        "time": "2017-02-09T16:15:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Feb",
+        "date": 9,
+        "year": 2017,
+        "team": "Girls' Varsity Basketball",
+        "isHome": true,
+        "opponent": "Episcopal High School",
+        "time": "2017-02-09T16:15:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Feb",
+        "date": 9,
+        "year": 2017,
+        "team": "Boys' JV Basketball",
+        "isHome": false,
+        "opponent": "St. James School",
+        "time": "2017-02-09T17:30:00-05:00",
+        "location": "St. James School"
+    },
+    {
+        "month": "Feb",
+        "date": 9,
+        "year": 2017,
+        "team": "Boys' Varsity Basketball",
+        "isHome": false,
+        "opponent": "St. James School",
+        "time": "2017-02-09T17:30:00-05:00",
+        "location": "St. James School"
+    },
+    {
+        "month": "Feb",
+        "date": 14,
+        "year": 2017,
+        "team": "Girls' Varsity Basketball",
+        "isHome": true,
+        "opponent": "Holton-Arms School",
+        "time": "2017-02-14T16:30:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Feb",
+        "date": 14,
+        "year": 2017,
+        "team": "Boys' Varsity Basketball",
+        "isHome": false,
+        "opponent": "Sidwell Friends School",
+        "time": "2017-02-14T17:30:00-05:00",
+        "location": "Sidwell Friends School"
+    },
+    {
+        "month": "Feb",
+        "date": 16,
+        "year": 2017,
+        "team": "Boys' Varsity Basketball",
+        "isHome": false,
+        "opponent": "Georgetown Day School",
+        "time": "2017-02-16T16:15:00-05:00",
+        "location": "Georgetown Day School"
+    },
+    {
+        "month": "Feb",
+        "date": 16,
+        "year": 2017,
+        "team": "Girls' Varsity Basketball",
+        "isHome": false,
+        "opponent": "St. Andrew's Episcopal School",
+        "time": "2017-02-16T16:30:00-05:00",
+        "location": "St. Andrew's Episcopal School"
+    },
+    {
+        "month": "Feb",
+        "date": 18,
+        "year": 2017,
+        "team": "Boys' Varsity Basketball",
+        "isHome": true,
+        "opponent": "Friendship Tech High School",
+        "time": "2017-02-18T13:00:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Feb",
+        "date": 21,
+        "year": 2017,
+        "team": "Boys' MS A Basketball",
+        "isHome": false,
+        "opponent": "St. Stephens & St. Agnes School",
+        "time": "2017-02-21T14:45:00-05:00",
+        "location": "St. Stephens & St. Agnes School"
+    },
+    {
+        "month": "Feb",
+        "date": 21,
+        "year": 2017,
+        "team": "Boys' MS B Basketball",
+        "isHome": true,
+        "opponent": "St. Stephens & St. Agnes School",
+        "time": "2017-02-21T14:45:00-05:00"
+    },
+    {
+        "month": "Feb",
+        "date": 21,
+        "year": 2017,
+        "team": "Girls' JV Basketball",
+        "isHome": false,
+        "opponent": "St. Stephens & St. Agnes School",
+        "time": "2017-02-21T16:15:00-05:00",
+        "location": "St. Stephens & St. Agnes School"
+    },
+    {
+        "month": "Feb",
+        "date": 21,
+        "year": 2017,
+        "team": "Boys' Varsity Basketball",
+        "isHome": false,
+        "opponent": "Potomac School",
+        "time": "2017-02-21T17:00:00-05:00",
+        "location": "Potomac School"
+    },
+    {
+        "month": "Feb",
+        "date": 21,
+        "year": 2017,
+        "team": "Girls' Varsity Basketball",
+        "isHome": false,
+        "opponent": "St. Stephens & St. Agnes School",
+        "time": "2017-02-21T17:45:00-05:00",
+        "location": "St. Stephens & St. Agnes School"
+    },
+    {
+        "month": "Feb",
+        "date": 24,
+        "year": 2017,
+        "team": "Girls' Varsity Basketball",
+        "isHome": false,
+        "opponent": "ISL",
+        "time": "2017-02-24T17:00:00-05:00",
+        "location": "ISL"
+    },
+    {
+        "month": "Feb",
+        "date": 24,
+        "year": 2017,
+        "team": "Boys' Varsity Basketball",
+        "isHome": true,
+        "opponent": "MAC",
+        "time": "2017-02-24T18:30:00-05:00",
+        "location": "New Gym"
+    },
+    {
+        "month": "Feb",
+        "date": 25,
+        "year": 2017,
+        "team": "Boys' Varsity Basketball",
+        "isHome": false,
+        "opponent": "MAC",
+        "time": "2017-02-25T17:00:00-05:00",
+        "location": "MAC"
+    },
+    {
+        "month": "Feb",
+        "date": 26,
+        "year": 2017,
+        "team": "Girls' Varsity Basketball",
+        "isHome": false,
+        "opponent": "ISL",
+        "time": "2017-02-26T14:45:00-05:00",
+        "location": "ISL"
+    },
+    {
+        "month": "Feb",
+        "date": 26,
+        "year": 2017,
+        "team": "Boys' Varsity Basketball",
+        "isHome": false,
+        "opponent": "MAC",
+        "time": "2017-02-26T17:00:00-05:00",
+        "location": "MAC"
+    }
+]
