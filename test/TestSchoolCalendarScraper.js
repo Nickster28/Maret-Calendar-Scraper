@@ -408,14 +408,14 @@ const testScrapeSchoolCalendars = function() {
                         assert.equal(url, util.constants.SCHOOL_CALENDAR_URL,
                             "First school calendar URL should be the constant");
 
-                        filename = "schoolCalendar/calendarsFull1.html";
+                        filename = "schoolCalendar/full.html";
                     } else if (callNumber == 1) {
                         var correctURL = util.constants.SCHOOL_CALENDAR_URL +
                             "?cal_date=2017-1-23";
                         assert.equal(url, correctURL, "Second school " +
                             "URL should have query param");
 
-                        filename = "schoolCalendar/calendarsFull2.html";
+                        filename = "schoolCalendar/full2.html";
                     } else {
                         assert(false, "Error: call number " + callNumber);
                     }
