@@ -1,6 +1,6 @@
-const assert = require('assert');
+const assert = require("assert");
 const cheerio = require("cheerio");
-const fs = require('fs');
+const fs = require("fs");
 
 const TEST_FILES_DIRECTORY = "files";
 
@@ -39,7 +39,7 @@ module.exports.testScraper = function(testName, scraperFn, tests) {
 
                 // Get the correct JSON output
                 const jsonFilename = getAbsolutePath(test["file"] + ".json");
-                const jsonFile = fs.readFileSync(jsonFilename, 'utf8');
+                const jsonFile = fs.readFileSync(jsonFilename, "utf8");
                 const correctOutput = JSON.parse(jsonFile);
 
                 assert.deepStrictEqual(output, correctOutput,

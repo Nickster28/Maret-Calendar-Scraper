@@ -9,7 +9,7 @@ Parameters:
 	date - the start date to fetch the calendars for.
 
 Returns: a list of event objects in chronological order for the next two months
-of the school calendar after 'date'.  Each event is guaranteed to have the
+of the school calendar after "date".  Each event is guaranteed to have the
 following fields:
 
 	- month: abbreviated month name
