@@ -158,7 +158,7 @@ const testScrapeAthleticsCalendars = function() {
            	/* We want to return two calendar HTML files to scrape.  Make sure
            	this function is called with the right parameters and right number
            	of times. */
-            mock('../util.js', {
+            mock("../util.js", {
                 constants: util.constants,
                 getURL: function(url) {
                     var filename = "";
@@ -173,17 +173,17 @@ const testScrapeAthleticsCalendars = function() {
                     }
 
                     filename = testUtil.getAbsolutePath(filename);
-                    const file = fs.readFileSync(filename, 'utf8');
+                    const file = fs.readFileSync(filename, "utf8");
                     callNumber += 1;
                     return Promise.resolve(file);
                 }
             });
 
-            scraper = mock.reRequire('../scraper.js');
+            scraper = mock.reRequire("../scraper.js");
         });
 
         after(function() {
-            mock.stop('../util.js');
+            mock.stop("../util.js");
         });
 
         // Test the whole scraping pipeline to ensure correct output
@@ -192,7 +192,7 @@ const testScrapeAthleticsCalendars = function() {
                 // Get the correct JSON output
                 var jsonFilename = "athleticsCalendar/full.json";
                 jsonFilename = testUtil.getAbsolutePath(jsonFilename);
-                const jsonFile = fs.readFileSync(jsonFilename, 'utf8');
+                const jsonFile = fs.readFileSync(jsonFilename, "utf8");
                 const correctOutput = JSON.parse(jsonFile);
                 assert.deepStrictEqual(data, correctOutput);
             });
