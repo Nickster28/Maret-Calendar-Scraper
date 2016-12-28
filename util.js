@@ -9,7 +9,7 @@ Parameters:
 
 Returns: a promise containing the GET response from the given url
 
-Uses 'request' within a promise.  If there's an error, the
+Uses "request" within a promise.  If there's an error, the
 error will be passed back in a promise.  Otherwise, the response
 is passed back.
 --------------------------

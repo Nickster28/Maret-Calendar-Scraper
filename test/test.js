@@ -10,6 +10,6 @@ must export a run() method that takes no arguments and runs all of its tests.
 ------------------
 */
 
-require('./TestSchoolCalendarScraper.js').run();
-require('./TestAthleticsCalendarScraper.js').run();
-require('./TestAthleticsTeamsScraper.js').run();
+require("./TestSchoolCalendarScraper.js").run();
+require("./TestAthleticsCalendarScraper.js").run();
+require("./TestAthleticsTeamsScraper.js").run();

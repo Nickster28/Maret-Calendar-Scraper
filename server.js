@@ -1,8 +1,9 @@
-const express = require('express');
-const scraper = require('./scraper.js');
+const express = require("express");
+const scraper = require("./scraper.js");
+const path = require("path");
 
 const app = express();
-app.set('port', (process.env.PORT || 5000));
+app.set("port", (process.env.PORT || 5000));
 
 const errorHandler = function(error, httpResponse) {
     console.log(error.stack);
@@ -45,7 +46,7 @@ Additionally, an event object may have the following fields:
     - location: the name of the event's location
 --------------------------
 */
-app.get('/schoolCalendar', function(req, res) {
+app.get("/schoolCalendar", function(req, res) {
     "use strict";
     scraper.scrapeSchoolCalendars(new Date()).then(function(calendarData) {
         res.json(calendarData);
@@ -119,7 +120,7 @@ All fields in a practice object are the same as their corresponding fields in a
 game object.
 --------------------------
 */
-app.get('/athleticsCalendar', function(req, res) {
+app.get("/athleticsCalendar", function(req, res) {
     "use strict";
     scraper.scrapeAthleticsCalendars().then(function(calendarData) {
         res.json(calendarData);   
@@ -149,7 +150,7 @@ arrays, one for each season, of athletics team names (as strings):
 }
 -----------------------------------------
 */
-app.get('/athleticsTeams', function(req, res) {
+app.get("/athleticsTeams", function(req, res) {
     "use strict";
     scraper.scrapeAthleticsTeams().then(function(teams) {
         res.json(teams);
@@ -159,9 +160,21 @@ app.get('/athleticsTeams', function(req, res) {
 });
 
 
+/* ENDPOINT: *
+----------------
+A catch-all endpoint that sends back a link to the GitHub repo.
+----------------
+*/
+app.get("*", function(req, res) {
+    res.send("<html><h1>Maret Calendar Scraper</h1>See " +
+        "<a href='https://github.com/Nickster28/Maret-Calendar-Scraper'>" +
+        "our GitHub repo</a> for this project's code</html>");
+});
+
+
 /* Start the server */
-app.listen(app.get('port'), function() {
-    console.log('Node app is running on port', app.get('port'));
+app.listen(app.get("port"), function() {
+    console.log("Node app is running on port", app.get("port"));
 });
 
 

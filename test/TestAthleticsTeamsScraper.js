@@ -68,7 +68,7 @@ module.exports.run = function() {
 				var callNumber = 0;
 
 			    // We want to return the athletics team page to scrape
-			    mock('../util.js', {
+			    mock("../util.js", {
 			        constants: util.constants,
 			        getURL: function(url) {
 			        	assert.equal(url, util.constants.ATHLETICS_TEAMS_URL,
@@ -78,17 +78,17 @@ module.exports.run = function() {
 
 			        	var filename = "athleticsTeams/full.html";
 			            filename = testUtil.getAbsolutePath(filename);
-			            const file = fs.readFileSync(filename, 'utf8');
+			            const file = fs.readFileSync(filename, "utf8");
 			            callNumber++;
 			            return Promise.resolve(file);
 			        }
 			    });
 
-			    scraper = mock.reRequire('../scraper.js');
+			    scraper = mock.reRequire("../scraper.js");
 			});
 
 			after(function() {
-			    mock.stop('../util.js');
+			    mock.stop("../util.js");
 			});
 
 			// Test the whole scraping pipeline to ensure correct output
@@ -97,7 +97,7 @@ module.exports.run = function() {
 			        // Get the correct JSON output
 			        var jsonFilename = "athleticsTeams/full.json";
 			        jsonFilename = testUtil.getAbsolutePath(jsonFilename);
-			        const jsonFile = fs.readFileSync(jsonFilename, 'utf8');
+			        const jsonFile = fs.readFileSync(jsonFilename, "utf8");
 			        assert.deepStrictEqual(teams, JSON.parse(jsonFile));
 			    });
 			});
