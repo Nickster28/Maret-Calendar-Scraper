@@ -64,31 +64,32 @@ module.exports.run = function() {
 		// This full test uses the same "full.html/json" as above tests
 		describe("scrapeAthleticsTeams", function() {
 			// Before all tests are run, mock out getURL to return static HTML
+			var oldGetURL = null;
 			before(function() {
 				var callNumber = 0;
 
 			    // We want to return the athletics team page to scrape
-			    mock("../util.js", {
-			        constants: util.constants,
-			        getURL: function(url) {
-			        	assert.equal(url, util.constants.ATHLETICS_TEAMS_URL,
-			        		"Athletics Teams URL should be from util");
-			        	assert.equal(callNumber, 0,
-			        		"getURL should only be called once");
+			    oldGetURL = util.getURL;
+			    util.getURL = function(url) {
+			    	assert.equal(url, util.constants.ATHLETICS_TEAMS_URL,
+			    		"Athletics Teams URL should be from util");
+			    	assert.equal(callNumber, 0,
+			    		"getURL should only be called once");
 
-			        	var filename = "athleticsTeams/full.html";
-			            filename = testUtil.getAbsolutePath(filename);
-			            const file = fs.readFileSync(filename, "utf8");
-			            callNumber++;
-			            return Promise.resolve(file);
-			        }
-			    });
+			    	var filename = "athleticsTeams/full.html";
+			        filename = testUtil.getAbsolutePath(filename);
+			        const file = fs.readFileSync(filename, "utf8");
+			        callNumber++;
+			        return Promise.resolve(file);
+			    };
 
+			    mock("../util.js", util);
 			    scraper = mock.reRequire("../scraper.js");
 			});
 
 			after(function() {
 			    mock.stop("../util.js");
+			    util.getURL = oldGetURL;
 			});
 
 			// Test the whole scraping pipeline to ensure correct output

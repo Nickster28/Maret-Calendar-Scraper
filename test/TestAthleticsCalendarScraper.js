@@ -108,7 +108,7 @@ const PRACTICES_TESTS = [
 	},
 	{
 		name: "Complete Event",
-		file: "athleticsCalendarPractice/complete"
+		file: "athleticsCalendarPractice/completePractice"
 	},
 	{
 		name: "Ignore Table Header",
@@ -152,38 +152,39 @@ const testScrapeAthleticsCalendars = function() {
     describe("scrapeAthleticsCalendars", function() {
         
         // Before all tests are run, mock out getURL to return static HTML files
+        var oldGetURL = null;
         before(function() {
             var callNumber = 0;
 
            	/* We want to return two calendar HTML files to scrape.  Make sure
            	this function is called with the right parameters and right number
            	of times. */
-            mock("../util.js", {
-                constants: util.constants,
-                getURL: function(url) {
-                    var filename = "";
-                    if (callNumber > 1) {
-                    	assert(false, "Error: too many calls: " + callNumber);
-                    } else if (url == util.constants.ATHLETICS_GAMES_URL) {
-                        filename = "athleticsCalendar/fullGames.html";
-                    } else if (url == util.constants.ATHLETICS_PRACTICES_URL) {
-                        filename = "athleticsCalendar/fullPractices.html";
-                    } else {
-                    	assert(false, "Error: invalid url " + url);
-                    }
+           	oldGetURL = util.getURL;
+           	util.getURL = function(url) {
+           	    var filename = "";
+           	    if (callNumber > 1) {
+           	    	assert(false, "Error: too many calls: " + callNumber);
+           	    } else if (url == util.constants.ATHLETICS_GAMES_URL) {
+           	        filename = "athleticsCalendar/fullGames.html";
+           	    } else if (url == util.constants.ATHLETICS_PRACTICES_URL) {
+           	        filename = "athleticsCalendar/fullPractices.html";
+           	    } else {
+           	    	assert(false, "Error: invalid url " + url);
+           	    }
 
-                    filename = testUtil.getAbsolutePath(filename);
-                    const file = fs.readFileSync(filename, "utf8");
-                    callNumber += 1;
-                    return Promise.resolve(file);
-                }
-            });
+           	    filename = testUtil.getAbsolutePath(filename);
+           	    const file = fs.readFileSync(filename, "utf8");
+           	    callNumber += 1;
+           	    return Promise.resolve(file);
+           	};
 
+            mock("../util.js", util);
             scraper = mock.reRequire("../scraper.js");
         });
 
         after(function() {
             mock.stop("../util.js");
+            util.getURL = oldGetURL;
         });
 
         // Test the whole scraping pipeline to ensure correct output

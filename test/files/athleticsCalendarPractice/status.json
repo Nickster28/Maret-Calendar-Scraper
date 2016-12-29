@@ -1,9 +1,7 @@
 [
 	{
-		"month": "Jan",
-		"date": 3,
-		"year": 2017,
 		"team": "Varsity Swimming",
-		"status": "CANCELLED"
+		"status": "CANCELLED",
+		"startDateTime": "2017-01-03T20:30:00.000Z"
 	}
 ]
