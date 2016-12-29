@@ -160,7 +160,7 @@ app.get("/athleticsTeams", function(req, res) {
 });
 
 
-/* ENDPOINT: *
+/* ENDPOINT:
 ----------------
 A catch-all endpoint that sends back a link to the GitHub repo.
 ----------------
@@ -168,7 +168,7 @@ A catch-all endpoint that sends back a link to the GitHub repo.
 app.get("*", function(req, res) {
     res.send("<html><h1>Maret Calendar Scraper</h1>See " +
         "<a href='https://github.com/Nickster28/Maret-Calendar-Scraper'>" +
-        "our GitHub repo</a> for this project's code</html>");
+        "our GitHub repo</a> for this project's code.</html>");
 });
 
 
