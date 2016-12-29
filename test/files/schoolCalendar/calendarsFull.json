@@ -1,666 +1,666 @@
 [
-  {
-    "eventName": "Classes Resume",
-    "startDateTime": "2016-11-28T05:00:00.000Z"
-  },
-  {
-    "eventName": "4th Gr Service Learning Trip to Martha's Table",
-    "startDateTime": "2016-11-28T14:45:00.000Z",
-    "endDateTime": "2016-11-28T16:05:00.000Z",
-    "location": "Martha's Table, Inc."
-  },
-  {
-    "eventName": "Topics in Afro-Hispanic Cultures Class Trip to the Nat'l Museum of the American Indian",
-    "startDateTime": "2016-11-28T16:45:00.000Z",
-    "endDateTime": "2016-11-28T20:45:00.000Z",
-    "location": "National Museum of the American Indian"
-  },
-  {
-    "eventName": "Viewing of the 13th Documentary",
-    "startDateTime": "2016-11-28T23:00:00.000Z",
-    "endDateTime": "2016-11-29T01:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "2nd Grade Parent Peer Group Meeting",
-    "startDateTime": "2016-11-28T23:30:00.000Z",
-    "endDateTime": "2016-11-29T01:30:00.000Z",
-    "location": "LS library"
-  },
-  {
-    "eventName": "Strategic Planning Focus Group Session for Parents",
-    "startDateTime": "2016-11-29T23:30:00.000Z",
-    "endDateTime": "2016-11-30T01:30:00.000Z",
-    "location": "Atrium"
-  },
-  {
-    "eventName": "US Musical Auditions",
-    "startDateTime": "2016-11-30T18:45:00.000Z",
-    "endDateTime": "2016-11-30T22:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "US Chorus Concert",
-    "startDateTime": "2016-12-01T00:00:00.000Z",
-    "endDateTime": "2016-12-01T02:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "US Musical call backs",
-    "startDateTime": "2016-12-01T21:00:00.000Z",
-    "endDateTime": "2016-12-01T23:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "MS Math Night",
-    "startDateTime": "2016-12-01T22:45:00.000Z",
-    "endDateTime": "2016-12-01T23:45:00.000Z",
-    "location": "Humanities Conf. Room"
-  },
-  {
-    "eventName": "MS Chorus Concert",
-    "startDateTime": "2016-12-02T00:00:00.000Z",
-    "endDateTime": "2016-12-02T02:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "MS Parent/Guardian Coffee",
-    "startDateTime": "2016-12-02T13:00:00.000Z",
-    "endDateTime": "2016-12-02T14:30:00.000Z",
-    "location": "AB Conference Room"
-  },
-  {
-    "eventName": "9th Grade Friday Night Writes",
-    "startDateTime": "2016-12-02T22:00:00.000Z",
-    "endDateTime": "2016-12-03T01:00:00.000Z",
-    "location": "Humanities Conf. Room"
-  },
-  {
-    "eventName": "8th Grade Dance",
-    "startDateTime": "2016-12-03T01:00:00.000Z",
-    "endDateTime": "2016-12-03T03:00:00.000Z",
-    "location": "Old Gym"
-  },
-  {
-    "eventName": "Open House--LS",
-    "startDateTime": "2016-12-04T17:00:00.000Z",
-    "endDateTime": "2016-12-04T19:00:00.000Z"
-  },
-  {
-    "eventName": "MS/US Open House",
-    "startDateTime": "2016-12-04T19:15:00.000Z",
-    "endDateTime": "2016-12-04T21:15:00.000Z"
-  },
-  {
-    "eventName": "Hour of Code",
-    "startDateTime": "2016-12-05T05:00:00.000Z"
-  },
-  {
-    "eventName": "US Band Concert",
-    "startDateTime": "2016-12-06T00:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "Hour of Code",
-    "startDateTime": "2016-12-06T05:00:00.000Z"
-  },
-  {
-    "eventName": "AIMS Workshop",
-    "startDateTime": "2016-12-06T15:00:00.000Z",
-    "endDateTime": "2016-12-06T17:00:00.000Z",
-    "location": "AB Conference Room"
-  },
-  {
-    "eventName": "Senior Pizza Lunch with Marjo Talbott",
-    "startDateTime": "2016-12-06T17:25:00.000Z",
-    "endDateTime": "2016-12-06T18:15:00.000Z",
-    "location": "Atrium"
-  },
-  {
-    "eventName": "MS Math Night",
-    "startDateTime": "2016-12-06T22:45:00.000Z",
-    "endDateTime": "2016-12-06T23:45:00.000Z",
-    "location": "Humanities Conf. Room"
-  },
-  {
-    "eventName": "MS Band Concert",
-    "startDateTime": "2016-12-07T00:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "Hour of Code",
-    "startDateTime": "2016-12-07T05:00:00.000Z"
-  },
-  {
-    "eventName": "MPA General Meeting",
-    "startDateTime": "2016-12-07T13:15:00.000Z",
-    "endDateTime": "2016-12-07T14:45:00.000Z",
-    "location": "202-AB Movement Studio"
-  },
-  {
-    "eventName": "Kindergarten siblings visit",
-    "startDateTime": "2016-12-07T18:00:00.000Z",
-    "location": "Cottage"
-  },
-  {
-    "eventName": "Summer Trips Meeting",
-    "startDateTime": "2016-12-07T23:00:00.000Z",
-    "endDateTime": "2016-12-08T01:00:00.000Z",
-    "location": "Atrium"
-  },
-  {
-    "eventName": "Hour of Code",
-    "startDateTime": "2016-12-08T05:00:00.000Z"
-  },
-  {
-    "eventName": "POCC--Atlanta",
-    "startDateTime": "2016-12-08T05:00:00.000Z"
-  },
-  {
-    "eventName": "US Musical Rehearsal",
-    "startDateTime": "2016-12-08T22:00:00.000Z",
-    "endDateTime": "2016-12-09T00:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "Strategic Planning Focus Group Mtg for Parents",
-    "startDateTime": "2016-12-08T23:30:00.000Z",
-    "endDateTime": "2016-12-09T01:30:00.000Z",
-    "location": "Atrium"
-  },
-  {
-    "eventName": "Hour of Code",
-    "startDateTime": "2016-12-09T05:00:00.000Z"
-  },
-  {
-    "eventName": "POCC--Atlanta",
-    "startDateTime": "2016-12-09T05:00:00.000Z"
-  },
-  {
-    "eventName": "Upper School",
-    "startDateTime": "2016-12-09T05:00:00.000Z"
-  },
-  {
-    "eventName": "US Musical Rehearsal",
-    "startDateTime": "2016-12-09T22:00:00.000Z",
-    "endDateTime": "2016-12-10T00:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "Open Mic Night-Senior Lounge",
-    "startDateTime": "2016-12-10T00:00:00.000Z",
-    "endDateTime": "2016-12-10T02:00:00.000Z"
-  },
-  {
-    "eventName": "POCC--Atlanta",
-    "startDateTime": "2016-12-10T05:00:00.000Z"
-  },
-  {
-    "eventName": "CANCELLED: FAFSA/CSS Workshop-12th Grade Parents",
-    "startDateTime": "2016-12-10T13:00:00.000Z",
-    "endDateTime": "2016-12-10T16:00:00.000Z",
-    "location": "Humanities Conf. Room"
-  },
-  {
-    "eventName": "SSAT Administration - 4th Floor AC Classrooms",
-    "startDateTime": "2016-12-10T13:15:00.000Z",
-    "endDateTime": "2016-12-10T17:30:00.000Z"
-  },
-  {
-    "eventName": "Horizons",
-    "startDateTime": "2016-12-10T13:30:00.000Z",
-    "endDateTime": "2016-12-10T17:15:00.000Z"
-  },
-  {
-    "eventName": "US Musical Rehearsal",
-    "startDateTime": "2016-12-10T19:00:00.000Z",
-    "endDateTime": "2016-12-10T22:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "A Better Chance (ABC)",
-    "startDateTime": "2016-12-11T20:00:00.000Z",
-    "endDateTime": "2016-12-11T22:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "US Musical Rehearsal",
-    "startDateTime": "2016-12-12T22:00:00.000Z",
-    "endDateTime": "2016-12-13T00:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "US Musical Rehearsal",
-    "startDateTime": "2016-12-13T22:00:00.000Z",
-    "endDateTime": "2016-12-14T00:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "Friday Schedule",
-    "startDateTime": "2016-12-14T05:00:00.000Z"
-  },
-  {
-    "eventName": "All School Music Assembly",
-    "startDateTime": "2016-12-14T15:00:00.000Z",
-    "endDateTime": "2016-12-14T16:00:00.000Z",
-    "location": "New Gym"
-  },
-  {
-    "eventName": "4th Gr Service Learning Trip to Martha's Table",
-    "startDateTime": "2016-12-15T14:30:00.000Z",
-    "endDateTime": "2016-12-15T16:05:00.000Z"
-  },
-  {
-    "eventName": "US Musical Rehearsal",
-    "startDateTime": "2016-12-15T22:00:00.000Z",
-    "endDateTime": "2016-12-16T00:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "(Winter Break begins at dismissal)",
-    "startDateTime": "2016-12-16T05:00:00.000Z"
-  },
-  {
-    "eventName": "Gap Camp available (noon)",
-    "startDateTime": "2016-12-16T05:00:00.000Z"
-  },
-  {
-    "eventName": "Wednesday Schedule",
-    "startDateTime": "2016-12-16T05:00:00.000Z"
-  },
-  {
-    "eventName": "Advanced Physics Class Trip to the Wardman Park Marriott Hotel",
-    "startDateTime": "2016-12-16T14:10:00.000Z",
-    "endDateTime": "2016-12-16T15:00:00.000Z"
-  },
-  {
-    "eventName": "LS Music Performance",
-    "startDateTime": "2016-12-16T16:00:00.000Z",
-    "endDateTime": "2016-12-16T17:00:00.000Z"
-  },
-  {
-    "eventName": "American University Basketball",
-    "startDateTime": "2016-12-21T15:00:00.000Z",
-    "endDateTime": "2016-12-21T18:00:00.000Z",
-    "location": "New Gym"
-  },
-  {
-    "eventName": "Alumni Holiday Party",
-    "startDateTime": "2016-12-22T23:30:00.000Z",
-    "endDateTime": "2016-12-23T01:30:00.000Z"
-  },
-  {
-    "eventName": "(Hanukkah begins at sundown)",
-    "startDateTime": "2016-12-24T05:00:00.000Z"
-  },
-  {
-    "eventName": "Christmas",
-    "startDateTime": "2016-12-25T05:00:00.000Z"
-  },
-  {
-    "eventName": "(Kwanzaa)",
-    "startDateTime": "2016-12-26T05:00:00.000Z"
-  },
-  {
-    "eventName": "(New Year Day)",
-    "startDateTime": "2017-01-01T05:00:00.000Z"
-  },
-  {
-    "eventName": "8th Grade Drug & Alcohol Program",
-    "startDateTime": "2017-01-03T05:00:00.000Z"
-  },
-  {
-    "eventName": "Day of Dialogue",
-    "startDateTime": "2017-01-03T05:00:00.000Z"
-  },
-  {
-    "eventName": "US Musical Rehearsal",
-    "startDateTime": "2017-01-03T22:00:00.000Z",
-    "endDateTime": "2017-01-04T00:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "Strategic Planning Focus Group Session for Alumni ('05-16)/Alumni Council",
-    "startDateTime": "2017-01-03T23:30:00.000Z",
-    "endDateTime": "2017-01-04T01:30:00.000Z",
-    "location": "Atrium"
-  },
-  {
-    "eventName": "8th Grade Drug & Alcohol Program",
-    "startDateTime": "2017-01-04T05:00:00.000Z"
-  },
-  {
-    "eventName": "Kindergarten visits begin",
-    "startDateTime": "2017-01-04T18:45:00.000Z"
-  },
-  {
-    "eventName": "Admissions Event",
-    "startDateTime": "2017-01-04T22:45:00.000Z",
-    "endDateTime": "2017-01-05T00:00:00.000Z",
-    "location": "202-AB Movement Studio"
-  },
-  {
-    "eventName": "Strategic Planning Focus Group Mtg for Parents",
-    "startDateTime": "2017-01-04T23:30:00.000Z",
-    "endDateTime": "2017-01-05T01:30:00.000Z",
-    "location": "Atrium"
-  },
-  {
-    "eventName": "8th Grade Drug & Alcohol Program",
-    "startDateTime": "2017-01-05T05:00:00.000Z"
-  },
-  {
-    "eventName": "US Musical Rehearsal",
-    "startDateTime": "2017-01-05T22:00:00.000Z",
-    "endDateTime": "2017-01-06T00:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "8th Gr Drug & Alcohol Parent Night",
-    "startDateTime": "2017-01-05T23:30:00.000Z",
-    "endDateTime": "2017-01-06T01:30:00.000Z",
-    "location": "AB Conference Room"
-  },
-  {
-    "eventName": "8th Grade Drug & Alcohol Program",
-    "startDateTime": "2017-01-06T05:00:00.000Z"
-  },
-  {
-    "eventName": "Driving Class",
-    "startDateTime": "2017-01-07T14:00:00.000Z",
-    "endDateTime": "2017-01-07T17:15:00.000Z",
-    "location": "463-AC"
-  },
-  {
-    "eventName": "US Musical Rehearsal",
-    "startDateTime": "2017-01-07T19:00:00.000Z",
-    "endDateTime": "2017-01-07T22:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "Grades 10-12 Drug/Alcohol",
-    "startDateTime": "2017-01-09T05:00:00.000Z"
-  },
-  {
-    "eventName": "LS Class Rep Meeting",
-    "startDateTime": "2017-01-09T13:00:00.000Z",
-    "endDateTime": "2017-01-09T14:30:00.000Z",
-    "location": "Development Conference Room"
-  },
-  {
-    "eventName": "National Geography Bee",
-    "startDateTime": "2017-01-09T20:30:00.000Z",
-    "endDateTime": "2017-01-09T23:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "US Musical Rehearsal",
-    "startDateTime": "2017-01-09T22:00:00.000Z",
-    "endDateTime": "2017-01-10T00:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "Grades 10-12 Drug/Alcohol",
-    "startDateTime": "2017-01-10T05:00:00.000Z"
-  },
-  {
-    "eventName": "National Geography Bee",
-    "startDateTime": "2017-01-10T20:30:00.000Z",
-    "endDateTime": "2017-01-10T23:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "US Musical Rehearsal",
-    "startDateTime": "2017-01-10T22:00:00.000Z",
-    "endDateTime": "2017-01-11T00:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "Strategic Planning Focus Group for Parents",
-    "startDateTime": "2017-01-10T23:30:00.000Z",
-    "endDateTime": "2017-01-11T01:30:00.000Z",
-    "location": "Atrium"
-  },
-  {
-    "eventName": "Grades 10-12 Drug/Alcohol",
-    "startDateTime": "2017-01-11T05:00:00.000Z"
-  },
-  {
-    "eventName": "US Class Rep Meeting",
-    "startDateTime": "2017-01-11T13:00:00.000Z",
-    "endDateTime": "2017-01-11T14:30:00.000Z",
-    "location": "Development Conference Room"
-  },
-  {
-    "eventName": "Grades 10-12 Parents Drug/Alcohol Program",
-    "startDateTime": "2017-01-11T23:30:00.000Z",
-    "endDateTime": "2017-01-12T01:30:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "Grades 10-12 Drug/Alcohol",
-    "startDateTime": "2017-01-12T05:00:00.000Z"
-  },
-  {
-    "eventName": "US World Lit Class Trip to AFI Theatre",
-    "startDateTime": "2017-01-12T13:30:00.000Z",
-    "endDateTime": "2017-01-12T17:00:00.000Z",
-    "location": "Silver Spring, MD"
-  },
-  {
-    "eventName": "6th Gr Trip to the Museum of Natural History",
-    "startDateTime": "2017-01-12T17:30:00.000Z",
-    "endDateTime": "2017-01-12T19:50:00.000Z",
-    "location": "10th St. & Constitution Ave., NW, Washington, DC"
-  },
-  {
-    "eventName": "US Musical Rehearsal",
-    "startDateTime": "2017-01-12T22:00:00.000Z",
-    "endDateTime": "2017-01-13T00:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "Strategic Planning Focus Group for Parents of Alumni/Former Trustees/Former Faculty",
-    "startDateTime": "2017-01-12T23:30:00.000Z",
-    "endDateTime": "2017-01-13T01:30:00.000Z",
-    "location": "Atrium"
-  },
-  {
-    "eventName": "MS Class Rep Meeting",
-    "startDateTime": "2017-01-13T13:00:00.000Z",
-    "endDateTime": "2017-01-13T14:30:00.000Z",
-    "location": "Development Conference Room"
-  },
-  {
-    "eventName": "MLK Day of Service",
-    "startDateTime": "2017-01-14T05:00:00.000Z"
-  },
-  {
-    "eventName": "Driving Class",
-    "startDateTime": "2017-01-14T14:00:00.000Z",
-    "endDateTime": "2017-01-14T17:15:00.000Z",
-    "location": "463-AC"
-  },
-  {
-    "eventName": "SAT/ACT Orientation/Placement Test",
-    "startDateTime": "2017-01-15T22:00:00.000Z",
-    "endDateTime": "2017-01-16T02:00:00.000Z",
-    "location": "Cafeteria"
-  },
-  {
-    "eventName": "Classes Resume",
-    "startDateTime": "2017-01-17T05:00:00.000Z"
-  },
-  {
-    "eventName": "US Musical Rehearsal",
-    "startDateTime": "2017-01-17T22:00:00.000Z",
-    "endDateTime": "2017-01-18T00:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "MPA Speaker Series:  Rosetta Lee",
-    "startDateTime": "2017-01-18T23:30:00.000Z",
-    "endDateTime": "2017-01-19T01:30:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "MS/US End 1st Semester",
-    "startDateTime": "2017-01-19T05:00:00.000Z"
-  },
-  {
-    "eventName": "US Musical Rehearsal",
-    "startDateTime": "2017-01-19T22:00:00.000Z",
-    "endDateTime": "2017-01-20T00:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "Mixed Forum",
-    "startDateTime": "2017-01-19T23:30:00.000Z",
-    "endDateTime": "2017-01-20T01:30:00.000Z",
-    "location": "Old Gym"
-  },
-  {
-    "eventName": "Inauguration Day--No School",
-    "startDateTime": "2017-01-20T05:00:00.000Z"
-  },
-  {
-    "eventName": "Driving Class",
-    "startDateTime": "2017-01-21T14:00:00.000Z",
-    "endDateTime": "2017-01-21T17:15:00.000Z",
-    "location": "463-AC"
-  },
-  {
-    "eventName": "US Musical Rehearsal",
-    "startDateTime": "2017-01-22T19:00:00.000Z",
-    "endDateTime": "2017-01-22T22:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "SAT/ACT Class 1",
-    "startDateTime": "2017-01-22T22:00:00.000Z",
-    "endDateTime": "2017-01-23T02:00:00.000Z",
-    "location": "Cafeteria"
-  },
-  {
-    "eventName": "US World Lit Class Trip to the SEED School",
-    "startDateTime": "2017-01-23T13:30:00.000Z",
-    "endDateTime": "2017-01-23T16:30:00.000Z",
-    "location": "4300 C Street, SE, Washington, DC"
-  },
-  {
-    "eventName": "MS/US Reports due in Veracross",
-    "startDateTime": "2017-01-23T14:00:00.000Z"
-  },
-  {
-    "eventName": "US Musical Rehearsal",
-    "startDateTime": "2017-01-23T22:00:00.000Z",
-    "endDateTime": "2017-01-24T01:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "US Musical Rehearsal",
-    "startDateTime": "2017-01-24T22:00:00.000Z",
-    "endDateTime": "2017-01-25T01:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "Alumni Strategic Planning Focus Group Session",
-    "startDateTime": "2017-01-24T23:30:00.000Z",
-    "endDateTime": "2017-01-25T01:30:00.000Z",
-    "location": "Atrium"
-  },
-  {
-    "eventName": "SAT/ACT Make-up Placement Test or Make-up Class 1",
-    "startDateTime": "2017-01-24T23:30:00.000Z",
-    "endDateTime": "2017-01-25T03:00:00.000Z",
-    "location": "Cafeteria"
-  },
-  {
-    "eventName": "Adm Deans/Director--11th Grade Families",
-    "startDateTime": "2017-01-26T00:00:00.000Z",
-    "endDateTime": "2017-01-26T01:30:00.000Z"
-  },
-  {
-    "eventName": "US Musical Rehearsal",
-    "startDateTime": "2017-01-26T22:00:00.000Z",
-    "endDateTime": "2017-01-27T01:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "MS Talent Show",
-    "startDateTime": "2017-01-27T05:00:00.000Z"
-  },
-  {
-    "eventName": "Driving Class",
-    "startDateTime": "2017-01-28T14:00:00.000Z",
-    "endDateTime": "2017-01-28T17:15:00.000Z",
-    "location": "463-AC"
-  },
-  {
-    "eventName": "US Musical Rehearsal",
-    "startDateTime": "2017-01-28T18:00:00.000Z",
-    "endDateTime": "2017-01-28T22:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "US Winter Formal",
-    "startDateTime": "2017-01-29T01:30:00.000Z",
-    "endDateTime": "2017-01-29T04:00:00.000Z"
-  },
-  {
-    "eventName": "SAT/ACT Class 2",
-    "startDateTime": "2017-01-29T22:00:00.000Z",
-    "endDateTime": "2017-01-30T02:00:00.000Z"
-  },
-  {
-    "eventName": "US Musical Rehearsal",
-    "startDateTime": "2017-01-30T22:00:00.000Z",
-    "endDateTime": "2017-01-31T00:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "SAT/ACT Make-up Class 2",
-    "startDateTime": "2017-01-31T23:30:00.000Z",
-    "endDateTime": "2017-02-01T03:00:00.000Z",
-    "location": "Cafeteria"
-  },
-  {
-    "eventName": "US Musical Rehearsal",
-    "startDateTime": "2017-02-01T22:00:00.000Z",
-    "endDateTime": "2017-02-02T00:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "Grs 1-4 resoure reports due",
-    "startDateTime": "2017-02-02T05:00:00.000Z"
-  },
-  {
-    "eventName": "US Musical Rehearsal",
-    "startDateTime": "2017-02-03T22:00:00.000Z",
-    "endDateTime": "2017-02-04T00:00:00.000Z",
-    "location": "Theatre"
-  },
-  {
-    "eventName": "Driving Class",
-    "startDateTime": "2017-02-04T14:00:00.000Z",
-    "endDateTime": "2017-02-04T17:15:00.000Z",
-    "location": "463-AC"
-  },
-  {
-    "eventName": "Horizons Field Trip to the Museum of African American History",
-    "startDateTime": "2017-02-04T14:00:00.000Z",
-    "endDateTime": "2017-02-04T17:00:00.000Z"
-  },
-  {
-    "eventName": "SAT Diagnostic #2 (with essay)",
-    "startDateTime": "2017-02-04T16:00:00.000Z",
-    "endDateTime": "2017-02-04T20:30:00.000Z",
-    "location": "Cafeteria"
-  },
-  {
-    "eventName": "US Musical Rehearsal",
-    "startDateTime": "2017-02-04T17:00:00.000Z",
-    "endDateTime": "2017-02-04T23:00:00.000Z",
-    "location": "Theatre"
-  }
+    {
+        "eventName": "Classes Resume",
+        "startDateTime": "2016-11-28T05:00:00.000Z"
+    },
+    {
+        "eventName": "4th Gr Service Learning Trip to Martha's Table",
+        "startDateTime": "2016-11-28T14:45:00.000Z",
+        "endDateTime": "2016-11-28T16:05:00.000Z",
+        "location": "Martha's Table, Inc."
+    },
+    {
+        "eventName": "Topics in Afro-Hispanic Cultures Class Trip to the Nat'l Museum of the American Indian",
+        "startDateTime": "2016-11-28T16:45:00.000Z",
+        "endDateTime": "2016-11-28T20:45:00.000Z",
+        "location": "National Museum of the American Indian"
+    },
+    {
+        "eventName": "Viewing of the 13th Documentary",
+        "startDateTime": "2016-11-28T23:00:00.000Z",
+        "endDateTime": "2016-11-29T01:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "2nd Grade Parent Peer Group Meeting",
+        "startDateTime": "2016-11-28T23:30:00.000Z",
+        "endDateTime": "2016-11-29T01:30:00.000Z",
+        "location": "LS library"
+    },
+    {
+        "eventName": "Strategic Planning Focus Group Session for Parents",
+        "startDateTime": "2016-11-29T23:30:00.000Z",
+        "endDateTime": "2016-11-30T01:30:00.000Z",
+        "location": "Atrium"
+    },
+    {
+        "eventName": "US Musical Auditions",
+        "startDateTime": "2016-11-30T18:45:00.000Z",
+        "endDateTime": "2016-11-30T22:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "US Chorus Concert",
+        "startDateTime": "2016-12-01T00:00:00.000Z",
+        "endDateTime": "2016-12-01T02:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "US Musical call backs",
+        "startDateTime": "2016-12-01T21:00:00.000Z",
+        "endDateTime": "2016-12-01T23:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "MS Math Night",
+        "startDateTime": "2016-12-01T22:45:00.000Z",
+        "endDateTime": "2016-12-01T23:45:00.000Z",
+        "location": "Humanities Conf. Room"
+    },
+    {
+        "eventName": "MS Chorus Concert",
+        "startDateTime": "2016-12-02T00:00:00.000Z",
+        "endDateTime": "2016-12-02T02:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "MS Parent/Guardian Coffee",
+        "startDateTime": "2016-12-02T13:00:00.000Z",
+        "endDateTime": "2016-12-02T14:30:00.000Z",
+        "location": "AB Conference Room"
+    },
+    {
+        "eventName": "9th Grade Friday Night Writes",
+        "startDateTime": "2016-12-02T22:00:00.000Z",
+        "endDateTime": "2016-12-03T01:00:00.000Z",
+        "location": "Humanities Conf. Room"
+    },
+    {
+        "eventName": "8th Grade Dance",
+        "startDateTime": "2016-12-03T01:00:00.000Z",
+        "endDateTime": "2016-12-03T03:00:00.000Z",
+        "location": "Old Gym"
+    },
+    {
+        "eventName": "Open House--LS",
+        "startDateTime": "2016-12-04T17:00:00.000Z",
+        "endDateTime": "2016-12-04T19:00:00.000Z"
+    },
+    {
+        "eventName": "MS/US Open House",
+        "startDateTime": "2016-12-04T19:15:00.000Z",
+        "endDateTime": "2016-12-04T21:15:00.000Z"
+    },
+    {
+        "eventName": "Hour of Code",
+        "startDateTime": "2016-12-05T05:00:00.000Z"
+    },
+    {
+        "eventName": "US Band Concert",
+        "startDateTime": "2016-12-06T00:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "Hour of Code",
+        "startDateTime": "2016-12-06T05:00:00.000Z"
+    },
+    {
+        "eventName": "AIMS Workshop",
+        "startDateTime": "2016-12-06T15:00:00.000Z",
+        "endDateTime": "2016-12-06T17:00:00.000Z",
+        "location": "AB Conference Room"
+    },
+    {
+        "eventName": "Senior Pizza Lunch with Marjo Talbott",
+        "startDateTime": "2016-12-06T17:25:00.000Z",
+        "endDateTime": "2016-12-06T18:15:00.000Z",
+        "location": "Atrium"
+    },
+    {
+        "eventName": "MS Math Night",
+        "startDateTime": "2016-12-06T22:45:00.000Z",
+        "endDateTime": "2016-12-06T23:45:00.000Z",
+        "location": "Humanities Conf. Room"
+    },
+    {
+        "eventName": "MS Band Concert",
+        "startDateTime": "2016-12-07T00:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "Hour of Code",
+        "startDateTime": "2016-12-07T05:00:00.000Z"
+    },
+    {
+        "eventName": "MPA General Meeting",
+        "startDateTime": "2016-12-07T13:15:00.000Z",
+        "endDateTime": "2016-12-07T14:45:00.000Z",
+        "location": "202-AB Movement Studio"
+    },
+    {
+        "eventName": "Kindergarten siblings visit",
+        "startDateTime": "2016-12-07T18:00:00.000Z",
+        "location": "Cottage"
+    },
+    {
+        "eventName": "Summer Trips Meeting",
+        "startDateTime": "2016-12-07T23:00:00.000Z",
+        "endDateTime": "2016-12-08T01:00:00.000Z",
+        "location": "Atrium"
+    },
+    {
+        "eventName": "Hour of Code",
+        "startDateTime": "2016-12-08T05:00:00.000Z"
+    },
+    {
+        "eventName": "POCC--Atlanta",
+        "startDateTime": "2016-12-08T05:00:00.000Z"
+    },
+    {
+        "eventName": "US Musical Rehearsal",
+        "startDateTime": "2016-12-08T22:00:00.000Z",
+        "endDateTime": "2016-12-09T00:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "Strategic Planning Focus Group Mtg for Parents",
+        "startDateTime": "2016-12-08T23:30:00.000Z",
+        "endDateTime": "2016-12-09T01:30:00.000Z",
+        "location": "Atrium"
+    },
+    {
+        "eventName": "Hour of Code",
+        "startDateTime": "2016-12-09T05:00:00.000Z"
+    },
+    {
+        "eventName": "POCC--Atlanta",
+        "startDateTime": "2016-12-09T05:00:00.000Z"
+    },
+    {
+        "eventName": "Upper School",
+        "startDateTime": "2016-12-09T05:00:00.000Z"
+    },
+    {
+        "eventName": "US Musical Rehearsal",
+        "startDateTime": "2016-12-09T22:00:00.000Z",
+        "endDateTime": "2016-12-10T00:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "Open Mic Night-Senior Lounge",
+        "startDateTime": "2016-12-10T00:00:00.000Z",
+        "endDateTime": "2016-12-10T02:00:00.000Z"
+    },
+    {
+        "eventName": "POCC--Atlanta",
+        "startDateTime": "2016-12-10T05:00:00.000Z"
+    },
+    {
+        "eventName": "CANCELLED: FAFSA/CSS Workshop-12th Grade Parents",
+        "startDateTime": "2016-12-10T13:00:00.000Z",
+        "endDateTime": "2016-12-10T16:00:00.000Z",
+        "location": "Humanities Conf. Room"
+    },
+    {
+        "eventName": "SSAT Administration - 4th Floor AC Classrooms",
+        "startDateTime": "2016-12-10T13:15:00.000Z",
+        "endDateTime": "2016-12-10T17:30:00.000Z"
+    },
+    {
+        "eventName": "Horizons",
+        "startDateTime": "2016-12-10T13:30:00.000Z",
+        "endDateTime": "2016-12-10T17:15:00.000Z"
+    },
+    {
+        "eventName": "US Musical Rehearsal",
+        "startDateTime": "2016-12-10T19:00:00.000Z",
+        "endDateTime": "2016-12-10T22:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "A Better Chance (ABC)",
+        "startDateTime": "2016-12-11T20:00:00.000Z",
+        "endDateTime": "2016-12-11T22:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "US Musical Rehearsal",
+        "startDateTime": "2016-12-12T22:00:00.000Z",
+        "endDateTime": "2016-12-13T00:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "US Musical Rehearsal",
+        "startDateTime": "2016-12-13T22:00:00.000Z",
+        "endDateTime": "2016-12-14T00:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "Friday Schedule",
+        "startDateTime": "2016-12-14T05:00:00.000Z"
+    },
+    {
+        "eventName": "All School Music Assembly",
+        "startDateTime": "2016-12-14T15:00:00.000Z",
+        "endDateTime": "2016-12-14T16:00:00.000Z",
+        "location": "New Gym"
+    },
+    {
+        "eventName": "4th Gr Service Learning Trip to Martha's Table",
+        "startDateTime": "2016-12-15T14:30:00.000Z",
+        "endDateTime": "2016-12-15T16:05:00.000Z"
+    },
+    {
+        "eventName": "US Musical Rehearsal",
+        "startDateTime": "2016-12-15T22:00:00.000Z",
+        "endDateTime": "2016-12-16T00:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "(Winter Break begins at dismissal)",
+        "startDateTime": "2016-12-16T05:00:00.000Z"
+    },
+    {
+        "eventName": "Gap Camp available (noon)",
+        "startDateTime": "2016-12-16T05:00:00.000Z"
+    },
+    {
+        "eventName": "Wednesday Schedule",
+        "startDateTime": "2016-12-16T05:00:00.000Z"
+    },
+    {
+        "eventName": "Advanced Physics Class Trip to the Wardman Park Marriott Hotel",
+        "startDateTime": "2016-12-16T14:10:00.000Z",
+        "endDateTime": "2016-12-16T15:00:00.000Z"
+    },
+    {
+        "eventName": "LS Music Performance",
+        "startDateTime": "2016-12-16T16:00:00.000Z",
+        "endDateTime": "2016-12-16T17:00:00.000Z"
+    },
+    {
+        "eventName": "American University Basketball",
+        "startDateTime": "2016-12-21T15:00:00.000Z",
+        "endDateTime": "2016-12-21T18:00:00.000Z",
+        "location": "New Gym"
+    },
+    {
+        "eventName": "Alumni Holiday Party",
+        "startDateTime": "2016-12-22T23:30:00.000Z",
+        "endDateTime": "2016-12-23T01:30:00.000Z"
+    },
+    {
+        "eventName": "(Hanukkah begins at sundown)",
+        "startDateTime": "2016-12-24T05:00:00.000Z"
+    },
+    {
+        "eventName": "Christmas",
+        "startDateTime": "2016-12-25T05:00:00.000Z"
+    },
+    {
+        "eventName": "(Kwanzaa)",
+        "startDateTime": "2016-12-26T05:00:00.000Z"
+    },
+    {
+        "eventName": "(New Year Day)",
+        "startDateTime": "2017-01-01T05:00:00.000Z"
+    },
+    {
+        "eventName": "8th Grade Drug & Alcohol Program",
+        "startDateTime": "2017-01-03T05:00:00.000Z"
+    },
+    {
+        "eventName": "Day of Dialogue",
+        "startDateTime": "2017-01-03T05:00:00.000Z"
+    },
+    {
+        "eventName": "US Musical Rehearsal",
+        "startDateTime": "2017-01-03T22:00:00.000Z",
+        "endDateTime": "2017-01-04T00:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "Strategic Planning Focus Group Session for Alumni ('05-16)/Alumni Council",
+        "startDateTime": "2017-01-03T23:30:00.000Z",
+        "endDateTime": "2017-01-04T01:30:00.000Z",
+        "location": "Atrium"
+    },
+    {
+        "eventName": "8th Grade Drug & Alcohol Program",
+        "startDateTime": "2017-01-04T05:00:00.000Z"
+    },
+    {
+        "eventName": "Kindergarten visits begin",
+        "startDateTime": "2017-01-04T18:45:00.000Z"
+    },
+    {
+        "eventName": "Admissions Event",
+        "startDateTime": "2017-01-04T22:45:00.000Z",
+        "endDateTime": "2017-01-05T00:00:00.000Z",
+        "location": "202-AB Movement Studio"
+    },
+    {
+        "eventName": "Strategic Planning Focus Group Mtg for Parents",
+        "startDateTime": "2017-01-04T23:30:00.000Z",
+        "endDateTime": "2017-01-05T01:30:00.000Z",
+        "location": "Atrium"
+    },
+    {
+        "eventName": "8th Grade Drug & Alcohol Program",
+        "startDateTime": "2017-01-05T05:00:00.000Z"
+    },
+    {
+        "eventName": "US Musical Rehearsal",
+        "startDateTime": "2017-01-05T22:00:00.000Z",
+        "endDateTime": "2017-01-06T00:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "8th Gr Drug & Alcohol Parent Night",
+        "startDateTime": "2017-01-05T23:30:00.000Z",
+        "endDateTime": "2017-01-06T01:30:00.000Z",
+        "location": "AB Conference Room"
+    },
+    {
+        "eventName": "8th Grade Drug & Alcohol Program",
+        "startDateTime": "2017-01-06T05:00:00.000Z"
+    },
+    {
+        "eventName": "Driving Class",
+        "startDateTime": "2017-01-07T14:00:00.000Z",
+        "endDateTime": "2017-01-07T17:15:00.000Z",
+        "location": "463-AC"
+    },
+    {
+        "eventName": "US Musical Rehearsal",
+        "startDateTime": "2017-01-07T19:00:00.000Z",
+        "endDateTime": "2017-01-07T22:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "Grades 10-12 Drug/Alcohol",
+        "startDateTime": "2017-01-09T05:00:00.000Z"
+    },
+    {
+        "eventName": "LS Class Rep Meeting",
+        "startDateTime": "2017-01-09T13:00:00.000Z",
+        "endDateTime": "2017-01-09T14:30:00.000Z",
+        "location": "Development Conference Room"
+    },
+    {
+        "eventName": "National Geography Bee",
+        "startDateTime": "2017-01-09T20:30:00.000Z",
+        "endDateTime": "2017-01-09T23:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "US Musical Rehearsal",
+        "startDateTime": "2017-01-09T22:00:00.000Z",
+        "endDateTime": "2017-01-10T00:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "Grades 10-12 Drug/Alcohol",
+        "startDateTime": "2017-01-10T05:00:00.000Z"
+    },
+    {
+        "eventName": "National Geography Bee",
+        "startDateTime": "2017-01-10T20:30:00.000Z",
+        "endDateTime": "2017-01-10T23:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "US Musical Rehearsal",
+        "startDateTime": "2017-01-10T22:00:00.000Z",
+        "endDateTime": "2017-01-11T00:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "Strategic Planning Focus Group for Parents",
+        "startDateTime": "2017-01-10T23:30:00.000Z",
+        "endDateTime": "2017-01-11T01:30:00.000Z",
+        "location": "Atrium"
+    },
+    {
+        "eventName": "Grades 10-12 Drug/Alcohol",
+        "startDateTime": "2017-01-11T05:00:00.000Z"
+    },
+    {
+        "eventName": "US Class Rep Meeting",
+        "startDateTime": "2017-01-11T13:00:00.000Z",
+        "endDateTime": "2017-01-11T14:30:00.000Z",
+        "location": "Development Conference Room"
+    },
+    {
+        "eventName": "Grades 10-12 Parents Drug/Alcohol Program",
+        "startDateTime": "2017-01-11T23:30:00.000Z",
+        "endDateTime": "2017-01-12T01:30:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "Grades 10-12 Drug/Alcohol",
+        "startDateTime": "2017-01-12T05:00:00.000Z"
+    },
+    {
+        "eventName": "US World Lit Class Trip to AFI Theatre",
+        "startDateTime": "2017-01-12T13:30:00.000Z",
+        "endDateTime": "2017-01-12T17:00:00.000Z",
+        "location": "Silver Spring, MD"
+    },
+    {
+        "eventName": "6th Gr Trip to the Museum of Natural History",
+        "startDateTime": "2017-01-12T17:30:00.000Z",
+        "endDateTime": "2017-01-12T19:50:00.000Z",
+        "location": "10th St. & Constitution Ave., NW, Washington, DC"
+    },
+    {
+        "eventName": "US Musical Rehearsal",
+        "startDateTime": "2017-01-12T22:00:00.000Z",
+        "endDateTime": "2017-01-13T00:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "Strategic Planning Focus Group for Parents of Alumni/Former Trustees/Former Faculty",
+        "startDateTime": "2017-01-12T23:30:00.000Z",
+        "endDateTime": "2017-01-13T01:30:00.000Z",
+        "location": "Atrium"
+    },
+    {
+        "eventName": "MS Class Rep Meeting",
+        "startDateTime": "2017-01-13T13:00:00.000Z",
+        "endDateTime": "2017-01-13T14:30:00.000Z",
+        "location": "Development Conference Room"
+    },
+    {
+        "eventName": "MLK Day of Service",
+        "startDateTime": "2017-01-14T05:00:00.000Z"
+    },
+    {
+        "eventName": "Driving Class",
+        "startDateTime": "2017-01-14T14:00:00.000Z",
+        "endDateTime": "2017-01-14T17:15:00.000Z",
+        "location": "463-AC"
+    },
+    {
+        "eventName": "SAT/ACT Orientation/Placement Test",
+        "startDateTime": "2017-01-15T22:00:00.000Z",
+        "endDateTime": "2017-01-16T02:00:00.000Z",
+        "location": "Cafeteria"
+    },
+    {
+        "eventName": "Classes Resume",
+        "startDateTime": "2017-01-17T05:00:00.000Z"
+    },
+    {
+        "eventName": "US Musical Rehearsal",
+        "startDateTime": "2017-01-17T22:00:00.000Z",
+        "endDateTime": "2017-01-18T00:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "MPA Speaker Series:  Rosetta Lee",
+        "startDateTime": "2017-01-18T23:30:00.000Z",
+        "endDateTime": "2017-01-19T01:30:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "MS/US End 1st Semester",
+        "startDateTime": "2017-01-19T05:00:00.000Z"
+    },
+    {
+        "eventName": "US Musical Rehearsal",
+        "startDateTime": "2017-01-19T22:00:00.000Z",
+        "endDateTime": "2017-01-20T00:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "Mixed Forum",
+        "startDateTime": "2017-01-19T23:30:00.000Z",
+        "endDateTime": "2017-01-20T01:30:00.000Z",
+        "location": "Old Gym"
+    },
+    {
+        "eventName": "Inauguration Day--No School",
+        "startDateTime": "2017-01-20T05:00:00.000Z"
+    },
+    {
+        "eventName": "Driving Class",
+        "startDateTime": "2017-01-21T14:00:00.000Z",
+        "endDateTime": "2017-01-21T17:15:00.000Z",
+        "location": "463-AC"
+    },
+    {
+        "eventName": "US Musical Rehearsal",
+        "startDateTime": "2017-01-22T19:00:00.000Z",
+        "endDateTime": "2017-01-22T22:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "SAT/ACT Class 1",
+        "startDateTime": "2017-01-22T22:00:00.000Z",
+        "endDateTime": "2017-01-23T02:00:00.000Z",
+        "location": "Cafeteria"
+    },
+    {
+        "eventName": "US World Lit Class Trip to the SEED School",
+        "startDateTime": "2017-01-23T13:30:00.000Z",
+        "endDateTime": "2017-01-23T16:30:00.000Z",
+        "location": "4300 C Street, SE, Washington, DC"
+    },
+    {
+        "eventName": "MS/US Reports due in Veracross",
+        "startDateTime": "2017-01-23T14:00:00.000Z"
+    },
+    {
+        "eventName": "US Musical Rehearsal",
+        "startDateTime": "2017-01-23T22:00:00.000Z",
+        "endDateTime": "2017-01-24T01:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "US Musical Rehearsal",
+        "startDateTime": "2017-01-24T22:00:00.000Z",
+        "endDateTime": "2017-01-25T01:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "Alumni Strategic Planning Focus Group Session",
+        "startDateTime": "2017-01-24T23:30:00.000Z",
+        "endDateTime": "2017-01-25T01:30:00.000Z",
+        "location": "Atrium"
+    },
+    {
+        "eventName": "SAT/ACT Make-up Placement Test or Make-up Class 1",
+        "startDateTime": "2017-01-24T23:30:00.000Z",
+        "endDateTime": "2017-01-25T03:00:00.000Z",
+        "location": "Cafeteria"
+    },
+    {
+        "eventName": "Adm Deans/Director--11th Grade Families",
+        "startDateTime": "2017-01-26T00:00:00.000Z",
+        "endDateTime": "2017-01-26T01:30:00.000Z"
+    },
+    {
+        "eventName": "US Musical Rehearsal",
+        "startDateTime": "2017-01-26T22:00:00.000Z",
+        "endDateTime": "2017-01-27T01:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "MS Talent Show",
+        "startDateTime": "2017-01-27T05:00:00.000Z"
+    },
+    {
+        "eventName": "Driving Class",
+        "startDateTime": "2017-01-28T14:00:00.000Z",
+        "endDateTime": "2017-01-28T17:15:00.000Z",
+        "location": "463-AC"
+    },
+    {
+        "eventName": "US Musical Rehearsal",
+        "startDateTime": "2017-01-28T18:00:00.000Z",
+        "endDateTime": "2017-01-28T22:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "US Winter Formal",
+        "startDateTime": "2017-01-29T01:30:00.000Z",
+        "endDateTime": "2017-01-29T04:00:00.000Z"
+    },
+    {
+        "eventName": "SAT/ACT Class 2",
+        "startDateTime": "2017-01-29T22:00:00.000Z",
+        "endDateTime": "2017-01-30T02:00:00.000Z"
+    },
+    {
+        "eventName": "US Musical Rehearsal",
+        "startDateTime": "2017-01-30T22:00:00.000Z",
+        "endDateTime": "2017-01-31T00:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "SAT/ACT Make-up Class 2",
+        "startDateTime": "2017-01-31T23:30:00.000Z",
+        "endDateTime": "2017-02-01T03:00:00.000Z",
+        "location": "Cafeteria"
+    },
+    {
+        "eventName": "US Musical Rehearsal",
+        "startDateTime": "2017-02-01T22:00:00.000Z",
+        "endDateTime": "2017-02-02T00:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "Grs 1-4 resoure reports due",
+        "startDateTime": "2017-02-02T05:00:00.000Z"
+    },
+    {
+        "eventName": "US Musical Rehearsal",
+        "startDateTime": "2017-02-03T22:00:00.000Z",
+        "endDateTime": "2017-02-04T00:00:00.000Z",
+        "location": "Theatre"
+    },
+    {
+        "eventName": "Driving Class",
+        "startDateTime": "2017-02-04T14:00:00.000Z",
+        "endDateTime": "2017-02-04T17:15:00.000Z",
+        "location": "463-AC"
+    },
+    {
+        "eventName": "Horizons Field Trip to the Museum of African American History",
+        "startDateTime": "2017-02-04T14:00:00.000Z",
+        "endDateTime": "2017-02-04T17:00:00.000Z"
+    },
+    {
+        "eventName": "SAT Diagnostic #2 (with essay)",
+        "startDateTime": "2017-02-04T16:00:00.000Z",
+        "endDateTime": "2017-02-04T20:30:00.000Z",
+        "location": "Cafeteria"
+    },
+    {
+        "eventName": "US Musical Rehearsal",
+        "startDateTime": "2017-02-04T17:00:00.000Z",
+        "endDateTime": "2017-02-04T23:00:00.000Z",
+        "location": "Theatre"
+    }
 ]

@@ -169,17 +169,6 @@ const scrapeSchoolCalendar = function($) {
 
 	return $(".fsCalendarInfo").map(function(i, elem) {
 
-		// Get date info from the top sibling (elem before all event rows)
-		const dateElem = $(elem).siblings().first();
-
-		const date = parseInt(dateElem.attr("data-day"));
-		const year = parseInt(dateElem.attr("data-year"));
-
-		// Calculate the month number
-		const monthName = $(dateElem).find(".fsCalendarMonth").text().trim();
-		const month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug",
-						"Sep", "Oct", "Nov", "Dec"].indexOf(monthName);
-
 		const event = {
 			eventName: $(elem).find(".fsCalendarEventTitle").text().trim()
 		};
@@ -189,6 +178,17 @@ const scrapeSchoolCalendar = function($) {
 		if (startTime.length > 0) {
 			event.startDateTime = new Date(startTime.attr("datetime").trim());
 		} else {
+			// Get date info from the top sibling (elem before all event rows)
+			const dateElem = $(elem).siblings().first();
+
+			const date = parseInt(dateElem.attr("data-day"));
+			const year = parseInt(dateElem.attr("data-year"));
+
+			// Calculate the month number
+			const monthName = $(dateElem).find(".fsCalendarMonth").text()
+				.trim();
+			const month = util.MONTH_NAMES.indexOf(monthName);
+
 			event.startDateTime = new Date(year, month, date, 0, 0, 0, 0);
 		}
 		event.startDateTime = event.startDateTime.toJSON();
@@ -231,12 +231,9 @@ for games and practices is slightly different, however.  The games events have
 the following format:
 
 {
-    "month": "Sep",
-    "date": 28,
-    "year": 2016,
     "team": "Boys' Varsity Soccer",
     "opponent": "Other School"
-    "time": "2016-11-28T15:45:00-05:00",
+    "startDateTime": "2016-11-28T20:45:00.000Z",
     "location": "Back Field",
     "isHome": true,
     "result": null,
@@ -245,16 +242,13 @@ the following format:
 
 Each game event is guaranteed to have the following fields:
 
-	- month: an abbreviated name for the event month
-	- date: the numeric date
-	- year: the numeric year
 	- team: the school team competing
+	- startDateTime: start date/time string of event (JS date string)
 	- isHome: boolean whether or not this is a home game
 
 Additionally, each game event may have the following fields:
 
 	- opponent: the opposing team name
-	- time: a datetime string
 	- location: the name of the game's location (NOT necessarily address)
 	- result: "Win" or "Loss" or another string indicator of game result
 	- status: "CANCELLED" or another string indicator of game status
@@ -262,11 +256,8 @@ Additionally, each game event may have the following fields:
 The practices events have the following format (a subset of the game object):
 
 {
-    "month": "Sep",
-    "date": 28,
-    "year": 2016,
     "team": "Boys' Varsity Soccer",
-    "time": "2016-11-28T15:45:00-05:00",
+    "startDateTime": "2016-11-28T20:45:00.000Z",
     "location": "Back Field",
     "status": "CANCELLED"
 }
@@ -304,30 +295,24 @@ Returns: An array of games event objects, sorted chronologically from
 earliest to latest.  The event objects have the following format:
 
 {
-    "month": "Sep",
-    "date": 28,
-    "year": 2016,
     "team": "Boys' Varsity Soccer",
     "opponent": "Other School"
-    "time": "2016-11-28T15:45:00-05:00",
+    "startDateTime": "2016-11-28T20:45:00.000Z",
     "location": "Back Field",
     "isHome": true,
     "result": null,
     "status": "CANCELLED"
 }
 
-Every game event object is guaranteed to have the following fields:
+Each game event is guaranteed to have the following fields:
 
-	- month: an abbreviated name for the event month
-	- date: the numeric date
-	- year: the numeric year
 	- team: the school team competing
-	- isHome: boolean whether or not this is a home game
+	- startDateTime: start date/time string of event (JS date string)
+	- isHome: boolean whether or not this is a home game (defaults to AWAY)
 
-Additionally, every game event object may have the following fields:
+Additionally, each game event may have the following fields:
 
 	- opponent: the opposing team name
-	- time: a datetime string
 	- location: the name of the game's location (NOT necessarily address)
 	- result: "Win" or "Loss" or another string indicator of game result
 	- status: "CANCELLED" or another string indicator of game status
@@ -336,29 +321,17 @@ Additionally, every game event object may have the following fields:
 const scrapeAthleticsGames = function($) {
 	return $("tbody tr").map(function(i, elem) {
 		const event = {
-			month: $(elem).find("td.fsAthleticsDate .fsMonth").text().trim(),
-			date: parseInt($(elem).find("td.fsAthleticsDate .fsDay").text()),
-			year: parseInt($(elem).find("td.fsAthleticsDate .fsYear").text()),
-			team: $(elem).find("td.fsTitle").text().trim()
+			team: $(elem).find("td.fsTitle").text().trim(),
+			startDateTime: dateTimeForAthleticsElem($(elem)),
+			isHome: $(elem).find("td.fsAthleticsAdvantage").text().trim()
+				== "Home"
 		};
-
-		// Check if it's a home game (if no label, default to away)
-		event.isHome =
-			$(elem).find("td.fsAthleticsAdvantage").text().trim() == "Home";
 
 		// Add the opponent if there is one
 		const opponentElem = $(elem)
 			.find("td.fsAthleticsOpponents .fsAthleticsOpponentNames");
 		if (opponentElem.length > 0 && opponentElem.text().trim().length > 0) {
 			event.opponent = opponentElem.text().trim();
-		}
-
-		// Add the time if there is one
-		const timeElem = $(elem).find("td.fsAthleticsTime time");
-		if (timeElem.length > 0
-			&& timeElem.attr("datetime").trim().length > 0) {
-
-			event.time = timeElem.attr("datetime").trim();
 		}
 
 		// Add the location if there is one
@@ -393,25 +366,19 @@ Returns: An array of practice event objects, sorted chronologically from
 earliest to latest.  The objects have the following format:
 
 {
-    "month": "Sep",
-    "date": 28,
-    "year": 2016,
     "team": "Boys' Varsity Soccer",
-    "time": "2016-11-28T15:45:00-05:00",
+    "startDateTime": "2016-11-28T20:45:00.000Z",
     "location": "Back Field",
     "status": "CANCELLED"
 }
 
-Every practice event is guaranteed to have the following fields:
+Each practice event is guaranteed to have the following fields:
 
-	- month: an abbreviated name for the event month
-	- date: the numeric date
-	- year: the numeric year
 	- team: the school team practicing
+	- startDateTime: start date/time string of event (JS date string)
 
-Additionally, every practice event object may have the following fields:
+Additionally, each practice event may have the following fields:
 
-	- time: a datetime string
 	- location: the name of the practice's location (NOT necessarily address)
 	- status: "CANCELLED" or another string indicator of practice status
 --------------------------------------
@@ -419,19 +386,9 @@ Additionally, every practice event object may have the following fields:
 const scrapeAthleticsPractices = function($) {
 	return $("tbody tr").map(function(i, elem) {
 		const event = {
-			month: $(elem).find("td.fsAthleticsDate .fsMonth").text().trim(),
-			date: parseInt($(elem).find("td.fsAthleticsDate .fsDay").text()),
-			year: parseInt($(elem).find("td.fsAthleticsDate .fsYear").text()),
-			team: $(elem).find("td.fsTitle").text().trim()
+			team: $(elem).find("td.fsTitle").text().trim(),
+			startDateTime: dateTimeForAthleticsElem($(elem))
 		};
-
-		// Add the time if there is one
-		const timeElem = $(elem).find("td.fsAthleticsTime time");
-		if (timeElem.length > 0
-			&& timeElem.attr("datetime").trim().length > 0) {
-
-			event.time = timeElem.attr("datetime").trim();
-		}
 
 		// Add the location if there is one
 		const locationElem = $(elem).find("td.fsAthleticsLocations");
@@ -447,6 +404,21 @@ const scrapeAthleticsPractices = function($) {
 
 		return event;
 	}).get();
+}
+
+
+/* FUNCTION: dateTimeForAthleticsElem
+--------------------------------------
+Parameters:
+	elem - the Cheerio DOM athletics elem to parse the date from
+
+Returns: the JSON form of a Date corresponding to the given athletics event
+elem.
+--------------------------------------
+*/
+function dateTimeForAthleticsElem(elem) {
+	const timeAttr = elem.find("td.fsAthleticsDate .fsDate").attr("datetime");
+	return (new Date(timeAttr.trim()).toJSON());
 }
 
 

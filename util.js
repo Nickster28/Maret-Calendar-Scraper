@@ -36,3 +36,7 @@ module.exports.constants = {
     ATHLETICS_TEAMS_URL: SCHOOL_URL_BASE + "/fs/elements/6188"
 };
 
+
+module.exports.MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
+                                "Aug", "Sep", "Oct", "Nov", "Dec"];
+

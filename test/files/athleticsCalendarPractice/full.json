@@ -1,963 +1,579 @@
 [
     {
-        "month": "Dec",
-        "date": 19,
-        "year": 2016,
         "team": "Girls' Varsity Basketball",
-        "time": "2016-12-19T10:00:00-05:00",
+        "startDateTime": "2016-12-26T14:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Dec",
-        "date": 21,
-        "year": 2016,
-        "team": "Girls' Varsity Basketball",
-        "time": "2016-12-21T09:00:00-05:00",
-        "location": "New Gym"
-    },
-    {
-        "month": "Dec",
-        "date": 22,
-        "year": 2016,
-        "team": "Girls' Varsity Basketball",
-        "time": "2016-12-22T10:00:00-05:00",
-        "location": "New Gym"
-    },
-    {
-        "month": "Dec",
-        "date": 26,
-        "year": 2016,
-        "team": "Girls' Varsity Basketball",
-        "time": "2016-12-26T09:00:00-05:00",
-        "location": "New Gym"
-    },
-    {
-        "month": "Dec",
-        "date": 26,
-        "year": 2016,
         "team": "Boys' Varsity Basketball",
-        "time": "2016-12-26T13:00:00-05:00",
+        "startDateTime": "2016-12-26T18:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Dec",
-        "date": 27,
-        "year": 2016,
         "team": "Girls' Varsity Basketball",
-        "time": "2016-12-27T10:00:00-05:00",
+        "startDateTime": "2016-12-27T15:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Dec",
-        "date": 27,
-        "year": 2016,
         "team": "Boys' Varsity Basketball",
-        "time": "2016-12-27T13:00:00-05:00",
+        "startDateTime": "2016-12-27T18:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Dec",
-        "date": 28,
-        "year": 2016,
         "team": "Girls' Varsity Basketball",
-        "time": "2016-12-28T09:00:00-05:00",
+        "startDateTime": "2016-12-28T14:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Dec",
-        "date": 28,
-        "year": 2016,
         "team": "Boys' Varsity Basketball",
-        "time": "2016-12-28T13:00:00-05:00",
+        "startDateTime": "2016-12-28T18:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Dec",
-        "date": 29,
-        "year": 2016,
         "team": "Girls' Varsity Basketball",
-        "time": "2016-12-29T10:00:00-05:00",
+        "startDateTime": "2016-12-29T15:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Dec",
-        "date": 30,
-        "year": 2016,
         "team": "Girls' Varsity Basketball",
-        "time": "2016-12-30T10:00:00-05:00",
+        "startDateTime": "2016-12-30T15:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Dec",
-        "date": 30,
-        "year": 2016,
         "team": "Boys' Varsity Basketball",
-        "time": "2016-12-30T14:00:00-05:00",
+        "startDateTime": "2016-12-30T19:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Dec",
-        "date": 31,
-        "year": 2016,
         "team": "Boys' Varsity Basketball",
-        "time": "2016-12-31T10:00:00-05:00",
+        "startDateTime": "2016-12-31T15:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 2,
-        "year": 2017,
         "team": "Girls' Varsity Basketball",
-        "time": "2017-01-02T10:00:00-05:00",
+        "startDateTime": "2017-01-02T15:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 2,
-        "year": 2017,
         "team": "Boys' JV Basketball",
-        "time": "2017-01-02T13:00:00-05:00",
+        "startDateTime": "2017-01-02T18:00:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 2,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-01-02T13:00:00-05:00",
+        "startDateTime": "2017-01-02T18:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 3,
-        "year": 2017,
         "team": "Varsity Swimming",
-        "time": "2017-01-03T15:30:00-05:00"
+        "startDateTime": "2017-01-03T20:30:00.000Z"
     },
     {
-        "month": "Jan",
-        "date": 3,
-        "year": 2017,
         "team": "Boys' JV Basketball",
-        "time": "2017-01-03T15:30:00-05:00",
+        "startDateTime": "2017-01-03T20:30:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 3,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-01-03T16:00:00-05:00",
+        "startDateTime": "2017-01-03T21:00:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 4,
-        "year": 2017,
         "team": "Varsity Swimming",
-        "time": "2017-01-04T14:00:00-05:00"
+        "startDateTime": "2017-01-04T19:00:00.000Z"
     },
     {
-        "month": "Jan",
-        "date": 4,
-        "year": 2017,
         "team": "Girls' JV Basketball",
-        "time": "2017-01-04T15:00:00-05:00",
+        "startDateTime": "2017-01-04T20:00:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 4,
-        "year": 2017,
         "team": "Girls' Varsity Basketball",
-        "time": "2017-01-04T15:00:00-05:00",
+        "startDateTime": "2017-01-04T20:00:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 5,
-        "year": 2017,
         "team": "Varsity Swimming",
-        "time": "2017-01-05T15:30:00-05:00"
+        "startDateTime": "2017-01-05T20:30:00.000Z"
     },
     {
-        "month": "Jan",
-        "date": 5,
-        "year": 2017,
         "team": "Boys' JV Basketball",
-        "time": "2017-01-05T15:30:00-05:00",
+        "startDateTime": "2017-01-05T20:30:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 5,
-        "year": 2017,
         "team": "Girls' JV Basketball",
-        "time": "2017-01-05T15:30:00-05:00",
+        "startDateTime": "2017-01-05T20:30:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 5,
-        "year": 2017,
         "team": "Girls' Varsity Basketball",
-        "time": "2017-01-05T15:30:00-05:00",
+        "startDateTime": "2017-01-05T20:30:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 5,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-01-05T16:00:00-05:00",
+        "startDateTime": "2017-01-05T21:00:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 6,
-        "year": 2017,
         "team": "Varsity Swimming",
-        "time": "2017-01-06T15:30:00-05:00"
+        "startDateTime": "2017-01-06T20:30:00.000Z"
     },
     {
-        "month": "Jan",
-        "date": 6,
-        "year": 2017,
         "team": "Boys' JV Basketball",
-        "time": "2017-01-06T15:30:00-05:00",
+        "startDateTime": "2017-01-06T20:30:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 6,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-01-06T15:30:00-05:00",
+        "startDateTime": "2017-01-06T20:30:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 9,
-        "year": 2017,
         "team": "Varsity Swimming",
-        "time": "2017-01-09T15:30:00-05:00"
+        "startDateTime": "2017-01-09T20:30:00.000Z"
     },
     {
-        "month": "Jan",
-        "date": 9,
-        "year": 2017,
         "team": "Boys' JV Basketball",
-        "time": "2017-01-09T15:30:00-05:00",
+        "startDateTime": "2017-01-09T20:30:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 9,
-        "year": 2017,
         "team": "Girls' JV Basketball",
-        "time": "2017-01-09T15:30:00-05:00",
+        "startDateTime": "2017-01-09T20:30:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 9,
-        "year": 2017,
         "team": "Girls' Varsity Basketball",
-        "time": "2017-01-09T15:30:00-05:00",
+        "startDateTime": "2017-01-09T20:30:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 9,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-01-09T16:00:00-05:00",
+        "startDateTime": "2017-01-09T21:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 10,
-        "year": 2017,
         "team": "Varsity Swimming",
-        "time": "2017-01-10T15:30:00-05:00"
+        "startDateTime": "2017-01-10T20:30:00.000Z"
     },
     {
-        "month": "Jan",
-        "date": 10,
-        "year": 2017,
         "team": "Girls' JV Basketball",
-        "time": "2017-01-10T15:30:00-05:00",
+        "startDateTime": "2017-01-10T20:30:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 10,
-        "year": 2017,
         "team": "Girls' Varsity Basketball",
-        "time": "2017-01-10T15:30:00-05:00",
+        "startDateTime": "2017-01-10T20:30:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 11,
-        "year": 2017,
         "team": "Varsity Swimming",
-        "time": "2017-01-11T14:00:00-05:00"
+        "startDateTime": "2017-01-11T19:00:00.000Z"
     },
     {
-        "month": "Jan",
-        "date": 11,
-        "year": 2017,
         "team": "Boys' JV Basketball",
-        "time": "2017-01-11T15:30:00-05:00",
+        "startDateTime": "2017-01-11T20:30:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 11,
-        "year": 2017,
         "team": "Girls' JV Basketball",
-        "time": "2017-01-11T15:30:00-05:00",
+        "startDateTime": "2017-01-11T20:30:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 11,
-        "year": 2017,
         "team": "Girls' Varsity Basketball",
-        "time": "2017-01-11T15:30:00-05:00",
+        "startDateTime": "2017-01-11T20:30:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 11,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-01-11T16:00:00-05:00",
+        "startDateTime": "2017-01-11T21:00:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 12,
-        "year": 2017,
         "team": "Varsity Swimming",
-        "time": "2017-01-12T15:30:00-05:00"
+        "startDateTime": "2017-01-12T20:30:00.000Z"
     },
     {
-        "month": "Jan",
-        "date": 12,
-        "year": 2017,
         "team": "Boys' JV Basketball",
-        "time": "2017-01-12T15:30:00-05:00",
+        "startDateTime": "2017-01-12T20:30:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 12,
-        "year": 2017,
         "team": "Girls' JV Basketball",
-        "time": "2017-01-12T15:30:00-05:00",
+        "startDateTime": "2017-01-12T20:30:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 12,
-        "year": 2017,
         "team": "Girls' Varsity Basketball",
-        "time": "2017-01-12T15:30:00-05:00",
+        "startDateTime": "2017-01-12T20:30:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 12,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-01-12T16:00:00-05:00",
+        "startDateTime": "2017-01-12T21:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 13,
-        "year": 2017,
         "team": "Varsity Swimming",
-        "time": "2017-01-13T15:30:00-05:00"
+        "startDateTime": "2017-01-13T20:30:00.000Z"
     },
     {
-        "month": "Jan",
-        "date": 13,
-        "year": 2017,
         "team": "Girls' JV Basketball",
-        "time": "2017-01-13T15:30:00-05:00",
+        "startDateTime": "2017-01-13T20:30:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 14,
-        "year": 2017,
         "team": "Boys' JV Basketball",
-        "time": "2017-01-14T13:00:00-05:00",
+        "startDateTime": "2017-01-14T18:00:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 14,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-01-14T13:00:00-05:00",
+        "startDateTime": "2017-01-14T18:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 16,
-        "year": 2017,
         "team": "Girls' JV Basketball",
-        "time": "2017-01-16T10:00:00-05:00",
+        "startDateTime": "2017-01-16T15:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 16,
-        "year": 2017,
         "team": "Girls' Varsity Basketball",
-        "time": "2017-01-16T10:00:00-05:00",
+        "startDateTime": "2017-01-16T15:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 16,
-        "year": 2017,
         "team": "Boys' JV Basketball",
-        "time": "2017-01-16T13:00:00-05:00",
+        "startDateTime": "2017-01-16T18:00:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 16,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-01-16T13:00:00-05:00",
+        "startDateTime": "2017-01-16T18:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 16,
-        "year": 2017,
         "team": "Varsity Swimming",
-        "time": "2017-01-16T15:30:00-05:00"
+        "startDateTime": "2017-01-16T20:30:00.000Z"
     },
     {
-        "month": "Jan",
-        "date": 17,
-        "year": 2017,
         "team": "Varsity Swimming",
-        "time": "2017-01-17T15:30:00-05:00"
+        "startDateTime": "2017-01-17T20:30:00.000Z"
     },
     {
-        "month": "Jan",
-        "date": 18,
-        "year": 2017,
         "team": "Boys' JV Basketball",
-        "time": "2017-01-18T14:00:00-05:00",
+        "startDateTime": "2017-01-18T19:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 18,
-        "year": 2017,
         "team": "Girls' JV Basketball",
-        "time": "2017-01-18T14:00:00-05:00",
+        "startDateTime": "2017-01-18T19:00:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 18,
-        "year": 2017,
         "team": "Girls' Varsity Basketball",
-        "time": "2017-01-18T14:00:00-05:00",
+        "startDateTime": "2017-01-18T19:00:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 18,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-01-18T16:00:00-05:00",
+        "startDateTime": "2017-01-18T21:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 19,
-        "year": 2017,
         "team": "Varsity Swimming",
-        "time": "2017-01-19T15:30:00-05:00"
+        "startDateTime": "2017-01-19T20:30:00.000Z"
     },
     {
-        "month": "Jan",
-        "date": 21,
-        "year": 2017,
         "team": "Boys' JV Basketball",
-        "time": "2017-01-21T13:00:00-05:00",
+        "startDateTime": "2017-01-21T18:00:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 21,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-01-21T13:00:00-05:00",
+        "startDateTime": "2017-01-21T18:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 23,
-        "year": 2017,
         "team": "Varsity Swimming",
-        "time": "2017-01-23T15:30:00-05:00"
+        "startDateTime": "2017-01-23T20:30:00.000Z"
     },
     {
-        "month": "Jan",
-        "date": 23,
-        "year": 2017,
         "team": "Boys' JV Basketball",
-        "time": "2017-01-23T15:30:00-05:00",
+        "startDateTime": "2017-01-23T20:30:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 23,
-        "year": 2017,
         "team": "Girls' JV Basketball",
-        "time": "2017-01-23T15:30:00-05:00",
+        "startDateTime": "2017-01-23T20:30:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 23,
-        "year": 2017,
         "team": "Girls' Varsity Basketball",
-        "time": "2017-01-23T15:30:00-05:00",
+        "startDateTime": "2017-01-23T20:30:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 23,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-01-23T16:00:00-05:00",
+        "startDateTime": "2017-01-23T21:00:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 24,
-        "year": 2017,
         "team": "Varsity Swimming",
-        "time": "2017-01-24T15:30:00-05:00"
+        "startDateTime": "2017-01-24T20:30:00.000Z"
     },
     {
-        "month": "Jan",
-        "date": 25,
-        "year": 2017,
         "team": "Girls' JV Basketball",
-        "time": "2017-01-25T14:00:00-05:00",
+        "startDateTime": "2017-01-25T19:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 25,
-        "year": 2017,
         "team": "Girls' Varsity Basketball",
-        "time": "2017-01-25T14:00:00-05:00",
+        "startDateTime": "2017-01-25T19:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 25,
-        "year": 2017,
         "team": "Varsity Swimming",
-        "time": "2017-01-25T15:30:00-05:00"
+        "startDateTime": "2017-01-25T20:30:00.000Z"
     },
     {
-        "month": "Jan",
-        "date": 25,
-        "year": 2017,
         "team": "Boys' JV Basketball",
-        "time": "2017-01-25T15:30:00-05:00",
+        "startDateTime": "2017-01-25T20:30:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 25,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-01-25T16:00:00-05:00",
+        "startDateTime": "2017-01-25T21:00:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 26,
-        "year": 2017,
         "team": "Varsity Swimming",
-        "time": "2017-01-26T15:30:00-05:00"
+        "startDateTime": "2017-01-26T20:30:00.000Z"
     },
     {
-        "month": "Jan",
-        "date": 27,
-        "year": 2017,
         "team": "Boys' JV Basketball",
-        "time": "2017-01-27T15:30:00-05:00",
+        "startDateTime": "2017-01-27T20:30:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 27,
-        "year": 2017,
         "team": "Girls' JV Basketball",
-        "time": "2017-01-27T15:30:00-05:00",
+        "startDateTime": "2017-01-27T20:30:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 27,
-        "year": 2017,
         "team": "Girls' Varsity Basketball",
-        "time": "2017-01-27T15:30:00-05:00",
+        "startDateTime": "2017-01-27T20:30:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 27,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-01-27T16:00:00-05:00",
+        "startDateTime": "2017-01-27T21:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 30,
-        "year": 2017,
         "team": "Varsity Swimming",
-        "time": "2017-01-30T15:30:00-05:00"
+        "startDateTime": "2017-01-30T20:30:00.000Z"
     },
     {
-        "month": "Jan",
-        "date": 30,
-        "year": 2017,
         "team": "Boys' JV Basketball",
-        "time": "2017-01-30T15:30:00-05:00",
+        "startDateTime": "2017-01-30T20:30:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Jan",
-        "date": 30,
-        "year": 2017,
         "team": "Girls' JV Basketball",
-        "time": "2017-01-30T15:30:00-05:00",
+        "startDateTime": "2017-01-30T20:30:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 30,
-        "year": 2017,
         "team": "Girls' Varsity Basketball",
-        "time": "2017-01-30T15:30:00-05:00",
+        "startDateTime": "2017-01-30T20:30:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Jan",
-        "date": 30,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-01-30T16:00:00-05:00",
+        "startDateTime": "2017-01-30T21:00:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Feb",
-        "date": 1,
-        "year": 2017,
         "team": "Varsity Swimming",
-        "time": "2017-02-01T14:00:00-05:00"
+        "startDateTime": "2017-02-01T19:00:00.000Z"
     },
     {
-        "month": "Feb",
-        "date": 1,
-        "year": 2017,
         "team": "Boys' JV Basketball",
-        "time": "2017-02-01T14:00:00-05:00",
+        "startDateTime": "2017-02-01T19:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Feb",
-        "date": 1,
-        "year": 2017,
         "team": "Girls' JV Basketball",
-        "time": "2017-02-01T14:00:00-05:00",
+        "startDateTime": "2017-02-01T19:00:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Feb",
-        "date": 1,
-        "year": 2017,
         "team": "Girls' Varsity Basketball",
-        "time": "2017-02-01T14:00:00-05:00",
+        "startDateTime": "2017-02-01T19:00:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Feb",
-        "date": 1,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-02-01T16:00:00-05:00",
+        "startDateTime": "2017-02-01T21:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Feb",
-        "date": 2,
-        "year": 2017,
         "team": "Varsity Swimming",
-        "time": "2017-02-02T15:30:00-05:00"
+        "startDateTime": "2017-02-02T20:30:00.000Z"
     },
     {
-        "month": "Feb",
-        "date": 2,
-        "year": 2017,
         "team": "Boys' JV Basketball",
-        "time": "2017-02-02T15:30:00-05:00",
+        "startDateTime": "2017-02-02T20:30:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Feb",
-        "date": 2,
-        "year": 2017,
         "team": "Girls' JV Basketball",
-        "time": "2017-02-02T15:30:00-05:00",
+        "startDateTime": "2017-02-02T20:30:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Feb",
-        "date": 2,
-        "year": 2017,
         "team": "Girls' Varsity Basketball",
-        "time": "2017-02-02T15:30:00-05:00",
+        "startDateTime": "2017-02-02T20:30:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Feb",
-        "date": 2,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-02-02T16:00:00-05:00",
+        "startDateTime": "2017-02-02T21:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Feb",
-        "date": 3,
-        "year": 2017,
         "team": "Varsity Swimming",
-        "time": "2017-02-03T15:30:00-05:00"
+        "startDateTime": "2017-02-03T20:30:00.000Z"
     },
     {
-        "month": "Feb",
-        "date": 4,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-02-04T13:00:00-05:00",
+        "startDateTime": "2017-02-04T18:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Feb",
-        "date": 5,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-02-05T13:00:00-05:00",
+        "startDateTime": "2017-02-05T18:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Feb",
-        "date": 6,
-        "year": 2017,
         "team": "Varsity Swimming",
-        "time": "2017-02-06T15:30:00-05:00"
+        "startDateTime": "2017-02-06T20:30:00.000Z"
     },
     {
-        "month": "Feb",
-        "date": 6,
-        "year": 2017,
         "team": "Girls' JV Basketball",
-        "time": "2017-02-06T15:30:00-05:00",
+        "startDateTime": "2017-02-06T20:30:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Feb",
-        "date": 6,
-        "year": 2017,
         "team": "Girls' Varsity Basketball",
-        "time": "2017-02-06T15:30:00-05:00",
+        "startDateTime": "2017-02-06T20:30:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Feb",
-        "date": 7,
-        "year": 2017,
         "team": "Boys' JV Basketball",
-        "time": "2017-02-07T15:30:00-05:00",
+        "startDateTime": "2017-02-07T20:30:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Feb",
-        "date": 7,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-02-07T16:00:00-05:00",
+        "startDateTime": "2017-02-07T21:00:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Feb",
-        "date": 8,
-        "year": 2017,
         "team": "Varsity Swimming",
-        "time": "2017-02-08T14:00:00-05:00"
+        "startDateTime": "2017-02-08T19:00:00.000Z"
     },
     {
-        "month": "Feb",
-        "date": 8,
-        "year": 2017,
         "team": "Girls' JV Basketball",
-        "time": "2017-02-08T14:00:00-05:00",
+        "startDateTime": "2017-02-08T19:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Feb",
-        "date": 8,
-        "year": 2017,
         "team": "Girls' Varsity Basketball",
-        "time": "2017-02-08T14:00:00-05:00",
+        "startDateTime": "2017-02-08T19:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Feb",
-        "date": 8,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-02-08T16:00:00-05:00",
+        "startDateTime": "2017-02-08T21:00:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Feb",
-        "date": 9,
-        "year": 2017,
         "team": "Varsity Swimming",
-        "time": "2017-02-09T15:30:00-05:00"
+        "startDateTime": "2017-02-09T20:30:00.000Z"
     },
     {
-        "month": "Feb",
-        "date": 10,
-        "year": 2017,
         "team": "Girls' JV Basketball",
-        "time": "2017-02-10T15:30:00-05:00",
+        "startDateTime": "2017-02-10T20:30:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Feb",
-        "date": 10,
-        "year": 2017,
         "team": "Girls' Varsity Basketball",
-        "time": "2017-02-10T15:30:00-05:00",
+        "startDateTime": "2017-02-10T20:30:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Feb",
-        "date": 10,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-02-10T16:00:00-05:00",
+        "startDateTime": "2017-02-10T21:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Feb",
-        "date": 11,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-02-11T13:00:00-05:00",
+        "startDateTime": "2017-02-11T18:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Feb",
-        "date": 13,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-02-13T16:00:00-05:00",
+        "startDateTime": "2017-02-13T21:00:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Feb",
-        "date": 13,
-        "year": 2017,
         "team": "Girls' Varsity Basketball",
-        "time": "2017-02-13T16:00:00-05:00",
+        "startDateTime": "2017-02-13T21:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Feb",
-        "date": 15,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-02-15T16:00:00-05:00",
+        "startDateTime": "2017-02-15T21:00:00.000Z",
         "location": "Old Gym"
     },
     {
-        "month": "Feb",
-        "date": 15,
-        "year": 2017,
         "team": "Girls' Varsity Basketball",
-        "time": "2017-02-15T16:00:00-05:00",
+        "startDateTime": "2017-02-15T21:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Feb",
-        "date": 17,
-        "year": 2017,
         "team": "Girls' Varsity Basketball",
-        "time": "2017-02-17T09:00:00-05:00",
+        "startDateTime": "2017-02-17T14:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Feb",
-        "date": 17,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-02-17T13:00:00-05:00",
+        "startDateTime": "2017-02-17T18:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Feb",
-        "date": 20,
-        "year": 2017,
         "team": "Girls' Varsity Basketball",
-        "time": "2017-02-20T10:00:00-05:00",
+        "startDateTime": "2017-02-20T15:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Feb",
-        "date": 20,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-02-20T13:00:00-05:00",
+        "startDateTime": "2017-02-20T18:00:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Feb",
-        "date": 22,
-        "year": 2017,
         "team": "Girls' Varsity Basketball",
-        "time": "2017-02-22T15:30:00-05:00",
+        "startDateTime": "2017-02-22T20:30:00.000Z",
         "location": "New Gym"
     },
     {
-        "month": "Feb",
-        "date": 22,
-        "year": 2017,
         "team": "Boys' Varsity Basketball",
-        "time": "2017-02-22T16:45:00-05:00",
+        "startDateTime": "2017-02-22T21:45:00.000Z",
         "location": "New Gym"
     }
 ]

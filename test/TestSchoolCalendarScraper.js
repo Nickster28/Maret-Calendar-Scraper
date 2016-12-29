@@ -372,42 +372,43 @@ const testScrapeSchoolCalendars = function() {
     describe("scrapeSchoolCalendars", function() {
         
         // Before all tests are run, mock out getURL to return static HTML files
+        var oldGetURL = null;
         before(function() {
             var callNumber = 0;
 
             // We want to return two calendar HTML files to scrape
-            mock("../util.js", {
-                constants: util.constants,
-                getURL: function(url) {
-                    var filename = "";
-                    if (callNumber == 0) {
-                        assert.equal(url, util.constants.SCHOOL_CALENDAR_URL,
-                            "First school calendar URL should be the constant");
+            oldGetURL = util.getURL;
+            util.getURL = function(url) {
+                var filename = "";
+                if (callNumber == 0) {
+                    assert.equal(url, util.constants.SCHOOL_CALENDAR_URL,
+                        "First school calendar URL should be the constant");
 
-                        filename = "schoolCalendar/full.html";
-                    } else if (callNumber == 1) {
-                        var correctURL = util.constants.SCHOOL_CALENDAR_URL +
-                            "?cal_date=2017-1-23";
-                        assert.equal(url, correctURL, "Second school " +
-                            "URL should have query param");
+                    filename = "schoolCalendar/full.html";
+                } else if (callNumber == 1) {
+                    var correctURL = util.constants.SCHOOL_CALENDAR_URL +
+                        "?cal_date=2017-1-23";
+                    assert.equal(url, correctURL, "Second school " +
+                        "URL should have query param");
 
-                        filename = "schoolCalendar/full2.html";
-                    } else {
-                        assert(false, "Error: call number " + callNumber);
-                    }
-
-                    filename = testUtil.getAbsolutePath(filename);
-                    const file = fs.readFileSync(filename, "utf8");
-                    callNumber += 1;
-                    return Promise.resolve(file);
+                    filename = "schoolCalendar/full2.html";
+                } else {
+                    assert(false, "Error: call number " + callNumber);
                 }
-            });
 
+                filename = testUtil.getAbsolutePath(filename);
+                const file = fs.readFileSync(filename, "utf8");
+                callNumber += 1;
+                return Promise.resolve(file);
+            };
+
+            mock("../util.js", util);
             scraper = mock.reRequire("../scraper.js");
         });
 
         after(function() {
             mock.stop("../util.js");
+            util.getURL = oldGetURL;
         });
 
         // Test the whole scraping pipeline to ensure correct output

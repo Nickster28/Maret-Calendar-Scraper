@@ -1,9 +1,7 @@
 [
 	{
-		"month": "Oct",
-		"date": 24,
-		"year": 2016,
 		"team": "Boys' MS B Soccer",
-		"isHome": true
+		"isHome": true,
+		"startDateTime": "2016-10-24T18:45:00.000Z"
 	}
 ]

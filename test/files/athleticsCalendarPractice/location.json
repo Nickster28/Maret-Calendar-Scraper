@@ -1,9 +1,7 @@
 [
 	{
-		"month": "Jan",
-		"date": 3,
-		"year": 2017,
 		"team": "Varsity Swimming",
-		"location": "Old Gym"
+		"location": "Old Gym",
+		"startDateTime": "2017-01-03T20:30:00.000Z"
 	}
 ]
