@@ -1,11 +1,7 @@
 [
 	{
-		"month": "Dec",
-		"date": 7,
-		"day": "Wed",
-		"year": 2016,
 		"eventName": "MPA General Meeting",
-		"startTime": "2016-12-07T08:15:00-05:00",
-		"endTime": "2016-12-07T09:45:00-05:00"
+		"startDateTime": "2016-12-07T13:15:00.000Z",
+		"endDateTime": "2016-12-07T14:45:00.000Z"
 	}
 ]

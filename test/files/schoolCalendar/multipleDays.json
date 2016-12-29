@@ -1,29 +1,18 @@
 [
 	{
-		"month": "Dec",
-		"date": 7,
-		"day": "Wed",
-		"year": 2016,
-		"eventName": "Hour of Code"
+		"eventName": "Hour of Code",
+		"startDateTime": "2016-12-07T05:00:00.000Z"
 	},
 	{
-		"month": "Dec",
-		"date": 12,
-		"day": "Mon",
-		"year": 2016,
 		"eventName": "US Musical Rehearsal",
-		"startTime": "2016-12-12T17:00:00-05:00",
-		"endTime": "2016-12-12T19:00:00-05:00",
+		"startDateTime": "2016-12-12T22:00:00.000Z",
+		"endDateTime": "2016-12-13T00:00:00.000Z",
 		"location": "Theatre"
 	},
 	{
-		"month": "Dec",
-		"date": 13,
-		"day": "Tue",
-		"year": 2016,
 		"eventName": "US Musical Rehearsal",
-		"startTime": "2016-12-13T17:00:00-05:00",
-		"endTime": "2016-12-13T19:00:00-05:00",
+		"startDateTime": "2016-12-13T22:00:00.000Z",
+		"endDateTime": "2016-12-14T00:00:00.000Z",
 		"location": "Theatre"
 	}
 ]

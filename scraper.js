@@ -12,17 +12,16 @@ Returns: a list of event objects in chronological order for the next two months
 of the school calendar after "date".  Each event is guaranteed to have the
 following fields:
 
-	- month: abbreviated month name
-	- date: the numeric date
-	- day: abbreviated day name
-	- year: numeric year
+	- startDateTime: start date/time string of event (JS date string)
 	- eventName: name of the event
 
 Additionally, an event may have the following fields:
-
-	- startTime: a datetime string
-	- endTime: a datetime string
+	
+	- endDateTime: end date/time string of event (JS date string)
 	- location: the name of the event's location
+
+Assumes events span at most one full day.  Events with no explicit start TIME
+(hours, minutes) have a specified start time of midnight.
 --------------------------------------------
 */
 module.exports.scrapeSchoolCalendars = function(date) {
@@ -133,8 +132,11 @@ we assume that calendar contains event as well.
 const containsEvent = function(calendar, event) {
 	for (var i = 0; i < calendar.length; i++) {
 		const currEvent = calendar[i];
-		if (currEvent.month == event.month && currEvent.date == event.date &&
-			currEvent.day == event.day && currEvent.year == event.year) {
+		const currEventDateTime = new Date(currEvent.startDateTime);
+		const eventDateTime = new Date(event.startDateTime);
+		if (currEventDateTime.getMonth() == eventDateTime.getMonth() 
+			&& currEventDateTime.getDate() == eventDateTime.getDate()
+			&& currEventDateTime.getFullYear() == eventDateTime.getFullYear()) {
 			return true;
 		}
 	}
@@ -151,17 +153,16 @@ Parameters:
 Returns: a list of event objects in chronological order scraped from the given
 DOM.  Each event is guaranteed to have the following fields:
 
-	- month: abbreviated month name
-	- date: the numeric date
-	- day: abbreviated day name
-	- year: numeric year
+	- startDateTime: start date/time string of event (JS date string)
 	- eventName: name of the event
 
-Additionally, each event may have the following fields:
-
-	- startTime: a datetime string
-	- endTime: a datetime string
+Additionally, an event may have the following fields:
+	
+	- endDateTime: end date/time string of event (JS date string)
 	- location: the name of the event's location
+
+Assumes events span at most one full day.  Events with no explicit start TIME
+(hours, minutes) have a specified start time of midnight.
 -------------------------------------------
 */
 const scrapeSchoolCalendar = function($) {
@@ -170,40 +171,39 @@ const scrapeSchoolCalendar = function($) {
 
 		// Get date info from the top sibling (elem before all event rows)
 		const dateElem = $(elem).siblings().first();
+
 		const date = parseInt(dateElem.attr("data-day"));
 		const year = parseInt(dateElem.attr("data-year"));
 
-		// Get the name of the day and month
-		var dayName = $(dateElem).find(".fsCalendarDay").text().trim();
-		dayName = dayName.substring(0, dayName.length - 1);
+		// Calculate the month number
 		const monthName = $(dateElem).find(".fsCalendarMonth").text().trim();
-
-		const eventName = $(elem).find(".fsCalendarEventTitle").text().trim();
+		const month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug",
+						"Sep", "Oct", "Nov", "Dec"].indexOf(monthName);
 
 		const event = {
-			month: monthName,
-			date: date,
-			day: dayName,
-			year: year,
-			eventName: eventName
+			eventName: $(elem).find(".fsCalendarEventTitle").text().trim()
 		};
+
+		// If there's a start time, use that.  Otherwise, set a time of 12AM
+		const startTime = $(elem).find(".fsStartTime");
+		if (startTime.length > 0) {
+			event.startDateTime = new Date(startTime.attr("datetime").trim());
+		} else {
+			event.startDateTime = new Date(year, month, date, 0, 0, 0, 0);
+		}
+		event.startDateTime = event.startDateTime.toJSON();
+
+		// Add the end time if there is one
+		const endTime = $(elem).find(".fsEndTime");
+		if (endTime.length > 0) {
+			event.endDateTime = new Date(endTime.attr("datetime").trim());
+			event.endDateTime = event.endDateTime.toJSON();
+		}
 
 		// Add the location if there is one
 		const location = $(elem).find(".fsLocation");
 		if (location.length > 0) {
 			event.location = location.text().trim();
-		}
-
-		// Add the start time if there is one
-		const startTime = $(elem).find(".fsStartTime");
-		if (startTime.length > 0) {
-			event.startTime = startTime.attr("datetime").trim();
-		}
-
-		// Add the end time if there is one
-		const endTime = $(elem).find(".fsEndTime");
-		if (endTime.length > 0) {
-			event.endTime = endTime.attr("datetime").trim();
 		}
 
 		return event;

@@ -20,30 +20,24 @@ sorted from earliest to latest.  Fetches the next two months of calendar data.
 Each object has the format:
 
 {
-    "month": "Sep",
-    "date": 28,
-    "day": "Wed",
-    "year": 2016,
     "eventName": "US Leadership Workshop",
-    "startTime": "2016-11-28T11:45:00-05:00",
-    "endTime": "2016-11-28T15:45:00-05:00",
+    "startDateTime": "2016-11-28T14:45:00.000Z",
+    "endDateTime": "2016-11-28T16:05:00.000Z",
     "location": "Theatre,Theatre Lobby"
 }
 
-where all fields except startTime, endTime and location are guaranteed to exist.
-An event object is guaranteed to have the following fields:
+Each event is guaranteed to have the following fields:
 
-    - month: abbreviated month name
-    - date: the numeric date
-    - day: abbreviated day name
-    - year: numeric year
+    - startDateTime: start date/time string of event (JS date string)
     - eventName: name of the event
 
-Additionally, an event object may have the following fields:
-
-    - startTime: a datetime string
-    - endTime: a datetime string
+Additionally, an event may have the following fields:
+    
+    - endDateTime: end date/time string of event (JS date string)
     - location: the name of the event's location
+
+Assumes events span at most one full day.  Events with no explicit start TIME
+(hours, minutes) have a specified start time of midnight.
 --------------------------
 */
 app.get("/schoolCalendar", function(req, res) {
