@@ -4,7 +4,8 @@
   "description": "A scraper for the Maret Upper School and athletics calendar sites.",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
+    "start:reload": "nodemon server.js",
     "test": "mocha"
   },
   "repository": {
