@@ -1,5 +1,5 @@
-# MyMaret-Calendar-Scraper
-A scraper for the Maret School Calendar and athletics calendar/teams sites.
+# Maret-Calendar-Scraper
+A scraper for the Maret School calendar and athletics calendar/teams sites.
 To run the server, just run
 
 ```javascript
