@@ -1,38 +1,23 @@
 [
 	{
-		"month": "Dec",
-		"date": 7,
-		"day": "Wed",
-		"year": 2016,
-		"eventName": "Hour of Code"
+		"eventName": "Hour of Code",
+		"startDateTime": "2016-12-07T05:00:00.000Z"
 	},
 	{
-		"month": "Dec",
-		"date": 7,
-		"day": "Wed",
-		"year": 2016,
 		"eventName": "MPA General Meeting",
-		"startTime": "2016-12-07T08:15:00-05:00",
-		"endTime": "2016-12-07T09:45:00-05:00",
+		"startDateTime": "2016-12-07T13:15:00.000Z",
+		"endDateTime": "2016-12-07T14:45:00.000Z",
 		"location": "202-AB Movement Studio"
 	},
 	{
-		"month": "Dec",
-		"date": 7,
-		"day": "Wed",
-		"year": 2016,
 		"eventName": "Kindergarten siblings visit",
-		"startTime": "2016-12-07T13:00:00-05:00",
+		"startDateTime": "2016-12-07T18:00:00.000Z",
 		"location": "Cottage"
 	},
 	{
-		"month": "Dec",
-		"date": 7,
-		"day": "Wed",
-		"year": 2016,
 		"eventName": "Summer Trips Meeting",
-		"startTime": "2016-12-07T18:00:00-05:00",
-		"endTime": "2016-12-07T20:00:00-05:00",
+		"startDateTime": "2016-12-07T23:00:00.000Z",
+		"endDateTime": "2016-12-08T01:00:00.000Z",
 		"location": "Atrium"
 	}
 ]

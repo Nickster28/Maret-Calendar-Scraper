@@ -10,22 +10,17 @@ The main file, server.js, will run.  There are multiple endpoints:
     
 ## GET /schoolCalendar
 
-This sends back a JSON response containing information about the events in
-the main school calendar for the next two months.  With data scraped from
-https://www.maret.org/fs/elements/6221, the format is an array of event objects,
-in chronological order from earliest to latest:
+This sends back a JSON list of event objects in chronological order for the next
+two months of the school calendar, scraped from
+https://www.maret.org/fs/elements/6221:
 
 ```javascript
 [
     {
-        "month": "Sep",
-        "date": 28,
-        "day": "Wed",
-        "year": 2016,
         "eventName": "US Leadership Workshop",
-        "startTime": "2016-11-28T11:45:00-05:00",
-        "endTime": "2016-11-28T15:45:00-05:00",
-        "location": "Theatre Lobby"
+        "startDateTime": "2016-11-28T14:45:00.000Z",
+        "endDateTime": "2016-11-28T16:05:00.000Z",
+        "location": "Theatre,Theatre Lobby"
     },
     ...
 ]
@@ -33,17 +28,16 @@ in chronological order from earliest to latest:
 
 Every event object is guaranteed to have the following fields:
 
-* **month** - abbreviated month name
-* **date** - the numeric date
-* **day** - abbreviated day name
-* **year** - numeric year
 * **eventName** - name of the event
+* **startDateTime** - start date/time string of event (JS date string)
 
 Additionally, an event may have the following fields:
 
-* **startTime** - a datetime string
-* **endTime** - a datetime string
+* **endDateTime** - end date/time string of event (JS date string)
 * **location** - the name of the event's location
+
+Events with no explicit start TIME (hours, minutes) have a specified start time
+of midnight and no end time.
 
 
 ## GET /athleticsCalendar
