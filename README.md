@@ -43,8 +43,9 @@ of midnight and no end time.
 ## GET /athleticsCalendar
 
 This sends back a JSON object containing information about all athletics games
-and practices for this school year.  With data scraped from
-http://www.maret.org/fs/elements/5634 and http://www.maret.org/fs/elements/5637,
+and practices for this school year.  With data scraped from the
+[athletics games website](http://www.maret.org/fs/elements/5634) and
+[athletics practices website](http://www.maret.org/fs/elements/5637),
 the format is an object with a "games" key and "practices" key, each mapping to
 an array:
 
@@ -64,14 +65,11 @@ games and practices scraped from the school website.  The information scraped
 for games and practices is slightly different, however.  The games events have
 the following format:
 
-```javascript
+```json
 {
-    "month": "Sep",
-    "date": 28,
-    "year": 2016,
     "team": "Boys' Varsity Soccer",
     "opponent": "Other School"
-    "time": "2016-11-28T15:45:00-05:00",
+    "startDateTime": "2016-11-28T20:45:00.000Z",
     "location": "Back Field",
     "isHome": true,
     "result": null,
@@ -79,38 +77,31 @@ the following format:
 }
 ```
 
-Every game event object is guaranteed to have the following fields:
+Each game event is guaranteed to have the following fields:
 
-* **month**: an abbreviated name for the event month
-* **date**: the numeric date
-* **year**: the numeric year
-* **team**: the school team competing
-* **isHome**: boolean whether or not this is a home game
+    * **team**: the school team competing
+    * **startDateTime**: start date/time string of event (JS date string)
+    * **isHome**: boolean whether or not this is a home game
 
-Additionally, a game object may have the following fields:
+Additionally, each game event may have the following fields:
 
-* **opponent**: the opposing team name
-* **time**: a datetime string
-* **location**: the name of the game's location (NOT necessarily address)
-* **result**: "Win" or "Loss" or another string indicator of game result
-* **status**: "CANCELLED" or another string indicator of game status
+    * **opponent**: the opposing team name
+    * **location**: the name of the game's location (NOT necessarily address)
+    * **result**: "Win" or "Loss" or another string indicator of game result
+    * **status**: "CANCELLED" or another string indicator of game status
 
 The practices events have the following format (a subset of the game object):
 
-```javascript
+```json
 {
-    "month": "Sep",
-    "date": 28,
-    "year": 2016,
     "team": "Boys' Varsity Soccer",
-    "time": "2016-11-28T15:45:00-05:00",
+    "startDateTime": "2016-11-28T20:45:00.000Z",
     "location": "Back Field",
     "status": "CANCELLED"
 }
 ```
 
-where all fields except time, location and status are guaranteed to exist.  All 
-fields in a practice object are the same as their corresponding fields in a
+All fields in a practice object are the same as their corresponding fields in a
 game object.
 
 
@@ -144,7 +135,7 @@ than are given here.
 ## Testing
 
 All parts of the scraper have corresponding [Mocha](https://mochajs.org) tests.
-To execute all tests, just run
+To execute all 57 tests, just run
 
 ```javascript
 npm test
