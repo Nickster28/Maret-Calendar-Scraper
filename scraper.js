@@ -263,7 +263,7 @@ The practices events have the following format (a subset of the game object):
 }
 
 All fields in a practice object are the same as their corresponding fields in a
-game object.
+game object, including whether they're guaranteed or optional.
 -----------------------------------------------
 */
 module.exports.scrapeAthleticsCalendars = function() {
