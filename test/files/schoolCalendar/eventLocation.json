@@ -1,10 +1,7 @@
 [
 	{
-		"month": "Dec",
-		"date": 25,
-		"day": "Sun",
-		"year": 2016,
 		"eventName": "Christmas",
+		"startDateTime": "2016-12-25T05:00:00.000Z",
 		"location": "North Pole"
 	}
 ]

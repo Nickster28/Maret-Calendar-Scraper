@@ -153,21 +153,15 @@ const testMergeCalendars = function() {
         // calendar1 and calendar2 are disjoint, one event each
         const calendar1 = [
             {
-                month: "Nov",
-                date: 2,
-                day: "Wed",
-                year: 2016,
-                eventName: "Test Event"
+                eventName: "Test Event",
+                startDateTime: "2016-11-02T05:00:00.000Z"
             }
         ];
 
         const calendar2 = [
             {
-                month: "Nov",
-                date: 3,
-                day: "Thurs",
-                year: 2016,
-                eventName: "Test Event 2"
+                eventName: "Test Event 2",
+                startDateTime: "2016-11-03T05:00:00.000Z"
             }
         ];
 
@@ -181,11 +175,8 @@ const testMergeCalendars = function() {
         const overlapCalendar2 = [
             overlapCalendar1[overlapCalendar1.length - 1],
             {
-                month: "Nov",
-                date: 4,
-                day: "Fri",
-                year: 2016,
-                eventName: "Test Event 3"
+                eventName: "Test Event 3",
+                startDateTime: "2016-11-04T05:00:00.000Z"
             }
         ];
 
@@ -200,11 +191,8 @@ const testMergeCalendars = function() {
             multiOverlapCalendar1[multiOverlapCalendar1.length - 2],
             multiOverlapCalendar1[multiOverlapCalendar1.length - 1],
             {
-                month: "Nov",
-                date: 5,
-                day: "Sat",
-                year: 2016,
-                eventName: "Test Event 4"
+                eventName: "Test Event 4",
+                startDateTime: "2016-11-05T05:00:00.000Z"
             }
         ];
         
@@ -288,38 +276,26 @@ const testContainsEvent = function() {
 
         const calendar = [
             {
-                month: "Nov",
-                date: 2,
-                day: "Wed",
-                year: 2016,
-                eventName: "Test Event"
+                eventName: "Test Event",
+                "startDateTime": "2016-11-02T05:00:00.000Z"
             },
             {
-                month: "Nov",
-                date: 3,
-                day: "Thurs",
-                year: 2016,
-                eventName: "Test Event 2"
+                eventName: "Test Event 2",
+                startDateTime: "2016-11-03T05:00:00.000Z"
             }
         ];
         
         it("Doesn't Contain Event", function() {
             assert(!containsEvent(calendar, {
-                month: "Nov",
-                date: 4,
-                day: "Fri",
-                year: 2016,
-                eventName: "Test Event 3"
+                eventName: "Test Event 3",
+                startDateTime: "2016-11-04T05:00:00.000Z"
             }), "event not in original calendar");
         });
 
         it("Contains Event", function() {
             assert(containsEvent(calendar, {
-                month: "Nov",
-                date: 3,
-                day: "Thurs",
-                year: 2016,
-                eventName: "Test Event 2"
+                eventName: "Test Event 2",
+                startDateTime: "2016-11-03T05:00:00.000Z"
             }), "event in original calendar");
         });
     });
