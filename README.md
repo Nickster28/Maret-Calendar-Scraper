@@ -12,7 +12,7 @@ The main file, server.js, will run.  There are multiple endpoints:
 
 This sends back a JSON list of event objects in chronological order for the next
 two months of the school calendar, scraped from
-https://www.maret.org/fs/elements/6221:
+the [school calendar website](https://www.maret.org/fs/elements/6221):
 
 ```javascript
 [
@@ -44,8 +44,8 @@ of midnight and no end time.
 
 This sends back a JSON object containing information about all athletics games
 and practices for this school year.  With data scraped from the
-[athletics games website](http://www.maret.org/fs/elements/5634) and
-[athletics practices website](http://www.maret.org/fs/elements/5637),
+[athletics games website](https://www.maret.org/fs/elements/5634) and
+[athletics practices website](https://www.maret.org/fs/elements/5637),
 the format is an object with a "games" key and "practices" key, each mapping to
 an array:
 
@@ -68,7 +68,7 @@ the following format:
 ```json
 {
     "team": "Boys' Varsity Soccer",
-    "opponent": "Other School"
+    "opponent": "Other School",
     "startDateTime": "2016-11-28T20:45:00.000Z",
     "location": "Back Field",
     "isHome": true,
@@ -79,16 +79,16 @@ the following format:
 
 Each game event is guaranteed to have the following fields:
 
-    * **team**: the school team competing
-    * **startDateTime**: start date/time string of event (JS date string)
-    * **isHome**: boolean whether or not this is a home game
+* **team**: the school team competing
+* **startDateTime**: start date/time string of event (JS date string)
+* **isHome**: boolean whether or not this is a home game
 
 Additionally, each game event may have the following fields:
 
-    * **opponent**: the opposing team name
-    * **location**: the name of the game's location (NOT necessarily address)
-    * **result**: "Win" or "Loss" or another string indicator of game result
-    * **status**: "CANCELLED" or another string indicator of game status
+* **opponent**: the opposing team name
+* **location**: the name of the game's location (NOT necessarily address)
+* **result**: "Win" or "Loss" or another string indicator of game result
+* **status**: "CANCELLED" or another string indicator of game status
 
 The practices events have the following format (a subset of the game object):
 
@@ -102,7 +102,7 @@ The practices events have the following format (a subset of the game object):
 ```
 
 All fields in a practice object are the same as their corresponding fields in a
-game object.
+game object, including whether they're guaranteed or optional.
 
 
 ## GET /athleticsTeams
@@ -127,9 +127,9 @@ names (e.g. "Fall", "Winter",...) and the values are arrays of team names:
 }
 ```
 
-Note that the seasons returned are whatever are included at the scraped page,
-https://www.maret.org/fs/elements/6188; there may be more or fewer seasons
-than are given here.
+Note that the seasons returned are whatever are included at the scraped
+[athletics teams page](https://www.maret.org/fs/elements/6188); there may be
+more or fewer seasons than are given here.
 
 
 ## Testing
