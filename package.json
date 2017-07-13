@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Nickster28/MyMaret-Calendar-Scraper.git"
+    "url": "git+https://github.com/Nickster28/Maret-Calendar-Scraper.git"
   },
   "author": "Nick Troccoli",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Nickster28/MyMaret-Calendar-Scraper/issues"
+    "url": "https://github.com/Nickster28/Maret-Calendar-Scraper/issues"
   },
-  "homepage": "https://github.com/Nickster28/MyMaret-Calendar-Scraper#readme",
+  "homepage": "https://github.com/Nickster28/Maret-Calendar-Scraper#readme",
   "dependencies": {
     "cheerio": "^0.22.0",
     "express": "^4.13.3",
