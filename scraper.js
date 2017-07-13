@@ -35,9 +35,7 @@ module.exports.scrapeSchoolCalendars = function(date) {
 			return scrapeSchoolCalendar(cheerio.load(html));
 		});
 		return Promise.all(scraperPromises);
-	}).then(function(calendars) {
-		return mergeCalendars(calendars);
-	});
+	}).then(mergeCalendars);
 }
 
 
